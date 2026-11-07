@@ -546,12 +546,21 @@ a { color: var(--ink); }
 
 .letters {
     border-top: 1px solid var(--ink);
-    padding: 5rem var(--pad-x); /* was 3rem top/bottom — matched to .movie-cover for consistent section spacing */
-    max-width: 1200px;
+    padding: 5rem 0;         /* was `5rem var(--pad-x)` — side padding moved to .letters__inner so border-top spans wider */
+    max-width: 1815px;       /* was 1200px — matches .movie-cover so both horizontal rules extend the same distance */
     margin: 0 auto;
     width: 100%;
     font-family: var(--font-mono);
     color: var(--ink);
+}
+
+/* Inner wrapper that caps the letters CONTENT at 1200px (where the
+   2-column grid stays readable), while the outer .letters border-top
+   runs the full width of the band above. */
+.letters__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--pad-x);
 }
 
 .letters__heading {
@@ -758,7 +767,8 @@ a { color: var(--ink); }
     .footer__links     { gap: 1rem; font-size: 0.7rem; }
     .footer__copyright { font-size: 0.7rem; }
 
-    .letters         { padding: 4rem var(--pad-x-sm); } /* was 2.5rem top/bottom */
+    .letters         { padding: 4rem 0; } /* was 2.5rem top/bottom — side padding on .letters__inner */
+    .letters__inner  { padding: 0 var(--pad-x-sm); }
     .letters__heading { font-size: 0.75rem; margin-bottom: 1.5rem; }
     .letters__letter,
     .letters__reply   { font-size: 0.9rem; max-width: none; padding-left: 0.75rem; }
