@@ -829,3 +829,192 @@ a { color: var(--ink); }
 @media (prefers-reduced-motion: reduce) {
     * { transition: none !important; animation: none !important; }
 }
+
+/* ============================================================
+   Exclusive Interview with FHBP Director
+   ------------------------------------------------------------
+   Three-column magazine spread, sits between the cover grid
+   and the Letters to FHBP section. Shares typography tokens
+   with the rest of the page; no new tokens introduced.
+   ============================================================ */
+
+.interview {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem var(--pad-x) 5rem;
+    border-top: 1px solid var(--ink);
+}
+
+/* ---- Title band (full-width, above the grid) ---- */
+
+.interview__titleband {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.interview__title {
+    font-family: var(--font-pixel);
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.interview__date {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mute);
+    white-space: nowrap;
+}
+
+/* ---- Three-column grid ----
+   Row 1: hero image (cols 1+2) | col 3 content (starts at top)
+   Row 2: col 1 text            | col 2 text            | col 3 continues
+   Col 3 is a single element spanning rows 1+2 so it starts at the top.
+------------------------------ */
+
+.interview__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 2rem;
+    row-gap: 1.25rem;
+    align-items: start;
+}
+
+/* Hero image — row 1, cols 1+2 */
+.interview__hero {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid var(--ink);
+}
+
+.interview__hero-img {
+    display: block;
+    width: 100%;
+    height: clamp(220px, 32vh, 360px);
+    object-fit: cover;
+    object-position: center 25%;
+    filter: grayscale(100%);
+}
+
+/* Col placements */
+.interview__col--1 { grid-column: 1; grid-row: 2; }
+.interview__col--2 { grid-column: 2; grid-row: 2; }
+.interview__col--3 { grid-column: 3; grid-row: 1 / span 2; }
+
+/* ---- Intro paragraph (italic lede at top of col 1) ---- */
+
+.interview__intro {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--ink);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--rule);
+}
+
+.interview__intro em {
+    font-style: italic;
+}
+
+/* ---- Q&A body ---- */
+
+.interview__qa {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--ink);
+    margin-bottom: 0.65rem;
+}
+
+.interview__qa strong {
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.interview__qa + .interview__qa {
+    margin-top: -0.2rem;
+}
+
+/* Answer (every 2nd .interview__qa) gets a hair more space below
+   so SD/SC pairs visually group. */
+.interview__qa:nth-of-type(2n) {
+    margin-bottom: 1rem;
+}
+
+/* ---- Inline figure (images 2 and 3) ---- */
+
+.interview__inline-fig {
+    margin: 0.4rem 0 1rem;
+    border: 1px solid var(--ink);
+    overflow: hidden;
+}
+
+.interview__inline-fig img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 260px;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100%);
+}
+
+/* ---- Sign-off ---- */
+
+.interview__signoff {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    color: var(--mute);
+    margin-top: 1.25rem;
+}
+
+/* ---- Medium screens: 2 columns; col 3 reflows into 2 sub-cols ---- */
+
+@media (max-width: 900px) {
+    .interview__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .interview__hero  { grid-column: 1 / span 2; }
+    .interview__col--1 { grid-column: 1; grid-row: 2; }
+    .interview__col--2 { grid-column: 2; grid-row: 2; }
+    .interview__col--3 {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+        column-count: 2;
+        column-gap: 2rem;
+    }
+    .interview__col--3 .interview__inline-fig,
+    .interview__col--3 .interview__qa {
+        break-inside: avoid;
+    }
+}
+
+/* ---- Narrow screens: single column ---- */
+
+@media (max-width: 600px) {
+    .interview       { padding: 2rem var(--pad-x-sm) 3rem; }
+    .interview__grid { grid-template-columns: 1fr; }
+    .interview__hero   { grid-column: 1; grid-row: 1; }
+    .interview__col--1 { grid-column: 1; grid-row: 2; }
+    .interview__col--2 { grid-column: 1; grid-row: 3; }
+    .interview__col--3 { grid-column: 1; grid-row: 4; column-count: 1; }
+    .interview__hero-img {
+        height: clamp(180px, 42vh, 280px);
+    }
+}
