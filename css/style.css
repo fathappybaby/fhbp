@@ -839,10 +839,20 @@ a { color: var(--ink); }
    ============================================================ */
 
 .interview {
+    border-top: 1px solid var(--ink);
+    padding: 5rem 0;         /* side padding moved to .interview__inner so border-top spans wider */
+    max-width: 1815px;       /* matches .movie-cover and .letters so all horizontal rules extend the same distance */
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Inner wrapper caps the interview CONTENT at 1200px (where the
+   3-column grid stays readable), while the outer .interview
+   border-top runs the full width of the band above. */
+.interview__inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 5rem var(--pad-x) 5rem;
-    border-top: 1px solid var(--ink);
+    padding: 0 var(--pad-x);
 }
 
 /* ---- Title band (full-width, above the grid) ---- */
@@ -1008,7 +1018,8 @@ a { color: var(--ink); }
 /* ---- Narrow screens: single column ---- */
 
 @media (max-width: 600px) {
-    .interview       { padding: 2rem var(--pad-x-sm) 3rem; }
+    .interview       { padding: 2rem 0 3rem; }
+    .interview__inner { padding: 0 var(--pad-x-sm); }
     .interview__grid { grid-template-columns: 1fr; }
     .interview__hero   { grid-column: 1; grid-row: 1; }
     .interview__col--1 { grid-column: 1; grid-row: 2; }
