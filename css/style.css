@@ -320,6 +320,54 @@ a { color: var(--ink); }
     margin-bottom: 0.9rem;
 }
 
+/* ---------- "To Our Fans" apology note ------------------
+   Horror-red marquee-style block inserted between the
+   "Our Most Popular Films" heading and the film list.
+   Announces delayed releases. Cream-on-red so it pops
+   against the F2F2F2 page background.
+--------------------------------------------------------- */
+
+.latest__note {
+    background: #8b0a0a;
+    color: #f2f2f2;
+    padding: 1rem 1.1rem;
+    margin-bottom: 1.25rem;
+    font-family: var(--font-mono);
+}
+
+.latest__note-label {
+    font-family: var(--font-pixel);
+    font-size: 1rem;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #f2f2f2;
+    margin-bottom: 0.7rem;
+}
+
+.latest__note-body {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #f2f2f2;
+    margin-bottom: 0.5rem;
+}
+
+.latest__note-body:last-of-type {
+    margin-bottom: 0;
+}
+
+.latest__note-body em {
+    font-style: italic;
+    font-weight: 700;
+}
+
+.latest__note-sd {
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    color: #d9a3a3;
+    margin-top: 0.6rem;
+}
+
 /* ============================================================
    OLD: Win95-bevel card treatment. Kept commented for revert.
    To restore: swap the comment markers around this block and
