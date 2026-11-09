@@ -131,7 +131,6 @@ a { color: var(--ink); }
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1815px;
     margin: 0 auto;
     padding: 5rem 0; /* vertical breathing room so poster doesn't touch the topbar/section rules; no side padding */
     border-bottom: 1px solid var(--ink);
@@ -596,7 +595,6 @@ a { color: var(--ink); }
 .letters {
     border-top: 1px solid var(--ink);
     padding: 5rem 0;         /* was `5rem var(--pad-x)` — side padding moved to .letters__inner so border-top spans wider */
-    max-width: 1815px;       /* was 1200px — matches .movie-cover so both horizontal rules extend the same distance */
     margin: 0 auto;
     width: 100%;
     font-family: var(--font-mono);
@@ -841,7 +839,6 @@ a { color: var(--ink); }
 .interview {
     border-top: 1px solid var(--ink);
     padding: 5rem 0;         /* side padding moved to .interview__inner so border-top spans wider */
-    max-width: 1815px;       /* matches .movie-cover and .letters so all horizontal rules extend the same distance */
     margin: 0 auto;
     width: 100%;
 }
