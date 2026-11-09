@@ -245,6 +245,119 @@
     </main>
 
     <!--
+        Exclusive Interview with FHBP Director (November 2026).
+        Three-column magazine spread. Sits between the cover grid
+        and the Letters to FHBP section.
+    -->
+    <article class="interview" aria-labelledby="interview-heading">
+
+        <header class="interview__titleband">
+            <h1 id="interview-heading" class="interview__title">Exclusive Interview with FHBP Director</h1>
+            <p class="interview__date">November 2026</p>
+        </header>
+
+        <!--
+            Three-column body.
+              row 1: hero image spans col 1+2, col 3 text starts at top
+              row 2: col 1 text continues under hero; col 2 text continues under hero;
+                     col 3 is the same element from row 1, spanning both rows.
+            Images 2 and 3 are inline inside their respective column divs.
+        -->
+        <div class="interview__grid">
+
+            <figure class="interview__hero">
+                <img src="images/shane-rubber-head-1.jpg"
+                     alt="Shane Campbell on set with a cinema camera, on-location in a living room."
+                     class="interview__hero-img">
+            </figure>
+
+            <!-- Col 3: starts at top of grid, spans both rows -->
+            <div class="interview__col interview__col--3">
+
+                <p class="interview__qa"><strong>SD:</strong> Why practical?</p>
+                <p class="interview__qa"><strong>SC:</strong> We stick with green screen, we like the raw look. We are doing CG. This isn't Jurasic Park.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Why the booth. Why trap him.</p>
+                <p class="interview__qa"><strong>SC:</strong> Every horror story has got to have a haunted house.</p>
+
+                <figure class="interview__inline-fig">
+                    <img src="images/shane-rubber-head-3.JPG"
+                         alt="Shane mixing a bucket of practical-effects material on set with a crew member.">
+                </figure>
+
+                <p class="interview__qa"><strong>SD:</strong> Why 48 hours?</p>
+                <p class="interview__qa"><strong>SC:</strong> Constraint is a form. Takes the excuse out. You either shoot or you don't.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Elevated horror.</p>
+                <p class="interview__qa"><strong>SC:</strong> No horror is elevated. Horror is low. That's the whole point. If you're ashamed of the floor, work in another genre.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Favorite scare?</p>
+                <p class="interview__qa"><strong>SC:</strong> The one where nothing happens for too long. Then something happens. Then nothing again.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Is Rubber Head scary?</p>
+                <p class="interview__qa"><strong>SC:</strong> Not my call. I just put the diamond out there, how the light hits it and reflects depends on what inside you. Were you scared?</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Next big horror film.</p>
+                <p class="interview__qa"><strong>SC:</strong> We've got vampires on the mind. Something that sucks the life out of you for sure.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Why clowns?</p>
+                <p class="interview__qa"><strong>SC:</strong> A clown already looks wrong. Half the job's done.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Final word.</p>
+                <p class="interview__qa"><strong>SC:</strong> Press the button.</p>
+
+                <p class="interview__signoff">&mdash; SD</p>
+            </div>
+
+            <!-- Col 1: text starts BELOW the hero (row 2) -->
+            <div class="interview__col interview__col--1">
+                <p class="interview__intro">
+                    <em>Shane Campbell is the writer-director behind Fat Happy Baby Productions. His films, Unicorn Warrior, Rubber Head, Lord of the Undead, Junk Haulers, and the forthcoming My Little Pumpkin, have run through the LA 48 Hour Film Project circuit and onto YouTube. Rubber Head, his 2023 Downtown LA entry, locks a late-night podcaster named Walter in a booth with a button he must keep pressing, or the world ends. Across the glass is The Head, a clown. Sean Dog caught Shane between effects shots on My Little Pumpkin with large glass jar in his hands containing a brains.</em>
+                </p>
+
+                <p class="interview__qa"><strong>SD:</strong> Horror. Define it.</p>
+                <p class="interview__qa"><strong>SC:</strong> Three things stacked. Terror up top, what you don't see. Horror in the middle, what's in the room. Gross-out at the bottom, what's on the floor. Most films stop at the floor.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Where's Rubber Head sit?</p>
+                <p class="interview__qa"><strong>SC:</strong> Between terror and horror. The Head is in the glass. The glass is the lie.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Favorites.</p>
+                <p class="interview__qa"><strong>SC:</strong> Carpenter's The Thing. Lynch's Eraserhead. The original Texas Chain Saw. Anything that looks like it hurt to make.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Who shoots with you?</p>
+                <p class="interview__qa"><strong>SC:</strong> People who'd rather bleed than bill hours. Nobody on my crew is building a reel. We're building a movie.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Budget?</p>
+                <p class="interview__qa"><strong>SC:</strong> Credit card and favors.</p>
+            </div>
+
+            <!-- Col 2: text starts BELOW the hero (row 2), image 2 inline mid-col -->
+            <div class="interview__col interview__col--2">
+                <p class="interview__qa"><strong>SD:</strong> Are you about A24 horror style.</p>
+                <p class="interview__qa"><strong>SC:</strong> Midsommar is a travel brochure. Beautifully lit. Means nothing. Call me when they build the monster with a bucket of blood instead of a laptop.</p>
+
+                <figure class="interview__inline-fig">
+                    <img src="images/shane-rubber-head-2.JPG"
+                         alt="Shane directing an actor on a green-screen set.">
+                </figure>
+
+                <p class="interview__qa"><strong>SD:</strong> What is The Head?</p>
+                <p class="interview__qa"><strong>SC:</strong> The head represents every man-made system that gone out of control until finaly you left pressing a button your entire life to keep it reigned in.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Marco in São Paulo said you copied Méliès.</p>
+                <p class="interview__qa"><strong>SC:</strong> Méliès did it in one minute in 1901 and left a hole. We filled the hole.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Horror runs on master and slave. Who's the slave in Rubber Head?</p>
+                <p class="interview__qa"><strong>SC:</strong> Walter. The button is the master. The Head is what the master looks like when it gets bored.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Walter doesn't fight back. He just presses.</p>
+                <p class="interview__qa"><strong>SC:</strong> Horror isn't about winning, that's action, horror is about coming face to face with death. One lives, roll credits.</p>
+            </div>
+
+        </div>
+    </article>
+
+    <!--
         Letters to the Editor — new page-level section below the cover.
         2-column grid of letter+reply pairs. Each pair has a CONCERNED
         WRITERS label above the reader letter, an FHBP label above the
