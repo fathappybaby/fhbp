@@ -1026,3 +1026,95 @@ a { color: var(--ink); }
         height: clamp(180px, 42vh, 280px);
     }
 }
+
+/* ============================================================
+   The Keeper Reviews
+   ------------------------------------------------------------
+   Film-review department hosted by The Keeper, inserted between
+   the interview and the letters. Band mirrors .interview /
+   .letters: full-width border-top, 1200px inner wrapper, 2px
+   title-band rule. Poem cut, left-justified. Uses existing
+   tokens; the only literal color is the horror-red sign-off,
+   matching the "To Our Fans" note (#8b0a0a) already on the page.
+   ============================================================ */
+
+.keeper {
+    border-top: 1px solid var(--ink);
+    padding: 5rem 0;
+    margin: 0 auto;
+    width: 100%;
+    font-family: var(--font-mono);
+    color: var(--ink);
+}
+
+/* Inner wrapper caps content at 1200px while the border-top runs
+   the full width of the band, exactly like .interview__inner. */
+.keeper__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--pad-x);
+}
+
+/* Header spacing only — no rule beneath (unlike the interview
+   titleband); it just holds the title above the poem. */
+.keeper__titleband {
+    margin-bottom: 2rem;
+}
+
+/* One line: "The Keeper Reviews: Rubber Head". Scale matches
+   .interview__title / .letters__heading. Keeper part ink; the
+   film title in the lighter mute gray used for the interview
+   "November 2026" date. */
+.keeper__title {
+    font-family: var(--font-pixel);
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.keeper__dept { color: var(--ink); }
+.keeper__film { color: var(--mute); }
+
+/* One-line critic tag under the title — italic mute standfirst,
+   mirroring .letters__motto. */
+.keeper__intro {
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--mute);
+    margin-bottom: 2rem;
+    max-width: 65ch;
+}
+
+/* Poem body — left-justified stanzas, generous line rhythm. */
+.keeper__stanza {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.keeper__closer {
+    font-size: 1rem;
+    line-height: 1.7;
+    font-weight: 500;
+    margin: 2rem 0 1.25rem;
+}
+
+/* Sign-off — black (ink), same as the body line above it. */
+.keeper__sd {
+    font-family: var(--font-pixel);
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+}
+
+/* ---- Narrow screens ---- */
+
+@media (max-width: 600px) {
+    .keeper        { padding: 4rem 0; }
+    .keeper__inner { padding: 0 var(--pad-x-sm); }
+    .keeper__stanza,
+    .keeper__closer { font-size: 0.9rem; }
+}
