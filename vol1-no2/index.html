@@ -3,545 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fat Happy Baby Productions — independent short films.">
-    <title>FHBP</title>
+    <meta name="description" content="Fat Happy Baby Productions. We make indie films. Pick an issue.">
+    <title>FHBP &middot; We Make Indie Films</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
+    <!--
+        Issue index / landing page. Styles in css/landing.css (landing only,
+        separate from each issue's own vol1-noN/css/style.css). Landing-only
+        images go in images/ at this deploy root. .nojekyll stays at root.
+    -->
+    <link rel="stylesheet" href="css/landing.css">
 </head>
 <body>
 
     <header class="topbar" aria-label="Site top bar">
-        <div class="topbar__left">
-            <a class="topbar__brand" href="../index.html">FHBP</a>
-            <p class="topbar__tagline">WE MAKE INDIE FILMS</p>
-        </div>
-        <ul class="topbar__links">
-            <li><a href="https://www.youtube.com/@FatHappyBabyProductions" target="_blank" rel="noopener">YOUTUBE</a></li>
-            <li><a href="https://www.instagram.com/Fat_Happy_Baby_Productions/" target="_blank" rel="noopener">INSTAGRAM</a></li>
-            <li><a href="mailto:fathappybaby112@gmail.com">EMAIL</a></li>
-            <li><a href="https://linktr.ee/FatHappyBabyProductions" target="_blank" rel="noopener">LINKTREE</a></li>
-        </ul>
+        <a class="topbar__brand" href="index.html">FHBP</a>
+        <span class="topbar__tagline">WE MAKE INDIE FILMS</span>
     </header>
 
-    <!--
-        Movie-cover: Rubber Head poster at the top of the page as a
-        title-card above the Fat Happy Baby cover. Full-width black
-        band, poster centered, max-height 100vh so it fits one screen.
-    -->
-    <section class="movie-cover" aria-label="Rubber Head poster">
-        <img src="images/rubberhead.png"
-             alt="Rubber Head — a Fat Happy Baby Productions short film. Movie poster: Andrew Aberth and Troy Robinson. Written and directed by Shane Campbell. LA 48 Hour Film Project 2023."
-             class="movie-cover__poster">
+    <!-- Landing poster band (full-width, centered), mirrors the issue poster bands. -->
+    <section class="landing-poster" aria-label="Fat Happy Baby Productions poster">
+        <img src="images/fhbp-poster.png" alt="Fat Happy Baby Productions poster. A low-poly illustration in warm orange and cool blue.">
     </section>
 
-    <main class="cover">
-        <div class="cover__hero">
-            <h1 class="cover__title">
-                FAT HAPPY<br>
-                BABY<br>
-                PRODUCTIONS
-            </h1>
-            <p class="cover__subtitle">We Make Indie Films</p>
+    <main>
+        <h1 class="wordmark">FAT HAPPY<br>BABY<br>PRODUCTIONS</h1>
+        <p class="sub">We Make Indie Films</p>
 
-            <section class="about">
-                <h2 class="about__heading">A Warm Welcome</h2>
-                <p class="about__body">And we heard you, Canada. You didn't like our romcom. We got it. That's why in our next film we immediately turned up the blood and had a mother rip off her own head for no apparent reason.</p>
-                <p class="about__body">And to our Brazilian contingent, you are beautiful, and we don't mean on the inside. Thank you for not B-I-T-C-H-I-N-G, like those up North.</p>
-                <p class="about__body">And to our new visitors, welcome to the indie-filmmaking revolution. We are Fat Happy Baby Productions and we produce short films across genres in comedy, horror, action, and whatever our movie titled 'Rubber Head' was about. Watch them, let us know if you like them, join our community and help us make them.</p>
-
-                <h2 class="about__heading">Standards</h2>
-                <p class="about__intro">Every FHBP film must include:</p>
-                <ol class="about__list">
-                    <li><strong class="about__lead">A dog takes a dump on camera.</strong></li>
-                    <li><strong class="about__lead">A child actor goes diva.</strong></li>
-                    <li><strong class="about__lead">A limb gets ripped off (heads ARE limbs, Canada).</strong></li>
-                    <li><strong class="about__lead">Probably the best green screen work in town.</strong></li>
-                    <li><strong class="about__lead">Multiple fold-out tables (we are big on tables).</strong></li>
-                    <li><strong class="about__lead">Backdrop sheets, over everything (lots of steaming).</strong></li>
-                </ol>
-
-                <h2 class="about__heading">Secret Weapon</h2>
-                <p class="about__body">Behind every FHB short is <strong class="about__lead">Sean Dog</strong>, our writer, producer, and webdev. Strategically kept firmly off-camera, he is full-stop our core talent and greatest strength.</p>
-
-                <h2 class="about__heading">Subscriber's Benefits</h2>
-                <p class="about__body">There is a stretch of time between the day we lock a film and the day we beg people to suffer through it. Give us your email and we will grant you and anyone else who gave us their email exclusive access to be the first to suffer.</p>
-            </section>
-        </div>
-
-        <!--
-            Most Popular Films panel. Each card is a Win95 outset-bevel button
-            containing an inline pixel-art SVG sprite + title + tag + arrow.
-            Buttons link to the full movie on YouTube, in a new tab.
-            Sprites are monochrome (fill = currentColor, color = --ink).
-            Order (top→bottom, films #8 → #1):
-              8  Junk Haulers           truck
-              7  Dust and Reckoning     revolver
-              6b Lord of the Undead     bat
-              5  Ghost in Orion 9       ghost
-              4  Lost And Found         magnifying glass
-              3  Killing Dragons        dragon head
-              2  Rubber Head            avatar head
-              1  Unicorn Warrior        unicorn head
-        -->
-        <aside class="latest" aria-labelledby="latest-heading">
-            <h2 id="latest-heading" class="latest__heading">Our Most Popular Films</h2>
-
-            <!--
-                Horror-red "To Our Fans" apology block. Sits between the
-                films heading and the film list. Announces the delayed
-                releases of GLP1 and My Little Pumpkin.
-            -->
-            <div class="latest__note" role="note" aria-label="Note to fans">
-                <p class="latest__note-label">To Our Fans</p>
-                <p class="latest__note-body">We apologize for the delayed release of our two most recent horrors <em>GLP1</em> and <em>My Little Pumpkin</em>. Our editor is refusing to release them and is acting, frankly, like a spoiled baby. Which is awkward, given the company name.</p>
-                <p class="latest__note-body">We are negotiating. Updates to follow.</p>
-                <p class="latest__note-sd">&mdash; SD</p>
-            </div>
-
-            <ul class="latest__list">
-                <!-- 9. My Little Pumpkin — jack-o-lantern sprite (link goes to channel for now — movie not released yet) [HIDDEN] -->
-                <!--
-<li>
-                    <a class="latest__card latest__card--expanded" href="https://www.youtube.com/@FatHappyBabyProductions" target="_blank" rel="noopener">
-                        <div class="latest__card__top">
-                            <span class="latest__title">My Little Pumpkin</span>
-                            <span class="latest__tag">FULL FILM</span>
-                            <span class="latest__arrow" aria-hidden="true">&gt;</span>
-                        </div>
-                        <p class="latest__summary">A father has been waiting 365 days to see his daughter and take her trick or treating.</p>
-                        <p class="latest__meta">Oct. 31, 2026 &middot; Online Release &middot; General 48 Hr Horror</p>
-                    </a>
-                </li>
--->
-
-                <!-- 8. Junk Haulers -->
-                <li>
-                    <a class="latest__card" href="https://youtu.be/mEnn8HIKH_A" target="_blank" rel="noopener">
-                        <p class="latest__kicker">
-                            <span>Full Film</span>
-                            <span class="latest__kicker-arrow" aria-hidden="true">&gt;</span>
-                        </p>
-                        <h3 class="latest__title">Junk Haulers</h3>
-                        <p class="latest__summary">With her boyfriend laid up and rent due, a waitress fills in as helper on Marcos's junk-hauling business and finds the trade is ten percent lifting, ninety percent listening to other people's grief.</p>
-                        <p class="latest__meta">Aug. 12, 2026 &middot; North LA Live Regal &middot; LA 48 Hr</p>
-                    </a>
-                </li>
-
-                <!-- 7. Dust and Reckoning — revolver sprite [HIDDEN] -->
-                <!--
-<li>
-                    <a class="latest__card latest__card--expanded" href="https://youtu.be/TeC0Sqw5HUQ" target="_blank" rel="noopener">
-                        <div class="latest__card__top">
-                            <span class="latest__title">Dust and Reckoning</span>
-                            <span class="latest__tag">FULL FILM</span>
-                            <span class="latest__arrow" aria-hidden="true">&gt;</span>
-                        </div>
-                        <p class="latest__summary">Full summary coming soon.</p>
-                    </a>
-                </li>
--->
-
-                <!-- 6b. Lord of the Undead -->
-                <li>
-                    <a class="latest__card" href="https://youtu.be/wOD4a1AsMAw" target="_blank" rel="noopener">
-                        <p class="latest__kicker">
-                            <span>Full Film</span>
-                            <span class="latest__kicker-arrow" aria-hidden="true">&gt;</span>
-                        </p>
-                        <h3 class="latest__title">Lord of the Undead</h3>
-                        <p class="latest__summary">After six generations hunting the master vampire, a huntress finally finds the ritual that can finish him, but her solution requires ultimate sacrifice.</p>
-                        <p class="latest__meta">Oct. 23, 2025 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
-                    </a>
-                </li>
-
-                <!-- 5. Ghost in Orion 9 — ghost sprite [HIDDEN] -->
-                <!--
-<li>
-                    <a class="latest__card latest__card--expanded" href="https://youtu.be/ULyuZ7eTPqA" target="_blank" rel="noopener">
-                        <div class="latest__card__top">
-                            <span class="latest__title">Ghost in Orion 9</span>
-                            <span class="latest__tag">FULL FILM</span>
-                            <span class="latest__arrow" aria-hidden="true">&gt;</span>
-                        </div>
-                        <p class="latest__summary">When a daydreaming ten-year-old blasts off in a rocket to a derelict spaceship adrift she becomes the only detective who can solve the murder of its crew.</p>
-                        <p class="latest__meta">Aug. 12, 2025 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
-                    </a>
-                </li>
--->
-
-                <!-- 4. Lost And Found — magnifying-glass sprite [HIDDEN] -->
-                <!--
-<li>
-                    <a class="latest__card latest__card--expanded" href="https://youtu.be/yN339ushFe0" target="_blank" rel="noopener">
-                        <div class="latest__card__top">
-                            <span class="latest__title">Lost And Found</span>
-                            <span class="latest__tag">FULL FILM</span>
-                            <span class="latest__arrow" aria-hidden="true">&gt;</span>
-                        </div>
-                        <p class="latest__summary">Homicide detectives question reality as they question a 10-yr-old girl found at a crime scene who seems keenly attached to her puppy.</p>
-                        <p class="latest__meta">Nov. 10, 2024 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
-                    </a>
-                </li>
--->
-
-                <!-- 3. Killing Dragons — dragon-head sprite [HIDDEN] -->
-                <!--
-<li>
-                    <a class="latest__card latest__card--expanded" href="https://youtu.be/L2UykahVvFo" target="_blank" rel="noopener">
-                        <div class="latest__card__top">
-                            <span class="latest__title">Killing Dragons</span>
-                            <span class="latest__tag">FULL FILM</span>
-                            <span class="latest__arrow" aria-hidden="true">&gt;</span>
-                        </div>
-                        <p class="latest__summary">A hosted D&amp;D game of high stakes goes terribly wrong.</p>
-                        <p class="latest__meta">Aug. 2024 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
-                    </a>
-                </li>
--->
-
-                <!-- 2. Rubber Head -->
-                <li>
-                    <a class="latest__card" href="https://youtu.be/nJDrCf0tXFk" target="_blank" rel="noopener">
-                        <p class="latest__kicker">
-                            <span>Full Film</span>
-                            <span class="latest__kicker-arrow" aria-hidden="true">&gt;</span>
-                        </p>
-                        <h3 class="latest__title">Rubber Head</h3>
-                        <p class="latest__summary">Walter Vergara, a struggling late-night podcaster, is locked in a booth with a button he must keep pressing, or the world ends.</p>
-                        <p class="latest__meta">Oct. 28, 2023 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
-                    </a>
-                </li>
-
-                <!-- 1. Unicorn Warrior -->
-                <li>
-                    <a class="latest__card" href="https://youtu.be/NvP6vjMp8QA" target="_blank" rel="noopener">
-                        <p class="latest__kicker">
-                            <span>Full Film</span>
-                            <span class="latest__kicker-arrow" aria-hidden="true">&gt;</span>
-                        </p>
-                        <h3 class="latest__title">Unicorn Warrior</h3>
-                        <p class="latest__summary">A ten-year old girl must brave the underworld to trick the Gods and save her father from an unknown sickness.</p>
-                        <p class="latest__meta">Aug. 10, 2023 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
-                    </a>
-                </li>
-            </ul>
-
-            <div class="latest__footer">
-                <a class="btn btn--sm" href="https://www.youtube.com/@FatHappyBabyProductions" target="_blank" rel="noopener">ALL FILMS &nbsp;&gt;</a>
-            </div>
-
-            <!-- Beehiiv subscribe form — moved from the hero column.
-                 Flex-column trick in CSS pushes it to the bottom of the aside. -->
-            <div class="subscribe">
-                <script async
-                        src="https://subscribe-forms.beehiiv.com/v3/loader.js"
-                        data-beehiiv-form="a1da26f0-628c-4e11-8700-fe23c46dc58d"></script>
-            </div>
-        </aside>
+        <ul class="issues">
+            <li>
+                <a class="issue" href="vol1-no2/">
+                    <p class="issue__meta">Volume 1 &middot; No. 2 &middot; November 2026</p>
+                    <h2 class="issue__title">Rubber Head</h2>
+                    <p class="issue__blurb">A late-night podcaster, locked in a booth with a button he must keep pressing, or the world ends.</p>
+                </a>
+            </li>
+            <li>
+                <a class="issue" href="vol1-no1/">
+                    <p class="issue__meta">Volume 1 &middot; No. 1 &middot; August 2026</p>
+                    <h2 class="issue__title">Unicorn Warrior</h2>
+                    <p class="issue__blurb">A ten-year-old girl braves the underworld to trick the gods and save her father. Our first film, our first issue.</p>
+                </a>
+            </li>
+        </ul>
     </main>
 
-    <!--
-        Exclusive Interview with FHBP Director (November 2026).
-        Three-column magazine spread. Sits between the cover grid
-        and the Letters to FHBP section.
-    -->
-    <article class="interview" aria-labelledby="interview-heading">
-        <div class="interview__inner">
-
-        <header class="interview__titleband">
-            <h1 id="interview-heading" class="interview__title">Exclusive Interview with FHBP Director</h1>
-            <p class="interview__date">November 2026</p>
-        </header>
-
-        <!--
-            Three-column body.
-              row 1: hero image spans col 1+2, col 3 text starts at top
-              row 2: col 1 text continues under hero; col 2 text continues under hero;
-                     col 3 is the same element from row 1, spanning both rows.
-            Images 2 and 3 are inline inside their respective column divs.
-        -->
-        <div class="interview__grid">
-
-            <figure class="interview__hero">
-                <img src="images/shane-rubber-head-1.jpg"
-                     alt="Shane Campbell on set with a cinema camera, on-location in a living room."
-                     class="interview__hero-img">
-            </figure>
-
-            <!-- Col 3: starts at top of grid, spans both rows -->
-            <div class="interview__col interview__col--3">
-
-                <p class="interview__qa"><strong>SD:</strong> Why practical?</p>
-                <p class="interview__qa"><strong>SC:</strong> We stick with green screen, we like the raw look. We are doing CG. This isn't Jurasic Park.</p>
-
-                <p class="interview__qa"><strong>SD:</strong> Why the booth. Why trap him.</p>
-                <p class="interview__qa"><strong>SC:</strong> Every horror story has got to have a haunted house.</p>
-
-                <figure class="interview__inline-fig">
-                    <img src="images/shane-rubber-head-3.JPG"
-                         alt="Shane mixing a bucket of practical-effects material on set with a crew member.">
-                </figure>
-
-                <p class="interview__qa"><strong>SD:</strong> Why 48 hours?</p>
-                <p class="interview__qa"><strong>SC:</strong> Constraint is a form. Takes the excuse out. You either shoot or you don't.</p>
-
-                <p class="interview__qa"><strong>SD:</strong> Elevated horror.</p>
-                <p class="interview__qa"><strong>SC:</strong> No horror is elevated. Horror is low. That's the whole point. If you're ashamed of the floor, work in another genre.</p>
-
-                <p class="interview__qa"><strong>SD:</strong> Favorite scare?</p>
-                <p class="interview__qa"><strong>SC:</strong> The one where nothing happens for too long. Then something happens. Then nothing again.</p>
-
-                <p class="interview__qa"><strong>SD:</strong> Is Rubber Head scary?</p>
-                <p class="interview__qa"><strong>SC:</strong> Not my call. I just put the diamond out there, how the light hits it and reflects depends on what inside you. Were you scared?</p>
-
-                <p class="interview__qa"><strong>SD:</strong> Next big horror film.</p>
-                <p class="interview__qa"><strong>SC:</strong> We've got vampires on the mind. Something that sucks the life out of you for sure.</p>
-
-                <p class="interview__qa"><strong>SD:</strong> Why clowns?</p>
-                <p class="interview__qa"><strong>SC:</strong> A clown already looks wrong. Half the job's done.</p>
-
-                <p class="interview__qa"><strong>SD:</strong> Final word.</p>
-                <p class="interview__qa"><strong>SC:</strong> Press the button.</p>
-
-                <p class="interview__signoff">&mdash; SD</p>
-            </div>
-
-            <!-- Col 1: text starts BELOW the hero (row 2) -->
-            <div class="interview__col interview__col--1">
-                <p class="interview__intro">
-                    <em>Shane Campbell is the writer-director behind Fat Happy Baby Productions. His films, Unicorn Warrior, Rubber Head, Lord of the Undead, Junk Haulers, and the forthcoming My Little Pumpkin, have run through the LA 48 Hour Film Project circuit and onto YouTube. Rubber Head, his 2023 Downtown LA entry, locks a late-night podcaster named Walter in a booth with a button he must keep pressing, or the world ends. Across the glass is The Head, a clown. Sean Dog caught Shane between effects shots on My Little Pumpkin with large glass jar in his hands containing a brains.</em>
-                </p>
-
-                <p class="interview__qa"><strong>SD:</strong> Horror. Define it.</p>
-                <p class="interview__qa"><strong>SC:</strong> Three things stacked. Terror up top, what you don't see. Horror in the middle, what's in the room. Gross-out at the bottom, what's on the floor. Most films stop at the floor.</p>
-
-                <p class="interview__qa"><strong>SD:</strong> Where's Rubber Head sit?</p>
-                <p class="interview__qa"><strong>SC:</strong> Between terror and horror. The Head is in the glass. The glass is the lie.</p>
-
-                <p class="interview__qa"><strong>SD:</strong> Favorites.</p>
-                <p class="interview__qa"><strong>SC:</strong> Carpenter's The Thing. Lynch's Eraserhead. The original Texas Chain Saw. Anything that looks like it hurt to make.</p>
-
-                <p class="interview__qa"><strong>SD:</strong> Who shoots with you?</p>
-                <p class="interview__qa"><strong>SC:</strong> People who'd rather bleed than bill hours. Nobody on my crew is building a reel. We're building a movie.</p>
-
-                <p class="interview__qa"><strong>SD:</strong> Budget?</p>
-                <p class="interview__qa"><strong>SC:</strong> Credit card and favors.</p>
-            </div>
-
-            <!-- Col 2: text starts BELOW the hero (row 2), image 2 inline mid-col -->
-            <div class="interview__col interview__col--2">
-                <p class="interview__qa"><strong>SD:</strong> Are you about A24 horror style.</p>
-                <p class="interview__qa"><strong>SC:</strong> Midsommar is a travel brochure. Beautifully lit. Means nothing. Call me when they build the monster with a bucket of blood instead of a laptop.</p>
-
-                <figure class="interview__inline-fig">
-                    <img src="images/shane-rubber-head-2.JPG"
-                         alt="Shane directing an actor on a green-screen set.">
-                </figure>
-
-                <p class="interview__qa"><strong>SD:</strong> What is The Head?</p>
-                <p class="interview__qa"><strong>SC:</strong> The head represents every man-made system that gone out of control until finaly you left pressing a button your entire life to keep it reigned in.</p>
-
-                <p class="interview__qa"><strong>SD:</strong> Marco in São Paulo said you copied Méliès.</p>
-                <p class="interview__qa"><strong>SC:</strong> Méliès did it in one minute in 1901 and left a hole. We filled the hole.</p>
-
-                <p class="interview__qa"><strong>SD:</strong> Horror runs on master and slave. Who's the slave in Rubber Head?</p>
-                <p class="interview__qa"><strong>SC:</strong> Walter. The button is the master. The Head is what the master looks like when it gets bored.</p>
-
-                <p class="interview__qa"><strong>SD:</strong> Walter doesn't fight back. He just presses.</p>
-                <p class="interview__qa"><strong>SC:</strong> Horror isn't about winning, that's action, horror is about coming face to face with death. One lives, roll credits.</p>
-            </div>
-
-        </div>
-        </div>
-    </article>
-
-    <!--
-        The Keeper Reviews — film-review department hosted by The Keeper,
-        FHBP's own horror-host columnist. Sits between the director interview
-        and the Letters: the maker's case, then the hostile verdict, then the
-        public writing back. Poem cut. Band mirrors the .interview / .letters
-        pattern (full-width border-top, 1200px inner wrapper, 2px title-band
-        rule). No em dashes in the body; the only dash is the sign-off.
-    -->
-    <section class="keeper" aria-labelledby="keeper-heading">
-        <div class="keeper__inner">
-
-            <header class="keeper__titleband">
-                <h2 id="keeper-heading" class="keeper__title">
-                    <span class="keeper__dept">The Keeper Reviews:</span>
-                    <span class="keeper__film">Rubber Head</span>
-                </h2>
-            </header>
-
-            <p class="keeper__intro">FHBP's resident horror expert. Reviews from six feet down. Dances on the good ones, buries the rest.</p>
-
-            <div class="keeper__poem">
-                <p class="keeper__stanza">
-                    Heh-heh-heh&hellip; eight minutes went into this grave,<br>
-                    and I cannot tell you what we buried.<br>
-                    Walter slams the phone like it insulted his mother.<br>
-                    A bit much, brother. Nobody was calling anyway.
-                </p>
-
-                <p class="keeper__stanza">
-                    Then the number. What number? Nobody says.<br>
-                    It just climbs, inmate, counting up to nothing,<br>
-                    a billion, a gazillion, clear across the screen.<br>
-                    A tombstone with the date still running.
-                </p>
-
-                <p class="keeper__stanza">
-                    And the explosion. Boils and ghouls, I have seen<br>
-                    corpses with better color than that.<br>
-                    A PhD in special effects: academic, meaning useless.<br>
-                    Worst one down here, and we bury a lot.
-                </p>
-
-                <p class="keeper__stanza">
-                    So tell me, kiddie, what was it about?<br>
-                    The counter ran. The clown stared. The dark sat.<br>
-                    Eight minutes climbed into the hole and never came back.<br>
-                    A picture that forgot to be about anything.
-                </p>
-
-                <p class="keeper__closer">Pleasant screams. I want my time back.</p>
-                <p class="keeper__sd">&mdash; The Keeper</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!--
-        Letters to the Editor — new page-level section below the cover.
-        2-column grid of letter+reply pairs. Each pair has a CONCERNED
-        WRITERS label above the reader letter, an FHBP label above the
-        reply, and sign-offs below each body.
-    -->
-    <section class="letters" aria-labelledby="letters-heading">
-        <div class="letters__inner">
-        <h2 id="letters-heading" class="letters__heading">Letters to FHBP</h2>
-        <p class="letters__motto">This is not customer service. This is the defense of independent thinking.</p>
-
-        <div class="letters__items">
-            <article class="letters__item">
-                <p class="letters__marker">Letter 1</p>
-                <p class="letters__label">Concerned Writer <em>(Second Letter)</em></p>
-                <div class="letters__letter">
-                    <p>I am writing a second time about content on your website.</p>
-                    <p>My first letter, regarding <em>Pumkin</em>, went two weeks without a reply, which I will note here for the record. Since then my son Jacob (14) found your film <em>Rubbber Head</em> and has drawn the clown behind the glass eleven times in his notebook. My husband is now also having bad dreams.</p>
-                    <p>I am not asking you to remove the film. I am asking you to consider a content advisory.</p>
-                </div>
-                <p class="letters__signer">Deborah Lantz, mother of three<br>Grand Rapids, MI<br><span class="letters__medium">via email</span></p>
-
-                <p class="letters__label letters__label--reply">FHBP</p>
-                <div class="letters__reply">
-                    <p><strong class="letters__salutation">Dear Deborah,</strong></p>
-                    <p>We got your letter for <em>My Little Pumpkin</em> and put it in a file titled REDICULOUS. Please send your son's clown pictures. We like to collect evidence that people are still having creative thoughts.</p>
-                    <p>FHBP has nothing to say about your husband's wet dreams</p>
-                </div>
-                <p class="letters__sd">&mdash; SD<br>PS: We will put this letter in a file titled NONSENSE.</p>
-                <p class="letters__sd">P.S. The advisory is on the YouTube About tab, right below the Skip Ad button. Jacob skipped both. He is learning. You are welcome.</p>
-            </article>
-
-            <article class="letters__item">
-                <p class="letters__marker">Letter 2</p>
-                <p class="letters__label">Concerned Writer <em>(Big Winner With Ideas)</em></p>
-                <div class="letters__letter">
-                    <p>As someone who has actually made the 48 Hr Film Festival finals TWICE ("Last Light at Echo Park," 2023, and "Still Burn," 2025) I feel compelled to point out a fundamental misunderstanding in your approach to the format.</p>
-                    <p>The 48 Hr finals reward narrative scaffolding. They reward a protagonist with an arc. They reward intentionality. <em>Junk Haulers</em> is competent, I'll grant it, but a two-hander where 90% of the runtime is Marcos "listening" to a waitress monologue is not, actually, a film. It is a short story someone pointed a camera at.</p>
-                    <p>You're very funny on your website. That's part of the problem. The website is doing work the films should be doing. If you spent half as much time on narrative scaffolding as you do on your "Standards" paragraph, you might, actually, make a final.</p>
-                    <p>Respectfully, keep trying.</p>
-                </div>
-                <p class="letters__signer">D. Reeves<br>Director, "Last Light at Echo Park" (2023 48 Hr Finalist)<br>Director, "Still Burn" (2025 48 Hr Finalist)<br><span class="letters__medium">via YouTube comment</span></p>
-
-                <p class="letters__label letters__label--reply">FHBP</p>
-                <div class="letters__reply">
-                    <p><strong class="letters__salutation">Dear D.,</strong></p>
-                    <p>We looked up <em>Last Light at Echo Park.</em> Fine work. Nobody's seen it.</p>
-                    <p>The trophy is on your mantelpiece. Our films are on YouTube. One of these two things has viewers.</p>
-                </div>
-                <p class="letters__sd">&mdash; SD</p>
-            </article>
-
-            <article class="letters__item">
-                <p class="letters__marker">Letter 3</p>
-                <p class="letters__label">Concerned Writer <em>(Méliès Representative)</em></p>
-                <div class="letters__letter">
-                    <p><strong class="letters__salutation">Dear Fat Baby,</strong></p>
-                    <p>I am sorry you did not finish your Rubber Made movie. Which is crazy because how hard is it to copy a 1-min Frech film. P.S. <em>L'Homme à la tête en caoutchouc</em> was made in 1901 and should stay in 1901. P.S. Adding a podcaster, a counter, and a clown, does not justify the seven extra minuts you made me sit through.</p>
-                </div>
-                <p class="letters__signer">Marco F.<br>São Paulo<br><span class="letters__medium">via Letterboxd review</span></p>
-
-                <p class="letters__label letters__label--reply">FHBP</p>
-                <div class="letters__reply">
-                    <p><strong class="letters__salutation">Dear Marco,</strong></p>
-                    <p>We did finish the movie. It is eight minutes. Méliès's version is one. We call this progress.</p>
-                    <p>P.S. It is Rubber Head, not Rubber Made. Rubbermaid is the plastic container brand that sells totes, which is exactly where you should put your ideas next time. You won't need a big one.</p>
-                </div>
-                <p class="letters__sd">&mdash; SD</p>
-            </article>
-
-            <article class="letters__item">
-                <p class="letters__marker">Letter 4</p>
-                <p class="letters__label">Concerned Writer <em>(Marxist Reading Available)</em></p>
-                <div class="letters__letter">
-                    <p><em>Rubber Head</em> is a late-capitalist allegory. The counter is capital accumulation. The clown behind the glass is the capitalist specter, feeding on the counting itself. The podcaster's button is the exhausted gesture of the neoliberal subject performing the labor of containment that holds the system together. Your website describes the film as "a man in a booth, hitting a button." That is either incompetent or deliberate. I intend to teach this film in my Horror Studies elective next semester and I would like to know which.</p>
-                </div>
-                <p class="letters__signer">Alan Goss, MFA<br>Film and Media Studies, Brooklyn<br><span class="letters__medium">via email, Google Doc attached</span></p>
-
-                <p class="letters__label letters__label--reply">FHBP</p>
-                <div class="letters__reply">
-                    <p><strong class="letters__salutation">Dear Alan,</strong></p>
-                    <p>The counter is a counter. The clown is a clown. If either of them is also capitalism, we didn't plan it, but we'll take the credit.</p>
-                    <p>Teach the Marxist reading. It is going to be the reading whether we endorse it or not. Welcome to criticism.</p>
-                </div>
-                <p class="letters__sd">&mdash; SD</p>
-            </article>
-
-            <article class="letters__item">
-                <p class="letters__marker">Letter 5</p>
-                <p class="letters__label">Concerned Writer <em>(Offside Observer)</em></p>
-                <div class="letters__letter">
-                    <p>Junk Haulers should be renamed to just Junk. You seem under the impression we didn't like your Junkers rom-com because we are, what, polite? The real issue was your horror-comedy was neither funny nor scary. In hockey we call this an offside penalty: the puck is behind you, the whistle has blown, and you are standing in the offensive zone looking foolish.</p>
-                </div>
-                <p class="letters__signer">Rob M.<br>Toronto, ON<br><span class="letters__medium">via certified mail</span></p>
-
-                <p class="letters__label letters__label--reply">FHBP</p>
-                <div class="letters__reply">
-                    <p><strong class="letters__salutation">Dear Rob,</strong></p>
-                    <p>First, it's romcom. One word. The hyphen is a Canadian affectation. Second, rom-com means romantic comedy. The only horror film here is your understanding of basic genre.</p>
-                    <p>On the hockey analogy: the puck was in Brazil the whole time. That is where we were trying to score.</p>
-                </div>
-                <p class="letters__sd">&mdash; SD<br>PS: You have been made honorary Brazilian. Enjoy.</p>
-            </article>
-
-            <article class="letters__item">
-                <p class="letters__marker">Letter 6</p>
-                <p class="letters__label">Concerned Writer <em>(Vancouver Set Dept.)</em></p>
-                <div class="letters__letter">
-                    <p>Listen, I have been watching your films from up here in Vancouver and I have to compliment your director on the set design. The gray bedsheet in <em>Unicorn Warrior</em> was a bold choice. The same gray bedsheet in <em>Lost and Found</em> was a bolder choice. Then I watched <em>Junk Haulers</em> and there was no sheet at all, which honestly broke me. I was waiting for the sheet. The sheet IS the visual language. Also, serious question out of professional respect: what does your director's actual bed look like at this point? He is clearly sleeping on the raw mattress and that is a level of commitment the rest of us would not make.</p>
-                </div>
-                <p class="letters__signer">Kyle M.<br>Vancouver, BC<br><span class="letters__medium">via Reddit DM</span></p>
-
-                <p class="letters__label letters__label--reply">FHBP</p>
-                <div class="letters__reply">
-                    <p><strong class="letters__salutation">Dear Kyle,</strong></p>
-                    <p>The director sleeps directly on the box spring now. The duvet became the set in a film we have not released. He finds the whole thing clarifying.</p>
-                    <p>On <em>Junk Haulers</em>: the truck is the sheet, metaphorically. You are the first critic on the continent to catch this. You have been promoted to Associate Set Decorator effective immediately. Vancouver office, remote.</p>
-                </div>
-                <p class="letters__sd">&mdash; SD</p>
-            </article>
-        </div>
-        </div>
-    </section>
-
     <footer class="footer" aria-label="Site footer">
-        <p class="footer__copyright">&copy; Fat Happy Baby Productions</p>
-        <ul class="footer__links">
+        <span class="footer__copyright">&copy; Fat Happy Baby Productions</span>
+        <ul style="list-style:none;display:flex;gap:1.5rem;flex-wrap:wrap;margin:0;">
             <li><a href="https://www.youtube.com/@FatHappyBabyProductions" target="_blank" rel="noopener">YOUTUBE</a></li>
             <li><a href="https://www.instagram.com/Fat_Happy_Baby_Productions/" target="_blank" rel="noopener">INSTAGRAM</a></li>
             <li><a href="mailto:fathappybaby112@gmail.com">EMAIL</a></li>
@@ -549,8 +61,5 @@
         </ul>
     </footer>
 
-    <script src="js/script.js"></script>
-    <script type="text/javascript" async
-            src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
 </body>
 </html>
