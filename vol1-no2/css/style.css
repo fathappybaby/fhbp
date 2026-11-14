@@ -1118,3 +1118,15 @@ a { color: var(--ink); }
     .keeper__stanza,
     .keeper__closer { font-size: 0.9rem; }
 }
+
+/* Parody / satire notice: full-width quiet fine print below the footer row. */
+.footer__satire {
+    order: 1;
+    flex: 0 0 100%;
+    margin: 0;
+    font-size: 0.6rem;
+    line-height: 1.5;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--mute);
+}
