@@ -1144,3 +1144,15 @@ a { color: var(--ink); }
         padding: 0.7rem var(--pad-x-sm);
     }
 }
+
+/* Parody / satire notice: full-width quiet fine print below the footer row. */
+.footer__satire {
+    order: 1;
+    flex: 0 0 100%;
+    margin: 0;
+    font-size: 0.6rem;
+    line-height: 1.5;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--mute);
+}
