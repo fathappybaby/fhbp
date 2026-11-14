@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fat Happy Baby Productions. Independent short films.">
+    <title>FHBP &middot; Vol. 1 No. 1</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="topbar" aria-label="Site top bar">
+        <div class="topbar__left">
+            <a class="topbar__brand" href="index.html">FHBP</a>
+            <p class="topbar__tagline">WE MAKE INDIE FILMS</p>
+        </div>
+        <ul class="topbar__links">
+            <li><a href="https://www.youtube.com/@FatHappyBabyProductions" target="_blank" rel="noopener">YOUTUBE</a></li>
+            <li><a href="https://www.instagram.com/Fat_Happy_Baby_Productions/" target="_blank" rel="noopener">INSTAGRAM</a></li>
+            <li><a href="mailto:fathappybaby112@gmail.com">EMAIL</a></li>
+            <li><a href="https://linktr.ee/FatHappyBabyProductions" target="_blank" rel="noopener">LINKTREE</a></li>
+        </ul>
+    </header>
+
+    <!-- Masthead / volume line: this issue's number, date, and price gag. -->
+    <p class="masthead" aria-label="Issue line">VOLUME 1 &middot; NO. 1 &middot; AUGUST 2026 &middot; FREE (YOU'RE WELCOME)</p>
+
+    <!--
+        Movie-cover: Unicorn Warrior poster at the top of the page as a
+        title-card above the Fat Happy Baby cover. Full-width band,
+        poster centered, max-height 95vh so it fits one screen.
+    -->
+    <section class="movie-cover" aria-label="Unicorn Warrior poster">
+        <img src="images/unicorn-warrior-poster.png"
+             alt="Unicorn Warrior. A Fat Happy Baby Productions short film. Written and directed by Shane Campbell. LA 48 Hour Film Project, August 2023."
+             class="movie-cover__poster">
+    </section>
+
+    <main class="cover">
+        <div class="cover__hero">
+            <h1 class="cover__title">
+                FAT HAPPY<br>
+                BABY<br>
+                PRODUCTIONS
+            </h1>
+            <p class="cover__subtitle">We Make Indie Films</p>
+
+            <section class="about">
+                <h2 class="about__heading">A Warm Welcome</h2>
+                <p class="about__body">Welcome to the first one. Before the clowns, before the vampires, before a mother tore her own head off for no stated reason, there was a ten-year-old girl walking into the underworld with a plastic unicorn and a plan. That was us, forty dollars and a bedsheet deep, finding out we could not stop.</p>
+                <p class="about__body">We are Fat Happy Baby Productions. We make shorts for the LA 48 Hour Film Project, which means we write, shoot, and bury a movie in two days, then put it on YouTube where it belongs. We do not make elevated anything. We make practical, we make cheap, and we make it on a clock that takes the excuses out of your hands.</p>
+                <p class="about__body">To everyone who got here first: good. You get to watch us learn to walk by falling down the stairs on purpose. Watch the films, tell us exactly where we tripped, and if you have forty dollars and a bedsheet of your own, come fall down the stairs with us.</p>
+
+                <h2 class="about__heading">Standards</h2>
+                <p class="about__intro">Every FHBP film must include:</p>
+                <ol class="about__list">
+                    <li><strong class="about__lead">A dog on camera, doing precisely what the dog wants.</strong></li>
+                    <li><strong class="about__lead">A child actor who is better than the adults and knows it.</strong></li>
+                    <li><strong class="about__lead">A monster built from a lamp, a hand, and whatever is on the floor.</strong></li>
+                    <li><strong class="about__lead">Green screen so bold you can see the seams, which is the point.</strong></li>
+                    <li><strong class="about__lead">Backdrop sheets over everything. Steaming optional, present anyway.</strong></li>
+                    <li><strong class="about__lead">A deadline we lose to, kept in the final cut.</strong></li>
+                </ol>
+
+                <h2 class="about__heading">Secret Weapon</h2>
+                <p class="about__body">Behind every FHBP film is <strong class="about__lead">Sean Dog</strong>: writer, producer, webdev, and the voice answering your letters whether you want it to or not. He has never been on camera and never will be. We keep him off-screen the way you keep a reactor behind lead. He is the core talent, the greatest strength, and the reason none of this is anyone's fault but his.</p>
+
+                <h2 class="about__heading">Subscriber's Benefits</h2>
+                <p class="about__body">There is a stretch of time between the day we lock a film and the day we release it on an unsuspecting public. Give us your email and you jump to the front of that line: first to watch, first to suffer, first to tell us it was better before. This is attempt one at getting your email. There will be others.</p>
+            </section>
+        </div>
+
+        <!--
+            Most Popular Films panel. Each card is a Win95 outset-bevel button
+            containing an inline pixel-art SVG sprite + title + tag + arrow.
+            Buttons link to the full movie on YouTube, in a new tab.
+            Sprites are monochrome (fill = currentColor, color = --ink).
+            Order (top→bottom, films #8 → #1):
+              8  Junk Haulers           truck
+              7  Dust and Reckoning     revolver
+              6b Lord of the Undead     bat
+              5  Ghost in Orion 9       ghost
+              4  Lost And Found         magnifying glass
+              3  Killing Dragons        dragon head
+              2  Rubber Head            avatar head
+              1  Unicorn Warrior        unicorn head
+        -->
+        <aside class="latest" aria-labelledby="latest-heading">
+            <h2 id="latest-heading" class="latest__heading">Our Most Popular Films</h2>
+
+            <!--
+                Horror-red "To Our Fans" apology block. Sits between the
+                films heading and the film list. Announces the delayed
+                releases of GLP1 and My Little Pumpkin.
+            -->
+            <div class="latest__note" role="note" aria-label="Note to fans">
+                <p class="latest__note-label">To Our Fans</p>
+                <p class="latest__note-body">We apologize for the delayed release of our two most recent horrors <em>GLP1</em> and <em>My Little Pumpkin</em>. Our editor is refusing to release them and is acting, frankly, like a spoiled baby. Which is awkward, given the company name.</p>
+                <p class="latest__note-body">We are negotiating. Updates to follow.</p>
+                <p class="latest__note-sd">&mdash; SD</p>
+            </div>
+
+            <ul class="latest__list">
+                <!-- 9. My Little Pumpkin — jack-o-lantern sprite (link goes to channel for now — movie not released yet) [HIDDEN] -->
+                <!--
+<li>
+                    <a class="latest__card latest__card--expanded" href="https://www.youtube.com/@FatHappyBabyProductions" target="_blank" rel="noopener">
+                        <div class="latest__card__top">
+                            <span class="latest__title">My Little Pumpkin</span>
+                            <span class="latest__tag">FULL FILM</span>
+                            <span class="latest__arrow" aria-hidden="true">&gt;</span>
+                        </div>
+                        <p class="latest__summary">A father has been waiting 365 days to see his daughter and take her trick or treating.</p>
+                        <p class="latest__meta">Oct. 31, 2026 &middot; Online Release &middot; General 48 Hr Horror</p>
+                    </a>
+                </li>
+-->
+
+                <!-- 8. Junk Haulers -->
+                <li>
+                    <a class="latest__card" href="https://youtu.be/mEnn8HIKH_A" target="_blank" rel="noopener">
+                        <p class="latest__kicker">
+                            <span>Full Film</span>
+                            <span class="latest__kicker-arrow" aria-hidden="true">&gt;</span>
+                        </p>
+                        <h3 class="latest__title">Junk Haulers</h3>
+                        <p class="latest__summary">With her boyfriend laid up and rent due, a waitress fills in as helper on Marcos's junk-hauling business and finds the trade is ten percent lifting, ninety percent listening to other people's grief.</p>
+                        <p class="latest__meta">Aug. 12, 2026 &middot; North LA Live Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+
+                <!-- 7. Dust and Reckoning — revolver sprite [HIDDEN] -->
+                <!--
+<li>
+                    <a class="latest__card latest__card--expanded" href="https://youtu.be/TeC0Sqw5HUQ" target="_blank" rel="noopener">
+                        <div class="latest__card__top">
+                            <span class="latest__title">Dust and Reckoning</span>
+                            <span class="latest__tag">FULL FILM</span>
+                            <span class="latest__arrow" aria-hidden="true">&gt;</span>
+                        </div>
+                        <p class="latest__summary">Full summary coming soon.</p>
+                    </a>
+                </li>
+-->
+
+                <!-- 6b. Lord of the Undead -->
+                <li>
+                    <a class="latest__card" href="https://youtu.be/wOD4a1AsMAw" target="_blank" rel="noopener">
+                        <p class="latest__kicker">
+                            <span>Full Film</span>
+                            <span class="latest__kicker-arrow" aria-hidden="true">&gt;</span>
+                        </p>
+                        <h3 class="latest__title">Lord of the Undead</h3>
+                        <p class="latest__summary">After six generations hunting the master vampire, a huntress finally finds the ritual that can finish him, but her solution requires ultimate sacrifice.</p>
+                        <p class="latest__meta">Oct. 23, 2025 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+
+                <!-- 5. Ghost in Orion 9 — ghost sprite [HIDDEN] -->
+                <!--
+<li>
+                    <a class="latest__card latest__card--expanded" href="https://youtu.be/ULyuZ7eTPqA" target="_blank" rel="noopener">
+                        <div class="latest__card__top">
+                            <span class="latest__title">Ghost in Orion 9</span>
+                            <span class="latest__tag">FULL FILM</span>
+                            <span class="latest__arrow" aria-hidden="true">&gt;</span>
+                        </div>
+                        <p class="latest__summary">When a daydreaming ten-year-old blasts off in a rocket to a derelict spaceship adrift she becomes the only detective who can solve the murder of its crew.</p>
+                        <p class="latest__meta">Aug. 12, 2025 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+-->
+
+                <!-- 4. Lost And Found — magnifying-glass sprite [HIDDEN] -->
+                <!--
+<li>
+                    <a class="latest__card latest__card--expanded" href="https://youtu.be/yN339ushFe0" target="_blank" rel="noopener">
+                        <div class="latest__card__top">
+                            <span class="latest__title">Lost And Found</span>
+                            <span class="latest__tag">FULL FILM</span>
+                            <span class="latest__arrow" aria-hidden="true">&gt;</span>
+                        </div>
+                        <p class="latest__summary">Homicide detectives question reality as they question a 10-yr-old girl found at a crime scene who seems keenly attached to her puppy.</p>
+                        <p class="latest__meta">Nov. 10, 2024 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+-->
+
+                <!-- 3. Killing Dragons — dragon-head sprite [HIDDEN] -->
+                <!--
+<li>
+                    <a class="latest__card latest__card--expanded" href="https://youtu.be/L2UykahVvFo" target="_blank" rel="noopener">
+                        <div class="latest__card__top">
+                            <span class="latest__title">Killing Dragons</span>
+                            <span class="latest__tag">FULL FILM</span>
+                            <span class="latest__arrow" aria-hidden="true">&gt;</span>
+                        </div>
+                        <p class="latest__summary">A hosted D&amp;D game of high stakes goes terribly wrong.</p>
+                        <p class="latest__meta">Aug. 2024 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+-->
+
+                <!-- 2. Rubber Head -->
+                <li>
+                    <a class="latest__card" href="https://youtu.be/nJDrCf0tXFk" target="_blank" rel="noopener">
+                        <p class="latest__kicker">
+                            <span>Full Film</span>
+                            <span class="latest__kicker-arrow" aria-hidden="true">&gt;</span>
+                        </p>
+                        <h3 class="latest__title">Rubber Head</h3>
+                        <p class="latest__summary">Walter Vergara, a struggling late-night podcaster, is locked in a booth with a button he must keep pressing, or the world ends.</p>
+                        <p class="latest__meta">Oct. 28, 2023 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+
+                <!-- 1. Unicorn Warrior -->
+                <li>
+                    <a class="latest__card" href="https://youtu.be/NvP6vjMp8QA" target="_blank" rel="noopener">
+                        <p class="latest__kicker">
+                            <span>Full Film</span>
+                            <span class="latest__kicker-arrow" aria-hidden="true">&gt;</span>
+                        </p>
+                        <h3 class="latest__title">Unicorn Warrior</h3>
+                        <p class="latest__summary">A ten-year old girl must brave the underworld to trick the Gods and save her father from an unknown sickness.</p>
+                        <p class="latest__meta">Aug. 10, 2023 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="latest__footer">
+                <a class="btn btn--sm" href="https://www.youtube.com/@FatHappyBabyProductions" target="_blank" rel="noopener">ALL FILMS &nbsp;&gt;</a>
+            </div>
+
+            <!-- Beehiiv subscribe form — moved from the hero column.
+                 Flex-column trick in CSS pushes it to the bottom of the aside. -->
+            <div class="subscribe">
+                <script async
+                        src="https://subscribe-forms.beehiiv.com/v3/loader.js"
+                        data-beehiiv-form="a1da26f0-628c-4e11-8700-fe23c46dc58d"></script>
+            </div>
+        </aside>
+    </main>
+
+    <!--
+        Exclusive Interview with FHBP Director (August 2026).
+        A retrospective on the company's first film. Three-column
+        magazine spread. Sits between the cover grid and the Letters.
+    -->
+    <article class="interview" aria-labelledby="interview-heading">
+        <div class="interview__inner">
+
+        <header class="interview__titleband">
+            <h1 id="interview-heading" class="interview__title">Exclusive Interview with FHBP Director</h1>
+            <p class="interview__date">August 2026</p>
+        </header>
+
+        <div class="interview__grid">
+
+            <figure class="interview__hero">
+                <img src="images/unicorn-qna-1.png"
+                     alt="The young lead in costume on the Unicorn Warrior set, lit against a hanging backdrop sheet."
+                     class="interview__hero-img">
+            </figure>
+
+            <!-- Col 3: starts at top of grid, spans both rows -->
+            <div class="interview__col interview__col--3">
+
+                <p class="interview__qa"><strong>SD:</strong> 48 hours. Your first one.</p>
+                <p class="interview__qa"><strong>SC:</strong> A baptism. You either shoot or you drown. We shot. Barely.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Practical or CG?</p>
+                <p class="interview__qa"><strong>SC:</strong> Practical. We do not own a laptop that renders a god. We own a sheet and a lamp. The sheet never crashes.</p>
+
+                <figure class="interview__inline-fig">
+                    <img src="images/unicorn-qna-3.png"
+                         alt="A shadow-puppet figure thrown against a lit sheet on the Unicorn Warrior set.">
+                </figure>
+
+                <p class="interview__qa"><strong>SD:</strong> Is it a kids' film?</p>
+                <p class="interview__qa"><strong>SC:</strong> It is a kids' film the way a fairy tale is. Which is to say there is a corpse under the floor of it. Terror up top, the thing in the room, the thing on the floor. Even here.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> A horror director making a fantasy quest.</p>
+                <p class="interview__qa"><strong>SC:</strong> Every genre is horror with the lights at a different level. A quest is just a haunted house you are allowed to leave.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> The ending. The door cracks open.</p>
+                <p class="interview__qa"><strong>SC:</strong> You do not get to see what is behind it. Show it and it is only a man in a bathroom. The crack is the whole prayer.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Did she save him?</p>
+                <p class="interview__qa"><strong>SC:</strong> The door opened. That is all a 48-hour film can promise. Ask again in the next one.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Final word.</p>
+                <p class="interview__qa"><strong>SC:</strong> Go down. Come back with something.</p>
+
+                <p class="interview__signoff">&mdash; SD</p>
+            </div>
+
+            <!-- Col 1: text starts BELOW the hero (row 2) -->
+            <div class="interview__col interview__col--1">
+                <p class="interview__intro">
+                    <em>Shane Campbell is the writer-director behind Fat Happy Baby Productions. Unicorn Warrior, shot for the LA 48 Hour Film Project in August 2023, was the company's first film: a ten-year-old girl braves the underworld to trick the gods and save her father, who is sick and locked in the bathroom. A Conan-style narrator opens it. Shadow puppets, a gatekeeper, a goddess, and a plastic unicorn stand between her and the bathroom door. Sean Dog asked Shane to go back to the beginning, to the first 48 hours, before any of the rest of it.</em>
+                </p>
+
+                <p class="interview__qa"><strong>SD:</strong> Your first film, and it is a descent.</p>
+                <p class="interview__qa"><strong>SC:</strong> Everybody's first film is a descent. We just made it literal. You go down, you meet what is down there, you try to come back up with something.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> A ten-year-old lead.</p>
+                <p class="interview__qa"><strong>SC:</strong> Children do not act scared. They act certain. That is more frightening than any adult sweating on cue.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> The father, locked in the bathroom.</p>
+                <p class="interview__qa"><strong>SC:</strong> Every house has one door you are afraid of. We shot ours. The sickness has no name because the ones that matter never do.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Favorites going in.</p>
+                <p class="interview__qa"><strong>SC:</strong> Cocteau's Orpheus. Harryhausen. The myth stuff that looks handmade because it was. Anything that looks like it hurt to make.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Budget.</p>
+                <p class="interview__qa"><strong>SC:</strong> Credit card and favors. The underworld cost about forty dollars and a bedsheet.</p>
+            </div>
+
+            <!-- Col 2: text starts BELOW the hero (row 2), image 2 inline mid-col -->
+            <div class="interview__col interview__col--2">
+                <p class="interview__qa"><strong>SD:</strong> The Conan voiceover.</p>
+                <p class="interview__qa"><strong>SC:</strong> A quest needs a narrator who believes it completely. Borrow the biggest voice you can and point it at a ten-year-old. The gap between them is the whole movie.</p>
+
+                <figure class="interview__inline-fig">
+                    <img src="images/unicorn-qna-2.png"
+                         alt="Shane directing the young lead on the Unicorn Warrior set.">
+                </figure>
+
+                <p class="interview__qa"><strong>SD:</strong> Shadow puppets.</p>
+                <p class="interview__qa"><strong>SC:</strong> Cheapest monster there is. A lamp, a sheet, a hand. The audience fills in the teeth, and they always bring worse teeth than we could afford.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> The gatekeeper and the unicorn charm.</p>
+                <p class="interview__qa"><strong>SC:</strong> She does not fight him. She distracts him with a toy. That is how a child wins. Not strength. Misdirection.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> She outwits a goddess.</p>
+                <p class="interview__qa"><strong>SC:</strong> Gods are vain. Vanity is a door. The kid finds the door. We did not give her a sword, because a sword is a boring answer.</p>
+            </div>
+
+        </div>
+        </div>
+    </article>
+
+    <!--
+        The Keeper Reviews — film-review department hosted by The Keeper,
+        FHBP's own horror-host columnist. Sits between the director interview
+        and the Letters: the maker's case, then the hostile verdict, then the
+        public writing back. Poem cut. Band mirrors the .interview / .letters
+        pattern (full-width border-top, 1200px inner wrapper, 2px title-band
+        rule). No em dashes in the body; the only dash is the sign-off.
+    -->
+    <section class="keeper" aria-labelledby="keeper-heading">
+        <div class="keeper__inner">
+
+            <header class="keeper__titleband">
+                <h2 id="keeper-heading" class="keeper__title">
+                    <span class="keeper__dept">The Keeper Reviews:</span>
+                    <span class="keeper__film">Unicorn Warrior</span>
+                </h2>
+            </header>
+
+            <p class="keeper__intro">FHBP's resident horror expert. Reviews from six feet down. Dances on the good ones, buries the rest.</p>
+
+            <div class="keeper__poem">
+                <p class="keeper__stanza">
+                    Heh-heh-heh&hellip; a children's film, they told me,<br>
+                    so I brought the small shovel.<br>
+                    A little girl walks into my neighborhood, the underworld,<br>
+                    to haggle with the gods over a man sick behind a door.
+                </p>
+
+                <p class="keeper__stanza">
+                    And what an underworld, kiddie. One lamp. One sheet.<br>
+                    A gatekeeper fooled by a plastic unicorn,<br>
+                    which is more than most of you bring to bargain with.<br>
+                    The dead have standards. These shadow puppets met none.
+                </p>
+
+                <p class="keeper__stanza">
+                    But here is the thing, boils and ghouls: it is about death.<br>
+                    A father rotting behind a door with no name on the sickness,<br>
+                    a ten-year-old doing the one thing the living always do,<br>
+                    which is sign a deal she cannot read the back of.
+                </p>
+
+                <p class="keeper__stanza">
+                    Then the door cracks. You do not get to look.<br>
+                    Smart, brother. Show me the body and it is just a man.<br>
+                    Keep it shut and it is mine.<br>
+                    First film. They went down. Most of you never do.
+                </p>
+
+                <p class="keeper__closer">Pleasant screams, kiddie. Save me the bedsheet.</p>
+                <p class="keeper__sd">&mdash; The Keeper</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!--
+        Letters to the Editor — new page-level section below the cover.
+        2-column grid of letter+reply pairs. Each pair has a CONCERNED
+        WRITERS label above the reader letter, an FHBP label above the
+        reply, and sign-offs below each body.
+    -->
+    <section class="letters" aria-labelledby="letters-heading">
+        <div class="letters__inner">
+        <h2 id="letters-heading" class="letters__heading">Letters to FHBP</h2>
+        <p class="letters__motto">This is not customer service. This is the defense of independent thinking.</p>
+
+        <div class="letters__items">
+            <article class="letters__item">
+                <p class="letters__marker">Letter 1</p>
+                <p class="letters__label">Concerned Writer <em>(First Time, Last Time)</em></p>
+                <div class="letters__letter">
+                    <p>I attended the 48 Hr screening with my daughter expecting, from the title, something about a horse. Instead a child her age walked into the underworld, lied to a god, and left her own father to rot behind a bathroom door. My daughter has since locked herself in our bathroom twice and asked, through the door, whether she can meet a goddess. I understand this is your first film. I am asking it to be your last of this kind. There was also a dog. The dog did something on camera. I will not type what.</p>
+                </div>
+                <p class="letters__signer">Carol Mertz, mother of two<br>Pasadena, CA<br><span class="letters__medium">via email</span></p>
+
+                <p class="letters__label letters__label--reply">FHBP</p>
+                <div class="letters__reply">
+                    <p><strong class="letters__salutation">Dear Carol,</strong></p>
+                    <p>The horse is a unicorn, and the unicorn is a decoy, which your daughter understood faster than you did. She is not trying to meet a goddess. She is trying to out-lie one. Encourage it.</p>
+                    <p>On the dog: that is a Standard, not a plot point. It is lock number three you want to watch for.</p>
+                </div>
+                <p class="letters__sd">&mdash; SD</p>
+            </article>
+
+            <article class="letters__item">
+                <p class="letters__marker">Letter 2</p>
+                <p class="letters__label">Concerned Writer <em>(Keeping It Red)</em></p>
+                <div class="letters__letter">
+                    <p>A WHOLE UNDERWORLD AND YOU SPENT IT ON A BEDSHEET. I came for a KILL COUNT and I left with a CRAFT PROJECT. A shadow puppet is NOT a monster, it is a HAND. The gods of the dead, and not ONE of them bleeds? Savini would weep. Fulci put a splinter through an eyeball on no budget, and you had an ENTIRE realm of the DAMNED and spent it on a PLASTIC PONY. The little girl was fine. The dad behind the door was the only one with potential and you never even KILLED him. Do better or hand the lamp to someone who OWNS a Savini box set.</p>
+                </div>
+                <p class="letters__signer">Cindy "Chainsaw" K.<br>Austin, TX<br><span class="letters__medium">via Fangoria forum thread</span></p>
+
+                <p class="letters__label letters__label--reply">FHBP</p>
+                <div class="letters__reply">
+                    <p><strong class="letters__salutation">Dear Cindy,</strong></p>
+                    <p>It is a 48-hour film about a ten-year-old. The kill count is zero and the budget was forty dollars. You wanted Fulci. We had a lamp.</p>
+                    <p>The underworld is a bedsheet because every underworld is a bedsheet, including yours. You have just never had the lamp pointed at it. Keep it red. We will keep it gray.</p>
+                </div>
+                <p class="letters__sd">&mdash; SD</p>
+            </article>
+
+            <article class="letters__item">
+                <p class="letters__marker">Letter 3</p>
+                <p class="letters__label">Concerned Writer <em>(Finalist, Reminding You)</em></p>
+                <div class="letters__letter">
+                    <p>As someone who has actually made the 48 Hr finals ("Last Light at Echo Park," 2023), I will say this gently, since it is your debut. A first film should establish competence before it reaches for ambition. The Conan-style voiceover is a crutch: you narrate the myth because you could not stage it. And the ending does not resolve, which your website calls ambiguity. It is not ambiguity. It is a team that ran out of time. Walk before you descend.</p>
+                </div>
+                <p class="letters__signer">D. Reeves<br>Director, "Last Light at Echo Park" (2023 48 Hr Finalist)<br><span class="letters__medium">via YouTube comment</span></p>
+
+                <p class="letters__label letters__label--reply">FHBP</p>
+                <div class="letters__reply">
+                    <p><strong class="letters__salutation">Dear D.,</strong></p>
+                    <p>You are correct that we ran out of time. It was a 48-hour film. That is the premise of the contest you keep almost winning.</p>
+                    <p>The door is cracked because the clock ran out and because a cracked door is better than anything we could have put behind it. Two of those were on purpose. We will let you guess which.</p>
+                </div>
+                <p class="letters__sd">&mdash; SD</p>
+            </article>
+
+            <article class="letters__item">
+                <p class="letters__marker">Letter 4</p>
+                <p class="letters__label">Concerned Writer <em>(Unicorn Community Liaison)</em></p>
+                <div class="letters__letter">
+                    <p>I run a two-thousand-member unicorn appreciation collective and we were, at first, thrilled. A film titled <em>Unicorn Warrior</em>. Finally. Then we watched it. There is no unicorn warrior. There is a plastic unicorn, used as a bribe, for approximately four seconds, and then pocketed. The unicorn does not fight. The unicorn does not speak. The unicorn does not even get a close-up. Do you know how long our community has waited for representation, and you handed us a keychain with a job.</p>
+                </div>
+                <p class="letters__signer">Gwen Palfrey<br>Sedona, AZ<br><span class="letters__medium">via the Unicorn Collective newsletter</span></p>
+
+                <p class="letters__label letters__label--reply">FHBP</p>
+                <div class="letters__reply">
+                    <p><strong class="letters__salutation">Dear Gwen,</strong></p>
+                    <p>The unicorn wins the film without throwing a punch. It distracts a god long enough for a child to rob the underworld. That is not a keychain. That is a tactician.</p>
+                    <p>Your community has been waiting for a warrior. We gave you a spy. Representation is a decoy you did not see coming. You are welcome.</p>
+                </div>
+                <p class="letters__sd">&mdash; SD</p>
+            </article>
+        </div>
+        </div>
+    </section>
+
+    <footer class="footer" aria-label="Site footer">
+        <p class="footer__copyright">&copy; Fat Happy Baby Productions</p>
+        <ul class="footer__links">
+            <li><a href="https://www.youtube.com/@FatHappyBabyProductions" target="_blank" rel="noopener">YOUTUBE</a></li>
+            <li><a href="https://www.instagram.com/Fat_Happy_Baby_Productions/" target="_blank" rel="noopener">INSTAGRAM</a></li>
+            <li><a href="mailto:fathappybaby112@gmail.com">EMAIL</a></li>
+            <li><a href="https://linktr.ee/FatHappyBabyProductions" target="_blank" rel="noopener">LINKTREE</a></li>
+        </ul>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script type="text/javascript" async
+            src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
+</body>
+</html>
