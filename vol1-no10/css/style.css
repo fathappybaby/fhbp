@@ -856,10 +856,10 @@ a { color: var(--ink); }
 
 .interview__titleband {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 1rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.35rem;
     border-bottom: 2px solid var(--ink);
     padding-bottom: 1rem;
     margin-bottom: 2rem;
@@ -1167,7 +1167,7 @@ a { color: var(--ink); }
 }
 
 /* Standfirst / setup intro spans the full spread width above the columns. */
-.feature__intro { max-width: 900px; margin: 2.25rem 0 2.75rem; }
+.feature__intro { max-width: 112ch; margin: 2.25rem 0 2.75rem; }
 .feature__intro p { font-size: 1.05rem; line-height: 1.7; margin: 0 0 1.1rem; }
 
 /* Two-page-spread body: the Q&A flows into two columns split by a center
@@ -1185,7 +1185,7 @@ a { color: var(--ink); }
 
 /* Current Moves band (carried Most Popular Films aside, reflowed). */
 .moves { border-top: 1px solid var(--ink); padding: 4rem 0 5rem; }
-.moves__inner { max-width: 760px; margin: 0 auto; padding: 0 var(--pad-x); }
+.moves__inner { max-width: 960px; margin: 0 auto; padding: 0 var(--pad-x); }
 .moves .subscribe { margin-top: 3rem; }
 
 /* Visible marker for unconfirmed facts in this draft. */
@@ -1222,3 +1222,43 @@ a { color: var(--ink); }
     font-family: var(--font-mono); font-size: 0.62rem; font-style: italic;
     letter-spacing: 0; line-height: 1.4; color: var(--mute); margin-top: 0.4rem;
 }
+
+/* ---- Cross-issue navigation: top issue rail + bottom pager ---- */
+.issue-rail {
+    display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;
+    padding: 0.55rem var(--pad-x);
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--font-mono); font-size: 0.68rem;
+    letter-spacing: 0.14em; text-transform: uppercase;
+}
+.issue-rail a { color: var(--mute); text-decoration: none; }
+.issue-rail a:hover, .issue-rail a:focus-visible { color: var(--accent); }
+.issue-rail__current { color: var(--ink); font-weight: 700; }
+
+.pager {
+    border-top: 1px solid var(--ink);
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 1.5rem; flex-wrap: wrap;
+    padding: 2rem var(--pad-x);
+}
+.pager__link { display: flex; flex-direction: column; gap: 0.2rem; text-decoration: none; color: var(--ink); }
+.pager__prev { align-items: flex-start; }
+.pager__next { align-items: flex-end; text-align: right; }
+.pager__dir { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mute); }
+.pager__title { font-family: var(--font-pixel); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.2; }
+.pager__link:hover .pager__title, .pager__link:focus-visible .pager__title { color: var(--accent); }
+.pager__home { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mute); text-decoration: none; }
+.pager__home:hover, .pager__home:focus-visible { color: var(--accent); }
+
+/* Compact issue nav: centered prev/next, arrows toward the middle.
+   Endcaps: grayed .issuenav__off arrow for the missing side, or a Home link. */
+.issuenav {
+    display: flex; justify-content: center; align-items: baseline; gap: 2.5rem;
+    font-family: var(--font-mono); font-size: 0.72rem;
+    letter-spacing: 0.16em; text-transform: uppercase;
+}
+.issuenav a { color: var(--ink); text-decoration: none; }
+.issuenav a:hover, .issuenav a:focus-visible { color: var(--accent); }
+.issuenav__off { color: var(--mute); }
+.issuenav--top { padding: 2rem var(--pad-x); }
+.issuenav--bottom { padding: 2rem var(--pad-x); }
