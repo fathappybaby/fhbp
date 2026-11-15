@@ -286,6 +286,32 @@ a { color: var(--ink); }
     margin-bottom: 0;
 }
 
+/* Opening-department lead: issue headline + dek (replaces the old wordmark
+   on interior issues). */
+.issue-headline {
+    font-family: var(--font-pixel);
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    line-height: 1.35;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.6rem;
+}
+.issue-dek {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--ink);
+    margin-bottom: 2rem;
+}
+/* Note From FHBP rotating gray mood tag — sits tight under its heading. */
+.about__mood {
+    font-family: var(--font-mono);
+    font-style: italic;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    color: var(--mute);
+    margin: -0.5rem 0 0.9rem;
+}
+
 /* Beehiiv subscribe form wrapper — now lives at the bottom of the
    Most Popular Films aside. margin-top:auto pushes it to the end of
    the stretched flex column. */
