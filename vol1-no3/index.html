@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fat Happy Baby Productions. Vol. 1 No. 3. Killing Dragons: A Cookbook, a hosted D&amp;D game of high stakes gone terribly wrong.">
+    <title>FHBP &middot; Vol. 1 No. 3</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="topbar" aria-label="Site top bar">
+        <div class="topbar__left">
+            <a class="topbar__brand" href="../index.html">FHBP</a>
+            <p class="topbar__tagline">WE MAKE INDIE FILMS</p>
+        </div>
+        <ul class="topbar__links">
+            <li><a href="https://www.youtube.com/@FatHappyBabyProductions" target="_blank" rel="noopener">YOUTUBE</a></li>
+            <li><a href="https://www.instagram.com/Fat_Happy_Baby_Productions/" target="_blank" rel="noopener">INSTAGRAM</a></li>
+            <li><a href="mailto:fathappybaby112@gmail.com">EMAIL</a></li>
+            <li><a href="https://linktr.ee/FatHappyBabyProductions" target="_blank" rel="noopener">LINKTREE</a></li>
+        </ul>
+    </header>
+
+    <!-- Masthead / volume line: issue number, date, price gag. -->
+    <p class="masthead" aria-label="Issue line">VOLUME 1 &middot; NO. 3 &middot; AUGUST 2024 &middot; FREE (NO SAVING THROW)</p>
+
+    <nav class="issuenav issuenav--top" aria-label="Issue navigation">
+        <a href="../vol1-no2/">No. 2 &lt;</a>
+        <a href="../vol1-no4/">&gt; No. 4</a>
+    </nav>
+
+    <!--
+        Movie-cover: Killing Dragons poster at the top of the page as a
+        title-card above the Fat Happy Baby cover. Full-width black
+        band, poster centered, max-height 100vh so it fits one screen.
+    -->
+    <section class="movie-cover" aria-label="Killing Dragons poster">
+        <img src="images/Killing-Dragons-a-Cookbook-poster-1.png"
+             alt="Killing Dragons: A Cookbook. A Fat Happy Baby Productions short film. Written and directed by Shane Campbell. LA 48 Hour Film Project, August 2024."
+             class="movie-cover__poster">
+    </section>
+
+    <main class="cover">
+        <div class="cover__hero">
+            <!-- Opening departments: headline + dek, then the recurring
+                 departments. Company wordmark dropped on interior issues;
+                 the masthead line and the home page carry FHBP identity. -->
+            <p class="issue-headline">Rolling Dice With Killing Dragons</p>
+            <p class="issue-dek">Six actors play Dungeons and Dragons on camera, a chef and a paid dungeon master versus the campaign, and the whole thing rides on one roll of a twenty-sided die. Somewhere in there we find the plot.</p>
+
+            <section class="about">
+                <h2 class="about__heading">Note From FHBP</h2>
+                <p class="about__mood">about what it is about, on purpose</p>
+                <p class="about__body">There is an old Hollywood line: if it is about what it is about, you are finished. We heard it. Then we made a movie about six people playing Dungeons and Dragons, and it is about six people playing Dungeons and Dragons, and we entered it in a festival as though it was a movie.</p>
+                <p class="about__body">The whole picture rides on one twenty-sided die. We shot the roll in slow motion because slow motion was the only plot we could find. Spoiler, it lands on a twenty. Then, the dragon dies, the dungeon master takes her money and leaves in a pout, and her chef leaves with her. That is the film. It runs seven minutes. At double speed that is three and a half, and we stand by two of them.</p>
+                <p class="about__body">We are trying to reclassify the film as non-fiction, which seems to fit better.</p>
+
+                <h2 class="about__heading">Standards Updates</h2>
+                <p class="about__intro">Revised, effective now, every FHBP film must include:</p>
+                <ol class="about__list">
+                    <li><strong class="about__lead">A twenty-sided die.</strong></li>
+                    <li><strong class="about__lead">A professional who visibly regrets taking the job.</strong></li>
+                    <li><strong class="about__lead">The dog is on hiatus.</strong></li>
+                    <li><strong class="about__lead">Exactly one shot in slow motion.</strong></li>
+                    <li><strong class="about__lead">Blackout sheets over everything (no change).</strong></li>
+                    <li><strong class="about__lead">Fill all 7 minutes of the competition's 7-min runtime max.</strong></li>
+                </ol>
+
+                <h2 class="about__heading">Secret Weapon</h2>
+                <p class="about__body">Behind every FHBP film is <strong class="about__lead">Sean Dog</strong>: writer, producer, webdev, and, as of this issue, dungeon master of this website.</p>
+
+                <h2 class="about__heading">Subscribe</h2>
+                <p class="about__body">Hand over your email so we can subject you to our newsletter.</p>
+            </section>
+        </div>
+
+        <!--
+            Most Popular Films panel. Each card is a Win95 outset-bevel button
+            containing an inline pixel-art SVG sprite + title + tag + arrow.
+            Buttons link to the full movie on YouTube, in a new tab.
+            Sprites are monochrome (fill = currentColor, color = --ink).
+            Order (top→bottom, films #8 → #1):
+              8  Junk Haulers           truck
+              7  Dust and Reckoning     revolver
+              6b Lord of the Undead     bat
+              5  Ghost in Orion 9       ghost
+              4  Lost And Found         magnifying glass
+              3  Killing Dragons        dragon head
+              2  Rubber Head            avatar head
+              1  Unicorn Warrior        unicorn head
+        -->
+        <aside class="latest" aria-labelledby="latest-heading">
+            <h2 id="latest-heading" class="latest__heading">Our Most Popular Films</h2>
+
+            <!--
+                Horror-red "To Our Fans" apology block. Sits between the
+                films heading and the film list. Announces the delayed
+                releases of GLP1 and My Little Pumpkin.
+            -->
+            <div class="latest__note" role="note" aria-label="Note to fans">
+                <p class="latest__note-label">To Our Fans</p>
+                <p class="latest__note-body">Our next picture, <em>Lost and Found</em>, is already in trouble. The staff is a collection of whining babies who exist only to trigger each other into crying louder. One starts, the rest answer, and nothing gets scheduled.</p>
+                <p class="latest__note-body">We may have to push the release. We are, fittingly, negotiating with infants. Updates to follow.</p>
+                <p class="latest__note-sd">&mdash; SD</p>
+            </div>
+
+            <ul class="latest__list">
+                <!-- 9. My Little Pumpkin — jack-o-lantern sprite (link goes to channel for now — movie not released yet) [HIDDEN] -->
+                <!--
+<li>
+                    <a class="latest__card latest__card--expanded" href="https://www.youtube.com/@FatHappyBabyProductions" target="_blank" rel="noopener">
+                        <div class="latest__card__top">
+                            <span class="latest__title">My Little Pumpkin</span>
+                            <span class="latest__tag">FULL FILM</span>
+                            <span class="latest__arrow" aria-hidden="true">&gt;</span>
+                        </div>
+                        <p class="latest__summary">A father has been waiting 365 days to see his daughter and take her trick or treating.</p>
+                        <p class="latest__meta">Oct. 31, 2026 &middot; Online Release &middot; General 48 Hr Horror</p>
+                    </a>
+                </li>
+-->
+
+                <!-- 8. Junk Haulers -->
+                <li>
+                    <a class="latest__card" href="https://youtu.be/mEnn8HIKH_A" target="_blank" rel="noopener">
+                        <p class="latest__kicker">
+                            <span>Full Film</span>
+                            <span class="latest__kicker-arrow" aria-hidden="true">&gt;</span>
+                        </p>
+                        <h3 class="latest__title">Junk Haulers</h3>
+                        <p class="latest__summary">With her boyfriend laid up and rent due, a waitress fills in as helper on Marcos's junk-hauling business and finds the trade is ten percent lifting, ninety percent listening to other people's grief.</p>
+                        <p class="latest__meta">Aug. 12, 2026 &middot; North LA Live Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+
+                <!-- 7. Dust and Reckoning — revolver sprite [HIDDEN] -->
+                <!--
+<li>
+                    <a class="latest__card latest__card--expanded" href="https://youtu.be/TeC0Sqw5HUQ" target="_blank" rel="noopener">
+                        <div class="latest__card__top">
+                            <span class="latest__title">Dust and Reckoning</span>
+                            <span class="latest__tag">FULL FILM</span>
+                            <span class="latest__arrow" aria-hidden="true">&gt;</span>
+                        </div>
+                        <p class="latest__summary">Full summary coming soon.</p>
+                    </a>
+                </li>
+-->
+
+                <!-- 6b. Lord of the Undead -->
+                <li>Shane Campbell is the writer-director behind
+                    <a class="latest__card" href="https://youtu.be/wOD4a1AsMAw" target="_blank" rel="noopener">
+                        <p class="latest__kicker">
+                            <span>Full Film</span>
+                            <span class="latest__kicker-arrow" aria-hidden="true">&gt;</span>
+                        </p>
+                        <h3 class="latest__title">Lord of the Undead</h3>
+                        <p class="latest__summary">After six generations hunting the master vampire, a huntress finally finds the ritual that can finish him, but her solution requires ultimate sacrifice.</p>
+                        <p class="latest__meta">Oct. 23, 2025 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+
+                <!-- 5. Ghost in Orion 9 — ghost sprite [HIDDEN] -->
+                <!--
+<li>
+                    <a class="latest__card latest__card--expanded" href="https://youtu.be/ULyuZ7eTPqA" target="_blank" rel="noopener">
+                        <div class="latest__card__top">
+                            <span class="latest__title">Ghost in Orion 9</span>
+                            <span class="latest__tag">FULL FILM</span>
+                            <span class="latest__arrow" aria-hidden="true">&gt;</span>
+                        </div>
+                        <p class="latest__summary">When a daydreaming ten-year-old blasts off in a rocket to a derelict spaceship adrift she becomes the only detective who can solve the murder of its crew.</p>
+                        <p class="latest__meta">Aug. 12, 2025 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+-->
+
+                <!-- 4. Lost And Found — magnifying-glass sprite [HIDDEN] -->
+                <!--
+<li>
+                    <a class="latest__card latest__card--expanded" href="https://youtu.be/yN339ushFe0" target="_blank" rel="noopener">
+                        <div class="latest__card__top">
+                            <span class="latest__title">Lost And Found</span>
+                            <span class="latest__tag">FULL FILM</span>
+                            <span class="latest__arrow" aria-hidden="true">&gt;</span>
+                        </div>
+                        <p class="latest__summary">Homicide detectives question reality as they question a 10-yr-old girl found at a crime scene who seems keenly attached to her puppy.</p>
+                        <p class="latest__meta">Nov. 10, 2024 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+-->
+
+                <!-- 3. Killing Dragons — dragon-head sprite [HIDDEN] -->
+                <!--
+<li>
+                    <a class="latest__card latest__card--expanded" href="https://youtu.be/L2UykahVvFo" target="_blank" rel="noopener">
+                        <div class="latest__card__top">
+                            <span class="latest__title">Killing Dragons</span>
+                            <span class="latest__tag">FULL FILM</span>
+                            <span class="latest__arrow" aria-hidden="true">&gt;</span>
+                        </div>
+                        <p class="latest__summary">A hosted D&amp;D game of high stakes goes terribly wrong.</p>
+                        <p class="latest__meta">Aug. 2024 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+-->
+
+                <!-- 2. Rubber Head -->
+                <li>
+                    <a class="latest__card" href="https://youtu.be/nJDrCf0tXFk" target="_blank" rel="noopener">
+                        <p class="latest__kicker">
+                            <span>Full Film</span>
+                            <span class="latest__kicker-arrow" aria-hidden="true">&gt;</span>
+                        </p>
+                        <h3 class="latest__title">Rubber Head</h3>
+                        <p class="latest__summary">Walter Vergara, a struggling late-night podcaster, is locked in a booth with a button he must keep pressing, or the world ends.</p>
+                        <p class="latest__meta">Oct. 28, 2023 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+
+                <!-- 1. Unicorn Warrior -->
+                <li>
+                    <a class="latest__card" href="https://youtu.be/NvP6vjMp8QA" target="_blank" rel="noopener">
+                        <p class="latest__kicker">
+                            <span>Full Film</span>
+                            <span class="latest__kicker-arrow" aria-hidden="true">&gt;</span>
+                        </p>
+                        <h3 class="latest__title">Unicorn Warrior</h3>
+                        <p class="latest__summary">A ten-year old girl must brave the underworld to trick the Gods and save her father from an unknown sickness.</p>
+                        <p class="latest__meta">Aug. 10, 2023 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="latest__footer">
+                <a class="btn btn--sm" href="https://www.youtube.com/@FatHappyBabyProductions" target="_blank" rel="noopener">ALL FILMS &nbsp;&gt;</a>
+            </div>
+
+            <!-- Beehiiv subscribe form — bottom of the Most Popular Films aside. -->
+            <div class="subscribe">
+                <script async
+                        src="https://subscribe-forms.beehiiv.com/v3/loader.js"
+                        data-beehiiv-form="a1da26f0-628c-4e11-8700-fe23c46dc58d"></script>
+            </div>
+        </aside>
+    </main>
+
+    <!--
+        Exclusive Interview with FHBP Director (November 2026).
+        Three-column magazine spread. Sits between the cover grid
+        and the Letters to FHBP section.
+    -->
+    <article class="interview" aria-labelledby="interview-heading">
+        <div class="interview__inner">
+
+        <header class="interview__titleband">
+            <h1 id="interview-heading" class="interview__title">Exclusive Interview with FHBP Director</h1>
+            <p class="interview__date">August 2024</p>
+        </header>
+
+        <!--
+            Three-column body.
+              row 1: hero image spans col 1+2, col 3 text starts at top
+              row 2: col 1 text continues under hero; col 2 text continues under hero;
+                     col 3 is the same element from row 1, spanning both rows.
+            Images 2 and 3 are inline inside their respective column divs.
+        -->
+        <div class="interview__grid">
+
+            <figure class="interview__hero">
+                <img src="images/the-dice-role.jpg"
+                     alt="A twenty-sided die mid-roll across the game board, shot in slow motion."
+                     class="interview__hero-img">
+            </figure>
+
+            <!-- Col 3: starts at top of grid, spans both rows -->
+            <div class="interview__col interview__col--3">
+
+                <p class="interview__qa"><strong>SD:</strong> Genre. Where does this sit.</p>
+                <p class="interview__qa"><strong>SC:</strong> Horror. Six people trapped at a table with a system that only lets them win on a twenty. Again, sounds like plot to me. I don't know why I have to keep defending that point.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> It is a comedy.</p>
+                <p class="interview__qa"><strong>SC:</strong> It is whatever the die says it is.</p>
+
+                <figure class="interview__inline-fig">
+                    <img src="images/the-dungeon-master.jpg"
+                         alt="The hired dungeon master running the campaign at the table.">
+                </figure>
+
+                <p class="interview__qa"><strong>SD:</strong> Runtime is seven minutes, could you have cut it down.</p>
+                <p class="interview__qa"><strong>SC:</strong> The only edit we could have made ws to the slow motion dice roll, and that sequence was perfect.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> The blackout sheets are back.</p>
+                <p class="interview__qa"><strong>SC:</strong> They were never gone. We would have used them on our last shoot but they were dirty.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Final word.</p>
+                <p class="interview__qa"><strong>SC:</strong> Roll a twenty or go home. Most people go home.</p>
+
+                <p class="interview__signoff">&mdash; SD</p>
+            </div>
+
+            <!-- Col 1: text starts BELOW the hero (row 2) -->
+            <div class="interview__col interview__col--1">
+                <p class="interview__intro">
+                    <em>Shane Campbell is the writer-director behind Fat Happy Baby Productions. For the August 2024 LA 48 Hour Film Project he shot Killing Dragons: A Cookbook, in which six actors sit at a table and play Dungeons and Dragons while a hired dungeon master and her chef preside. Everything in the film comes down to a single roll of a twenty-sided die. Sean Dog found Shane reshelving a boxed D&amp;D starter set he swears was a production expense.</em>
+                </p>
+
+                <p class="interview__qa"><strong>SD:</strong> There is an old Hollywood line. If it is about what it is about, you are finished.</p>
+                <p class="interview__qa"><strong>SC:</strong> I know the line. Read it in a book. Where it should stay. This isn't the library. We are making movies here.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> The whole film rides on one die.</p>
+                <p class="interview__qa"><strong>SC:</strong> Is that even a question. The die plays. </p>
+
+                <p class="interview__qa"><strong>SD:</strong> Favorite moment.</p>
+                <p class="interview__qa"><strong>SC:</strong> The roll. Everyone who sees it says the roll is fantastic. It's authentic.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Budget?</p>
+                <p class="interview__qa"><strong>SC:</strong> We had the d20 die and the table. The pizza was put on the credit card.</p>
+            </div>
+
+            <!-- Col 2: text starts BELOW the hero (row 2), image 2 inline mid-col -->
+            <div class="interview__col interview__col--2">
+                <p class="interview__qa"><strong>SD:</strong> Let us talk about the dungeon master. What was her motivation?</p>
+                <p class="interview__qa"><strong>SC:</strong> No to crush their campaign, and to get paid doing it. The second the dragon dies she stompst off in shame, she has lost. People say there is no plot, but that sounds like plot to me.</p>
+
+                <figure class="interview__inline-fig">
+                    <img src="images/the-chef.jpg"
+                         alt="The dungeon master's chef, present at the table for reasons the film never explains.">
+                </figure>
+
+                <p class="interview__qa"><strong>SD:</strong> The chef. Why is there a chef.</p>
+                <p class="interview__qa"><strong>SC:</strong> The movie is called A Cookbook. It's obvious the dungeon master and the chef have somethign on the side. People keep asking if it is a romance.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Is it a romance.</p>
+                <p class="interview__qa"><strong>SC:</strong> Every genre is improved by a head coming off, and every genre is improved by an unexplained chef. This one only had budget for the chef.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> The bard, the french barbarian, the teenager on her phone.</p>
+                <p class="interview__qa"><strong>SC:</strong> The teenager spends the whole shoot filming herself and saying cringe into my camera. I kept every frame of it. She was the only one acting.</p>
+            </div>
+
+        </div>
+        </div>
+    </article>
+
+    <!--
+        The Keeper Reviews — film-review department hosted by The Keeper,
+        FHBP's own horror-host columnist. Sits between the director interview
+        and the Letters: the maker's case, then the hostile verdict, then the
+        public writing back. Poem cut. Band mirrors the .interview / .letters
+        pattern (full-width border-top, 1200px inner wrapper, 2px title-band
+        rule). No em dashes in the body; the only dash is the sign-off.
+    -->
+    <section class="keeper" aria-labelledby="keeper-heading">
+        <div class="keeper__inner">
+
+            <header class="keeper__titleband">
+                <h2 id="keeper-heading" class="keeper__title">
+                    <span class="keeper__dept">The Keeper Reviews:</span>
+                    <span class="keeper__film">Killing Dragons</span>
+                </h2>
+            </header>
+
+            <p class="keeper__intro">FHBP's resident horror expert. Reviews from six feet down. Dances on the good ones, buries the rest.</p>
+
+            <div class="keeper__poem">
+                <p class="keeper__stanza">
+                    Heh-heh-heh&hellip; seven minutes at a card table,<br>
+                    and I ran it at double speed, ghoul,<br>
+                    down to three and a half, and of those<br>
+                    I would bury all but two.
+                </p>
+
+                <p class="keeper__stanza">
+                    Six of them rolling dice at a dragon,<br>
+                    a bard who sings, a barbarian gone french,<br>
+                    a child on her phone mouthing cringe at the lens,<br>
+                    a documentary about nerds, and I sided with the child.
+                </p>
+
+                <p class="keeper__stanza">
+                    A dungeon master came for the money and said so,<br>
+                    dragged her chef into the fog by the wrist.<br>
+                    A cookbook, they called it, and nobody cooked.<br>
+                    The blackout sheets behind them, the one honest wall in the house.
+                </p>
+
+                <p class="keeper__stanza">
+                    Then the die, one die, in glorious slow motion,<br>
+                    tumbling the felt toward a natural twenty,<br>
+                    and boils and ghouls, for one second it was cinema.<br>
+                    Was that a romance in the corner? I could not tell.
+                </p>
+
+                <p class="keeper__closer">Great roll, kiddie. Small note: try having a plot.</p>
+                <p class="keeper__sd">&mdash; The Keeper</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!--
+        Letters to the Editor — new page-level section below the cover.
+        2-column grid of letter+reply pairs. Each pair has a CONCERNED
+        WRITERS label above the reader letter, an FHBP label above the
+        reply, and sign-offs below each body.
+    -->
+    <section class="letters" aria-labelledby="letters-heading">
+        <div class="letters__inner">
+        <h2 id="letters-heading" class="letters__heading">Letters to FHBP</h2>
+        <p class="letters__motto">This is not customer service. This is the defense of independent thinking.</p>
+
+        <div class="letters__items">
+            <article class="letters__item">
+                <p class="letters__marker">Letter 1</p>
+                <p class="letters__label">Concerned Writer <em>(Judgemental DM)</em></p>
+                <div class="letters__letter">
+                    <p>You cannot defeat a dragon on one unmodified d20. There are armor classes, saving throws, an initiative order. Your dungeon master sucks.</p>
+                </div>
+                <p class="letters__signer">Devin K., Dungeon Master (14 years)<br>Burbank, CA<br><span class="letters__medium">via email</span></p>
+
+                <p class="letters__label letters__label--reply">FHBP</p>
+                <div class="letters__reply">
+                    <p><strong class="letters__salutation">Dear Devin,</strong></p>
+                    <p>We are aware a campaign cannot be won on one roll. We rolled for initiative on whether to answer this.</p>
+                </div>
+                <p class="letters__sd">&mdash; SD</p>
+            </article>
+
+            <article class="letters__item">
+                <p class="letters__marker">Letter 2</p>
+                <p class="letters__label">Concerned Writer <em>(The Chef Knows)</em></p>
+                <div class="letters__letter">
+                    <p>THE CHEF IS THE REAL DUNGEON MASTER. He blinks twice before she rolls. TWICE. He is feeding her the numbers. This is not a movie, it is a documentary about a woman being CONTROLLED BY HER CHEF, and nobody in the comments will say it.</p>
+                </div>
+                <p class="letters__signer">A Friend<br>(sent 4:12 AM)<br><span class="letters__medium">via email</span></p>
+
+                <p class="letters__label letters__label--reply">FHBP</p>
+                <div class="letters__reply">
+                    <p><strong class="letters__salutation">Dear Friend,</strong></p>
+                    <p>The chef blinks because it was 104 degrees under the blackout sheets and he is a human. You seem paranoid. Please sleep.</p>
+                </div>
+                <p class="letters__sd">&mdash; SD <em>(this reply reviewed and approved by the chef)</em></p>
+            </article>
+
+            <article class="letters__item">
+                <p class="letters__marker">Letter 3</p>
+                <p class="letters__label">Concerned Writer <em>(Watched At Double Speed)</em></p>
+                <div class="letters__letter">
+                    <p>I watched <em>Killing Dragons</em> at two times speed, the only humane way to take a seven-minute film about dice. The slow-motion dice shot was beautiful. The other three minutes and twenty-six seconds are a hostage situation.</p>
+                </div>
+                <p class="letters__signer">Marco F.<br>São Paulo<br><span class="letters__medium">via Letterboxd review</span></p>
+
+                <p class="letters__label letters__label--reply">FHBP</p>
+                <div class="letters__reply">
+                    <p><strong class="letters__salutation">Dear Marco,</strong></p>
+                    <p>You again. We budgeted for four good seconds and delivered four good seconds. That is a one hundred percent hit rate, which no finalist on your shelf can claim.</p>
+                </div>
+                <p class="letters__sd">&mdash; SD<br>P.S. You keep writing in. We keep answering. One of us breaks first.</p>
+            </article>
+
+            <article class="letters__item">
+                <p class="letters__marker">Letter 4</p>
+                <p class="letters__label">Concerned Writer <em>(Vancouver Set Dept.)</em></p>
+                <div class="letters__letter">
+                    <p>Associate Set Decorator reporting from the Vancouver office. I must commend the blackout sheets in <em>Killing Dragons</em>. In a film with no plot, the sheets ARE the plot. They hold the frame, the room, the whole company. The chef never touches them, which tells me he knows. Please confirm the director still sleeps on the box spring.</p>
+                </div>
+                <p class="letters__signer">Kyle M.<br>Vancouver, BC<br><span class="letters__medium">via Reddit DM</span></p>
+
+                <p class="letters__label letters__label--reply">FHBP</p>
+                <div class="letters__reply">
+                    <p><strong class="letters__salutation">Dear Kyle,</strong></p>
+                    <p>The sheets remain the one thing in this company that cannot be voted out. The director has moved from the box spring to the floor beside it, for clarity. Your promotion stands.</p>
+                </div>
+                <p class="letters__sd">&mdash; SD</p>
+            </article>
+        </div>
+        </div>
+    </section>
+
+    <nav class="issuenav issuenav--bottom" aria-label="Issue navigation">
+        <a href="../vol1-no2/">No. 2 &lt;</a>
+        <a href="../vol1-no4/">&gt; No. 4</a>
+    </nav>
+
+    <footer class="footer" aria-label="Site footer">
+        <p class="footer__satire"><strong>Disclaimer:</strong> This publication is a work of satire and parody. All persons, characters, teams, production companies, films, titles, and quotations depicted herein are fictitious or are used in a fictionalized, parodic manner for the purposes of commentary and humor. Names have been invented or altered; any resemblance to actual persons, living or dead, or to actual companies, teams, films, or events is coincidental or is intended as protected parody and commentary. Any references to real festivals, competitions, or organizations are nominative, used for identification and commentary only, and imply no affiliation with, sponsorship by, or endorsement from those entities. Nothing herein is a statement of fact about any real person or entity.</p>
+        <p class="footer__copyright">&copy; Fat Happy Baby Productions</p>
+        <ul class="footer__links">
+            <li><a href="https://www.youtube.com/@FatHappyBabyProductions" target="_blank" rel="noopener">YOUTUBE</a></li>
+            <li><a href="https://www.instagram.com/Fat_Happy_Baby_Productions/" target="_blank" rel="noopener">INSTAGRAM</a></li>
+            <li><a href="mailto:fathappybaby112@gmail.com">EMAIL</a></li>
+            <li><a href="https://linktr.ee/FatHappyBabyProductions" target="_blank" rel="noopener">LINKTREE</a></li>
+        </ul>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script type="text/javascript" async
+            src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
+</body>
+</html>

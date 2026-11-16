@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fat Happy Baby Productions. Vol. 1 No. 4. Lost and Found: a black-and-white interrogation-room horror about a girl, a puppy, and three unlucky detectives.">
+    <title>FHBP &middot; Vol. 1 No. 4</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="topbar" aria-label="Site top bar">
+        <div class="topbar__left">
+            <a class="topbar__brand" href="../index.html">FHBP</a>
+            <p class="topbar__tagline">WE MAKE INDIE FILMS</p>
+        </div>
+        <ul class="topbar__links">
+            <li><a href="https://www.youtube.com/@FatHappyBabyProductions" target="_blank" rel="noopener">YOUTUBE</a></li>
+            <li><a href="https://www.instagram.com/Fat_Happy_Baby_Productions/" target="_blank" rel="noopener">INSTAGRAM</a></li>
+            <li><a href="mailto:fathappybaby112@gmail.com">EMAIL</a></li>
+            <li><a href="https://linktr.ee/FatHappyBabyProductions" target="_blank" rel="noopener">LINKTREE</a></li>
+        </ul>
+    </header>
+
+    <!-- Masthead / volume line: issue number, date, price gag. -->
+    <p class="masthead" aria-label="Issue line">VOLUME 1 &middot; NO. 4 &middot; NOVEMBER 2024 &middot; FREE (BRING A MOP)</p>
+
+    <nav class="issuenav issuenav--top" aria-label="Issue navigation">
+        <a href="../vol1-no3/">No. 3 &lt;</a>
+        <a href="../vol1-no10/">&gt; No. 10</a>
+    </nav>
+
+    <!--
+        Movie-cover: Lost and Found poster at the top of the page as a
+        title-card above the Fat Happy Baby cover. Full-width black
+        band, poster centered, max-height 100vh so it fits one screen.
+    -->
+    <section class="movie-cover" aria-label="Lost and Found poster">
+        <img src="images/lost-and-found-poster.png"
+             alt="Lost and Found. A Fat Happy Baby Productions short film. Written and directed by Shane Campbell. LA 48 Hour Film Project, November 2024."
+             class="movie-cover__poster">
+    </section>
+
+    <main class="cover">
+        <div class="cover__hero">
+            <!-- Opening departments: headline + dek, then the recurring
+                 departments. Company wordmark dropped on interior issues;
+                 the masthead line and the home page carry FHBP identity. -->
+            <p class="issue-headline">Booked In With Lost and Found</p>
+            <p class="issue-dek">A girl is found at a crime scene clutching her puppy. Three homicide detectives bring her in for questions. The first one to touch the dog does not leave the room.</p>
+
+            <section class="about">
+                <h2 class="about__heading">Note From FHBP</h2>
+                <p class="about__mood">proudly in the gutter</p>
+                <p class="about__body">This is the gutter one. We give you the full horror stack: terror, then horror, then the gross-out on the floor, and Lost and Found never leaves the floor. A girl, a puppy, an interrogation room upholstered in bedsheets, and three detectives who will not all be walking out. We nailed every standard we set out for.</p>
+
+                <h2 class="about__heading">Standards Updates</h2>
+                <p class="about__intro">Revised again. Effective now, every FHBP film must include:</p>
+                <ol class="about__list">
+                    <li><strong class="about__lead">The dog is reinstated, effective immediately. No further comment.</strong></li>
+                    <li><strong class="about__lead">All upholstered entirely in bedsheets (no change).</strong></li>
+                    <li><strong class="about__lead">Two limbs (up from one) must leave their owner on camera.</strong></li>
+                    <li><strong class="about__lead">Still the best green screen shop in town (no change).</strong></li>
+                    <li><strong class="about__lead">A child who out-acts every adult.</strong></li>
+                    <li><strong class="about__lead">Shot in black and white, but not to hide our cheap fake blood.</strong></li>
+                </ol>
+
+                <h2 class="about__heading">Secret Weapon</h2>
+                <p class="about__body">Behind every FHBP film is <strong class="about__lead">Sean Dog</strong>: writer, producer, webdev. He is the one who keeps the sheets steamed and the fold-out tables folded out.</p>
+
+                <h2 class="about__heading">Subscribe</h2>
+                <p class="about__body">Hand over your email. Anything you submit can and will be used to send you more emails. You have the right to unsubscribe, but you are on your own finding the unsubscribe button.</p>
+            </section>
+        </div>
+
+        <!--
+            Most Popular Films panel. Each card is a Win95 outset-bevel button
+            containing an inline pixel-art SVG sprite + title + tag + arrow.
+            Buttons link to the full movie on YouTube, in a new tab.
+            Sprites are monochrome (fill = currentColor, color = --ink).
+            Order (top→bottom, films #8 → #1):
+              8  Junk Haulers           truck
+              7  Dust and Reckoning     revolver
+              6b Lord of the Undead     bat
+              5  Ghost in Orion 9       ghost
+              4  Lost And Found         magnifying glass
+              3  Killing Dragons        dragon head
+              2  Rubber Head            avatar head
+              1  Unicorn Warrior        unicorn head
+        -->
+        <aside class="latest" aria-labelledby="latest-heading">
+            <h2 id="latest-heading" class="latest__heading">Our Most Popular Films</h2>
+
+            <!--
+                Horror-red "To Our Fans" apology block. Sits between the
+                films heading and the film list. Announces the delayed
+                releases of GLP1 and My Little Pumpkin.
+            -->
+            <div class="latest__note" role="note" aria-label="Note to fans">
+                <p class="latest__note-label">To Our Fans</p>
+                <p class="latest__note-body">Our next picture, <em>Ghost in Orion 9</em>, is in trouble. The cast has split into factions, each one crying that the other started it, and every meeting ends with somebody needing to be held.</p>
+                <p class="latest__note-body">We may push the release into next year. We are, as ever, running a daycare. Updates to follow.</p>
+                <p class="latest__note-sd">&mdash; SD</p>
+            </div>
+
+            <ul class="latest__list">
+                <!-- 9. My Little Pumpkin — jack-o-lantern sprite (link goes to channel for now — movie not released yet) [HIDDEN] -->
+                <!--
+<li>
+                    <a class="latest__card latest__card--expanded" href="https://www.youtube.com/@FatHappyBabyProductions" target="_blank" rel="noopener">
+                        <div class="latest__card__top">
+                            <span class="latest__title">My Little Pumpkin</span>
+                            <span class="latest__tag">FULL FILM</span>
+                            <span class="latest__arrow" aria-hidden="true">&gt;</span>
+                        </div>
+                        <p class="latest__summary">A father has been waiting 365 days to see his daughter and take her trick or treating.</p>
+                        <p class="latest__meta">Oct. 31, 2026 &middot; Online Release &middot; General 48 Hr Horror</p>
+                    </a>
+                </li>
+-->
+
+                <!-- 8. Junk Haulers -->
+                <li>
+                    <a class="latest__card" href="https://youtu.be/mEnn8HIKH_A" target="_blank" rel="noopener">
+                        <p class="latest__kicker">
+                            <span>Full Film</span>
+                            <span class="latest__kicker-arrow" aria-hidden="true">&gt;</span>
+                        </p>
+                        <h3 class="latest__title">Junk Haulers</h3>
+                        <p class="latest__summary">With her boyfriend laid up and rent due, a waitress fills in as helper on Marcos's junk-hauling business and finds the trade is ten percent lifting, ninety percent listening to other people's grief.</p>
+                        <p class="latest__meta">Aug. 12, 2026 &middot; North LA Live Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+
+                <!-- 7. Dust and Reckoning — revolver sprite [HIDDEN] -->
+                <!--
+<li>
+                    <a class="latest__card latest__card--expanded" href="https://youtu.be/TeC0Sqw5HUQ" target="_blank" rel="noopener">
+                        <div class="latest__card__top">
+                            <span class="latest__title">Dust and Reckoning</span>
+                            <span class="latest__tag">FULL FILM</span>
+                            <span class="latest__arrow" aria-hidden="true">&gt;</span>
+                        </div>
+                        <p class="latest__summary">Full summary coming soon.</p>
+                    </a>
+                </li>
+-->
+
+                <!-- 6b. Lord of the Undead -->
+                <li>
+                    <a class="latest__card" href="https://youtu.be/wOD4a1AsMAw" target="_blank" rel="noopener">
+                        <p class="latest__kicker">
+                            <span>Full Film</span>
+                            <span class="latest__kicker-arrow" aria-hidden="true">&gt;</span>
+                        </p>
+                        <h3 class="latest__title">Lord of the Undead</h3>
+                        <p class="latest__summary">After six generations hunting the master vampire, a huntress finally finds the ritual that can finish him, but her solution requires ultimate sacrifice.</p>
+                        <p class="latest__meta">Oct. 23, 2025 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+
+                <!-- 5. Ghost in Orion 9 — ghost sprite [HIDDEN] -->
+                <!--
+<li>
+                    <a class="latest__card latest__card--expanded" href="https://youtu.be/ULyuZ7eTPqA" target="_blank" rel="noopener">
+                        <div class="latest__card__top">
+                            <span class="latest__title">Ghost in Orion 9</span>
+                            <span class="latest__tag">FULL FILM</span>
+                            <span class="latest__arrow" aria-hidden="true">&gt;</span>
+                        </div>
+                        <p class="latest__summary">When a daydreaming ten-year-old blasts off in a rocket to a derelict spaceship adrift she becomes the only detective who can solve the murder of its crew.</p>
+                        <p class="latest__meta">Aug. 12, 2025 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+-->
+
+                <!-- 4. Lost And Found — magnifying-glass sprite [HIDDEN] -->
+                <!--
+<li>
+                    <a class="latest__card latest__card--expanded" href="https://youtu.be/yN339ushFe0" target="_blank" rel="noopener">
+                        <div class="latest__card__top">
+                            <span class="latest__title">Lost And Found</span>
+                            <span class="latest__tag">FULL FILM</span>
+                            <span class="latest__arrow" aria-hidden="true">&gt;</span>
+                        </div>
+                        <p class="latest__summary">Homicide detectives question reality as they question a 10-yr-old girl found at a crime scene who seems keenly attached to her puppy.</p>
+                        <p class="latest__meta">Nov. 10, 2024 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+-->
+
+                <!-- 3. Killing Dragons — dragon-head sprite [HIDDEN] -->
+                <!--
+<li>
+                    <a class="latest__card latest__card--expanded" href="https://youtu.be/L2UykahVvFo" target="_blank" rel="noopener">
+                        <div class="latest__card__top">
+                            <span class="latest__title">Killing Dragons</span>
+                            <span class="latest__tag">FULL FILM</span>
+                            <span class="latest__arrow" aria-hidden="true">&gt;</span>
+                        </div>
+                        <p class="latest__summary">A hosted D&amp;D game of high stakes goes terribly wrong.</p>
+                        <p class="latest__meta">Aug. 2024 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+-->
+
+                <!-- 2. Rubber Head -->
+                <li>
+                    <a class="latest__card" href="https://youtu.be/nJDrCf0tXFk" target="_blank" rel="noopener">
+                        <p class="latest__kicker">
+                            <span>Full Film</span>
+                            <span class="latest__kicker-arrow" aria-hidden="true">&gt;</span>
+                        </p>
+                        <h3 class="latest__title">Rubber Head</h3>
+                        <p class="latest__summary">Walter Vergara, a struggling late-night podcaster, is locked in a booth with a button he must keep pressing, or the world ends.</p>
+                        <p class="latest__meta">Oct. 28, 2023 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+
+                <!-- 1. Unicorn Warrior -->
+                <li>
+                    <a class="latest__card" href="https://youtu.be/NvP6vjMp8QA" target="_blank" rel="noopener">
+                        <p class="latest__kicker">
+                            <span>Full Film</span>
+                            <span class="latest__kicker-arrow" aria-hidden="true">&gt;</span>
+                        </p>
+                        <h3 class="latest__title">Unicorn Warrior</h3>
+                        <p class="latest__summary">A ten-year old girl must brave the underworld to trick the Gods and save her father from an unknown sickness.</p>
+                        <p class="latest__meta">Aug. 10, 2023 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="latest__footer">
+                <a class="btn btn--sm" href="https://www.youtube.com/@FatHappyBabyProductions" target="_blank" rel="noopener">ALL FILMS &nbsp;&gt;</a>
+            </div>
+
+            <!-- Beehiiv subscribe form — bottom of the Most Popular Films aside. -->
+            <div class="subscribe">
+                <script async
+                        src="https://subscribe-forms.beehiiv.com/v3/loader.js"
+                        data-beehiiv-form="a1da26f0-628c-4e11-8700-fe23c46dc58d"></script>
+            </div>
+        </aside>
+    </main>
+
+    <!--
+        Exclusive Interview with FHBP Director (November 2026).
+        Three-column magazine spread. Sits between the cover grid
+        and the Letters to FHBP section.
+    -->
+    <article class="interview" aria-labelledby="interview-heading">
+        <div class="interview__inner">
+
+        <header class="interview__titleband">
+            <h1 id="interview-heading" class="interview__title">Exclusive Interview with FHBP Director</h1>
+            <p class="interview__date">November 2024</p>
+        </header>
+
+        <!--
+            Three-column body.
+              row 1: hero image spans col 1+2, col 3 text starts at top
+              row 2: col 1 text continues under hero; col 2 text continues under hero;
+                     col 3 is the same element from row 1, spanning both rows.
+            Images 2 and 3 are inline inside their respective column divs.
+        -->
+        <div class="interview__grid">
+
+            <figure class="interview__hero">
+                <img src="images/girl-closeup.png"
+                     alt="The ten-year-old girl in close-up, blood-flecked, holding her puppy in the interrogation room."
+                     class="interview__hero-img">
+            </figure>
+
+            <!-- Col 3: starts at top of grid, spans both rows -->
+            <div class="interview__col interview__col--3">
+
+                <p class="interview__qa"><strong>SD:</strong> Genre. Where does this sit.</p>
+                <p class="interview__qa"><strong>SC:</strong> Terror, horror, gross-out. This one lives in the gross-out layer, with a big puddle of blood on the floor. The floor is where the money is.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> It is also a comedy.</p>
+                <p class="interview__qa"><strong>SC:</strong> Three homicide detectives interrogate a ten-year-old who turns them into a crime scene one at a time. If that is not funny to you, I cannot help you.</p>
+
+                <figure class="interview__inline-fig">
+                    <img src="images/detectives.png"
+                         alt="The three homicide detectives in the sheet-draped interrogation room.">
+                </figure>
+
+                <p class="interview__qa"><strong>SD:</strong> Black and white. Why.</p>
+                <p class="interview__qa"><strong>SC:</strong> Same reason we use sheets, limit the variables, focus the audience on one thing... the horror taking place in front of them. Note the pink color of our fake blood.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> The missing-child flier.</p>
+                <p class="interview__qa"><strong>SC:</strong> She has not aged a day since he went missing, that's when we know something is up. It's when we jump from detective to fantasy.</p>
+                
+                <p class="interview__qa"><strong>SD:</strong> Fantasy? Is this fantasy.</p>
+                <p class="interview__qa"><strong>SC:</strong> Well all horror is fantasy, just swap out Tinker Bell for Freddy Krueger</p>
+                
+                <p class="interview__qa"><strong>SD:</strong> Final word.</p>
+                <p class="interview__qa"><strong>SC:</strong> Do not touch the puppy. That is the whole film. It's up to you to figure out what that means.</p>
+
+                <p class="interview__signoff">&mdash; SD</p>
+            </div>
+
+            <!-- Col 1: text starts BELOW the hero (row 2) -->
+            <div class="interview__col interview__col--1">
+                <p class="interview__intro">
+                    <em>Shane Campbell is the writer-director behind Fat Happy Baby Productions. For the November 2024 LA 48 Hour Film Project he shot Lost and Found, a black-and-white interrogation-room horror in which three homicide detectives question a blood-covered ten-year-old girl who will only say one thing about her puppy. Sean Dog found Shane washing a pile of bedsheets he described as the set.</em>
+                </p>
+
+                <p class="interview__qa"><strong>SD:</strong> You said this one hits every standard.</p>
+                <p class="interview__qa"><strong>SC:</strong> Yep. We require child, dog, sheets, tables, and the removal of a limb. I did not plan it, but we finally made the complete Fat Happy Baby film. The others were rehearsal.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> The room is all sheets.</p>
+                <p class="interview__qa"><strong>SC:</strong> Two picnic tables and a room draped in sheets. Like I said we removed all variables to make sure we get full suspension of disbelief.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Budget.</p>
+                <p class="interview__qa"><strong>SC:</strong> We even splurged, ordered carne asada burritos for lunch. I had my best guy fetch them. His name is Sean Dog.</p>
+            </div>
+
+            <!-- Col 2: text starts BELOW the hero (row 2), image 2 inline mid-col -->
+            <div class="interview__col interview__col--2">
+                <p class="interview__qa"><strong>SD:</strong> The girl does not do anything. She just sits there.</p>
+                <p class="interview__qa"><strong>SC:</strong> She says four words. Do not touch my puppy. The lead detective pets the dog anyway, which as you saw was the wrong move.</p>
+
+                <figure class="interview__inline-fig">
+                    <img src="images/forced-shot.png"
+                         alt="A detective, under the girl's control, forced to turn a weapon on himself.">
+                </figure>
+
+                <p class="interview__qa"><strong>SD:</strong> She kills them with her mind.</p>
+                <p class="interview__qa"><strong>SC:</strong> Yep. So that solves dealing with a child actor issue. She just sits there. One goes face-first into the table and rips them to shreds. Horror is not about who is strong. It is about who was never in charge.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Someone wrote in that they could still see the missing legs in the green screen.</p>
+                <p class="interview__qa"><strong>SC:</strong> I will take genius. A clean effect is a lie.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Why did this not make the finals.</p>
+                <p class="interview__qa"><strong>SC:</strong> Ask the finals. We do not slow down for rooms we are not invited into. All gas, no brakes.</p>
+            </div>
+
+        </div>
+        </div>
+    </article>
+
+    <!--
+        The Keeper Reviews — film-review department hosted by The Keeper,
+        FHBP's own horror-host columnist. Sits between the director interview
+        and the Letters: the maker's case, then the hostile verdict, then the
+        public writing back. Poem cut. Band mirrors the .interview / .letters
+        pattern (full-width border-top, 1200px inner wrapper, 2px title-band
+        rule). No em dashes in the body; the only dash is the sign-off.
+    -->
+    <section class="keeper" aria-labelledby="keeper-heading">
+        <div class="keeper__inner">
+
+            <header class="keeper__titleband">
+                <h2 id="keeper-heading" class="keeper__title">
+                    <span class="keeper__dept">The Keeper Reviews:</span>
+                    <span class="keeper__film">Lost and Found</span>
+                </h2>
+            </header>
+
+            <p class="keeper__intro">FHBP's resident horror expert. Reviews from six feet down. Dances on the good ones, buries the rest.</p>
+
+            <div class="keeper__poem">
+                <p class="keeper__stanza">
+                    Heh-heh-heh&hellip; now this one I dug up smiling.<br>
+                    A little girl, a puppy, a room dressed in sheets,<br>
+                    and three detectives who walk in breathing<br>
+                    and do not, boils and ghouls, walk out.
+                </p>
+
+                <p class="keeper__stanza">
+                    They touched the dog. You never touch the dog.<br>
+                    One kisses the table, one eats his own pistol,<br>
+                    the chief goes down pointing the wrong way,<br>
+                    and the last one begs, which is my favorite sound.
+                </p>
+
+                <p class="keeper__stanza">
+                    Black and white, so the blood runs like ink,<br>
+                    and the green screen shows the legs still missing.<br>
+                    They called that a flaw. I call it honesty.<br>
+                    A clean effect lies. A seam tells the truth.
+                </p>
+
+                <p class="keeper__stanza">
+                    Every standard in one grave: the child, the dog,<br>
+                    the sheets, the tables, a limb set loose.<br>
+                    I have buried a hundred of these. This one<br>
+                    I danced on. Hard. In both shoes.
+                </p>
+
+                <p class="keeper__closer">A masterpiece, kiddie. Do not touch the puppy.</p>
+                <p class="keeper__sd">&mdash; The Keeper</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!--
+        Letters to the Editor — new page-level section below the cover.
+        2-column grid of letter+reply pairs. Each pair has a CONCERNED
+        WRITERS label above the reader letter, an FHBP label above the
+        reply, and sign-offs below each body.
+    -->
+    <section class="letters" aria-labelledby="letters-heading">
+        <div class="letters__inner">
+        <h2 id="letters-heading" class="letters__heading">Letters to FHBP</h2>
+        <p class="letters__motto">This is not customer service. This is the defense of independent thinking.</p>
+
+        <div class="letters__items">
+            <article class="letters__item">
+                <p class="letters__marker">Letter 1</p>
+                <p class="letters__label">Concerned Writer <em>(Second Letter)</em></p>
+                <div class="letters__letter">
+                    <p>I am writing, again, about content. Do you really think seeing a person get their legs ripped off is child appropriate. Highly concerned parent requesting, once more, a content advisory.</p>
+                </div>
+                <p class="letters__signer">Deborah Lantz, mother of three<br>Grand Rapids, MI<br><span class="letters__medium">via email</span></p>
+
+                <p class="letters__label letters__label--reply">FHBP</p>
+                <div class="letters__reply">
+                    <p><strong class="letters__salutation">Dear Deborah,</strong></p>
+                    <p>The detectives knew the risk when they touched the puppy. You knew the risk when you started in on a FHBP Film.</p>
+                </div>
+                <p class="letters__sd">&mdash; SD<br>P.S. The advisory is the film.</p>
+            </article>
+
+            <article class="letters__item">
+                <p class="letters__marker">Letter 2</p>
+                <p class="letters__label">Concerned Writer <em>(Keep It Red)</em></p>
+                <div class="letters__letter">
+                    <p>FINALLY. A FHBP film with the courage of its own VISCERA. The table kill? I REWOUND it nine times. The chief eating his own GUN? Savini himself could not have framed it colder. You understand what the cowards at the finals do not: gore is not decoration, gore is GRAMMAR. The black and white is a Fulci move and I will not hear otherwise. I need to be in the next one. I will bring my own BLOOD.</p>
+                </div>
+                <p class="letters__signer">Cindy "Chainsaw" K.<br>Austin, TX<br><span class="letters__medium">via Fangoria forum thread</span></p>
+
+                <p class="letters__label letters__label--reply">FHBP</p>
+                <div class="letters__reply">
+                    <p><strong class="letters__salutation">Dear Cindy,</strong></p>
+                    <p>FHBP is always BYOBlood. Report to the Vancouver office, which does not exist, which is the point. Bring the blood.</p>
+                </div>
+                <p class="letters__sd">&mdash; SD</p>
+            </article>
+
+            <article class="letters__item">
+                <p class="letters__marker">Letter 3</p>
+                <p class="letters__label">Concerned Writer <em>(Could See The Seams)</em></p>
+                <div class="letters__letter">
+                    <p>I want to be fair. The green screen is not finished. During the second kill you can plainly see where the detective's legs should be and simply are not. It pulled me straight out of the film.</p>
+                </div>
+                <p class="letters__signer">Chet Rankin<br>Burbank, CA<br><span class="letters__medium">via email</span></p>
+
+                <p class="letters__label letters__label--reply">FHBP</p>
+                <div class="letters__reply">
+                    <p><strong class="letters__salutation">Dear Chet,</strong></p>
+                    <p>It was a choice, and the choice was we have no money for anything else.</p>
+                </div>
+                <p class="letters__sd">&mdash; SD <em>(the seam stays)</em></p>
+            </article>
+
+            <article class="letters__item">
+                <p class="letters__marker">Letter 4</p>
+                <p class="letters__label">Concerned Writer <em>(Procedure Matters)</em></p>
+                <div class="letters__letter">
+                    <p>No competent homicide detective interrogates an unaccompanied minor without a guardian. I spent twenty years on the job. This is not how it works.</p>
+                </div>
+                <p class="letters__signer">Ret. Det. Ron Vance<br>Long Beach, CA<br><span class="letters__medium">via certified mail</span></p>
+
+                <p class="letters__label letters__label--reply">FHBP</p>
+                <div class="letters__reply">
+                    <p><strong class="letters__salutation">Dear Ron,</strong></p>
+                    <p>Our on-site procedural expert was sick that day but we felt confident the procedure for interviewing a 10-yr-old ghost was not the core element of the film.</p>
+                </div>
+                <p class="letters__sd">&mdash; SD</p>
+            </article>
+        </div>
+        </div>
+    </section>
+
+    <nav class="issuenav issuenav--bottom" aria-label="Issue navigation">
+        <a href="../vol1-no3/">No. 3 &lt;</a>
+        <a href="../vol1-no10/">&gt; No. 10</a>
+    </nav>
+
+    <footer class="footer" aria-label="Site footer">
+        <p class="footer__satire"><strong>Disclaimer:</strong> This publication is a work of satire and parody. All persons, characters, teams, production companies, films, titles, and quotations depicted herein are fictitious or are used in a fictionalized, parodic manner for the purposes of commentary and humor. Names have been invented or altered; any resemblance to actual persons, living or dead, or to actual companies, teams, films, or events is coincidental or is intended as protected parody and commentary. Any references to real festivals, competitions, or organizations are nominative, used for identification and commentary only, and imply no affiliation with, sponsorship by, or endorsement from those entities. Nothing herein is a statement of fact about any real person or entity.</p>
+        <p class="footer__copyright">&copy; Fat Happy Baby Productions</p>
+        <ul class="footer__links">
+            <li><a href="https://www.youtube.com/@FatHappyBabyProductions" target="_blank" rel="noopener">YOUTUBE</a></li>
+            <li><a href="https://www.instagram.com/Fat_Happy_Baby_Productions/" target="_blank" rel="noopener">INSTAGRAM</a></li>
+            <li><a href="mailto:fathappybaby112@gmail.com">EMAIL</a></li>
+            <li><a href="https://linktr.ee/FatHappyBabyProductions" target="_blank" rel="noopener">LINKTREE</a></li>
+        </ul>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script type="text/javascript" async
+            src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
+</body>
+</html>
