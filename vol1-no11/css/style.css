@@ -1308,3 +1308,23 @@ a { color: var(--ink); }
     color: var(--mute);
     margin-top: 0.4rem;
 }
+
+/* vol1-no11 mailing-list band is form-only — no heading, no pitch copy.
+   Shrink the vertical space to a tight 10px top + 10px bottom, overriding
+   the base .moves (4rem/5rem) and mobile (2.5rem/3.5rem) padding that was
+   sized for content-dense bands. Also zero out the .subscribe inner
+   margin/padding that would otherwise add another 5rem on top. */
+.moves {
+    padding: 10px 0;
+}
+
+.moves .subscribe {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+@media (max-width: 600px) {
+    .moves {
+        padding: 10px 0;
+    }
+}
