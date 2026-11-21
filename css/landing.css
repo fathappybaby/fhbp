@@ -168,3 +168,13 @@ main { flex: 1; max-width: 960px; margin: 0 auto; width: 100%; padding: 2.5rem v
     border-color: var(--accent);
     color: var(--bg);
 }
+
+/* Stacked Latest cards. When the Latest column shows more than one
+   issue, each subsequent card gets a hairline rule above it +
+   breathing room — matches the Back Issues list visual rhythm. */
+
+.cry__latest + .cry__latest {
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--rule);
+}
