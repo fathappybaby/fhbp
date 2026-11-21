@@ -126,3 +126,45 @@ main { flex: 1; max-width: 960px; margin: 0 auto; width: 100%; padding: 2.5rem v
     .hero { padding: 1rem var(--pad-x) 1.5rem; }
     .hero__poster img { max-height: 55vh; }
 }
+
+/* ---------- Retracted back-issue row --------------------
+   An issue that has been retracted gets a strikethrough on the
+   original title + a small ink chip marking the state. The whole
+   anchor links to the retraction page (currently vol1-no12), not
+   to the retracted issue's own URL. The original issue remains
+   on disk and reachable via paginators; this row is the public
+   signal that it has been pulled.
+--------------------------------------------------------- */
+
+.cry__back--retracted a {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+.cry__back__strike {
+    text-decoration: line-through;
+    color: var(--mute);
+}
+.cry__back__chip {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+    padding: 0.15rem 0.5rem;
+    white-space: nowrap;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.cry__back--retracted a:hover .cry__back__strike,
+.cry__back--retracted a:focus-visible .cry__back__strike {
+    color: var(--mute);  /* keep muted on hover so the strike reads as archival */
+}
+.cry__back--retracted a:hover .cry__back__chip,
+.cry__back--retracted a:focus-visible .cry__back__chip {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
+}
