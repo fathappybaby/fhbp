@@ -35,3 +35,7 @@ Or `python3 -m http.server 8000` and visit `http://localhost:8000/` if the
 
 See `../working/plan1.md` for the full style research (fonts, palette,
 layout moves), decisions made, and the deferred items for the archive page.
+
+
+<!-- Last deploy nudge: 2026-11-21 — trivial commit to break a stuck
+     actions/deploy-pages state on an earlier SHA. -->
