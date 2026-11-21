@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fat Happy Baby Productions. Vol. 1 No. 12. Official retraction of Vol. 1 No. 10 at the director's request, filed under protest by the editorial board.">
+    <meta name="description" content="Fat Happy Baby Productions. We make indie films. Watch on YouTube and read The Cry Room.">
     <title>FHBP</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,22 +11,18 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
 
     <!--
-        VOL. 1 NO. 12 — Corrections department (full-issue retraction mode).
-        A single-entry retraction of Vol. 1 No. 10 ("Fat Happy Baby
-        Productions Does Cannes") at the director's request, filed under
-        protest by the editorial board. One wide-column band with a reading
-        column capped at ~100ch. Content drafted in
-        ../../../working/v1-n12-corrections/context1.md. Format prompt:
-        ../../../working/page-prompts/corrections-issue.md (single-entry
-        sub-mode — see author notes in context1.md).
+        Home / landing page. Films-first: feature film + recent titles (links to
+        YouTube), then The Cry Room (the magazine) with the latest issue and back
+        issues. Styles in css/landing.css (landing only, separate from each
+        issue's own vol1-noN/css/style.css). Landing images in images/ at root.
     -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/landing.css">
 </head>
 <body>
 
     <header class="topbar" aria-label="Site top bar">
         <div class="topbar__left">
-            <a class="topbar__brand" href="../index.html">FHBP</a>
+            <a class="topbar__brand" href="index.html">FHBP</a>
             <p class="topbar__tagline">WE MAKE INDIE FILMS</p>
         </div>
         <ul class="topbar__links">
@@ -37,88 +33,80 @@
         </ul>
     </header>
 
-    <!-- Masthead / volume line: this issue's number, date, and price gag. -->
-    <p class="masthead" aria-label="Issue line">VOLUME 1 &middot; NO. 12 &middot; NOV. 21, 2026 &middot; FREE (COMPLIANCE OFFICER APPROVED)</p>
-
-    <nav class="issuenav issuenav--top" aria-label="Issue navigation">
-        <a href="../vol1-no11/">No. 11 &lt;</a>
-        <span class="issuenav__off" aria-hidden="true">&gt;</span>
-    </nav>
-
-    <main>
-
-    <!--
-        The Corrections department as a full-issue retraction. Single
-        entry. Title band carries the retraction headline; no standfirst
-        (cold open per the format prompt). The pulled no10 excerpt lives
-        inside the entry as a .correction__excerpt blockquote — verbatim
-        from vol1-no10/index.html, preserving the <i> stage direction
-        around "...no response..." as no10 renders it.
-    -->
-    <article class="corrections" aria-labelledby="corrections-heading">
-        <div class="corrections__inner">
-
-            <header class="corrections__titleband">
-                <h1 id="corrections-heading" class="corrections__title">Official Retraction of Vol. 1 No. 10 &middot; &ldquo;Fat Happy Baby Productions Does Cannes&rdquo;</h1>
-                <p class="corrections__date">November 21, 2026</p>
-            </header>
-
-            <div class="corrections__reading">
-                <ol class="corrections__list">
-                    <li class="correction">
-                        <div class="correction__body">
-
-                            <p>Because Shane wanted to be a complete bitch. Even though the article says nothing about any other film group and you cannot identify any other film group nor any true film festival nor anything libelous... and even though it has a disclaimer as thick as a phone book... he was worried it could "offend". It should be clear that this magazine editorial board disagrees in full but is willing to take it on the chin for the FHBP Creator. But, not without heads rolling. We are officially removing his title as "Creative Heavy" and replacing it with "Compliance Officer". With that we retract this beautiful piece of comedy gold that we worked on ALL DAY. To be clear, ALL DAY.</p>
-
-                            <p>And to be clear, the piece was inspired by a real event. There was a shoot. The director was on it. He was, in the words of his own dog, the bitch boy of the set. And, this remains fictional per the aforementioned disclaimer, and any statement in this paragraph asserting otherwise is itself retracted under the same disclaimer. These sentences cancel each other out, which is also how we understand the director's (now Compliance Officer's) thinking.</p>
-
-                            <p>While there was no libel in that issue, here is some. The All-Gas-No-Breaks FHBP Team drives in the slow lane. They are the car you're stuck behind because the driver is white-knuckling it at 45 in a 75. With a professional trajectory of a bad lawyer worried about being sued for nothing. "Total bitch" is more accurate.</p>
-
-                            <p>Here is just a taste of what we are throwing out:</p>
-
-                            <blockquote class="correction__excerpt">
-                                <p><strong>SD:</strong> How do you feel about going from Director, Producer, Writer, to background extra and gofer?</p>
-                                <p><strong>SC:</strong> <i>&hellip;no response&hellip;</i></p>
-                                <p><strong>SD:</strong> A second ago you said you don't place 3rd, does that mean you won 2nd or 1st?</p>
-                                <p><strong>SC:</strong> Let us move to the next question.</p>
-                            </blockquote>
-
-                        </div>
-                    </li>
-                </ol>
-
-                <p class="correction__signoff">&mdash; SD</p>
-            </div>
-
+    <section class="hero" aria-label="Fat Happy Baby Productions">
+        <div class="hero__poster">
+            <img src="images/fhbp-poster.png" alt="Fat Happy Baby Productions poster.">
         </div>
-    </article>
-
-    <!--
-        Mailing-list sign-up. Standing FHBP block. Same stripped-down
-        Beehiiv form + .moves band pattern as vol1-no11 (no heading,
-        no pitch, tight 10px padding override carried in the CSS).
-    -->
-    <section class="moves" aria-label="Mailing list sign-up">
-        <div class="moves__inner">
-            <div class="subscribe">
-                <script async
-                        src="https://subscribe-forms.beehiiv.com/v3/loader.js"
-                        data-beehiiv-form="a1da26f0-628c-4e11-8700-fe23c46dc58d"></script>
-            </div>
+        <div class="hero__words">
+            <h1 class="wordmark">FAT HAPPY<br>BABY<br>PRODUCTIONS</h1>
+            <p class="sub">We Make Indie Films</p>
         </div>
     </section>
 
-    </main>
+    <main>
 
-    <nav class="issuenav issuenav--bottom" aria-label="Issue navigation">
-        <a href="../vol1-no11/">No. 11 &lt;</a>
-        <span class="issuenav__off" aria-hidden="true">&gt;</span>
-    </nav>
+        <!-- FHBP FILMS -->
+        <h2 class="section-name">Films</h2>
+
+        <!-- FEATURE FILM -->
+        <section class="feature" aria-label="Feature film">
+            <p class="label">Feature</p>
+            <a class="feature__media" href="https://youtu.be/nJDrCf0tXFk" target="_blank" rel="noopener">
+                <img src="https://img.youtube.com/vi/nJDrCf0tXFk/maxresdefault.jpg" alt="Rubber Head — watch the full film on YouTube">
+            </a>
+            <h2 class="feature__title"><a href="https://youtu.be/nJDrCf0tXFk" target="_blank" rel="noopener">Rubber Head</a></h2>
+        </section>
+
+        <!-- MORE FILMS — titles only, link out to YouTube -->
+        <section class="strip" aria-label="More films">
+            <p class="label">More Films</p>
+            <nav class="strip__titles">
+                <a href="https://youtu.be/NvP6vjMp8QA" target="_blank" rel="noopener">Unicorn Warrior</a>
+                <a href="https://youtu.be/mEnn8HIKH_A" target="_blank" rel="noopener">Junk Haulers</a>
+                <a href="https://youtu.be/wOD4a1AsMAw" target="_blank" rel="noopener">Lord of the Undead</a>
+                <a href="https://youtu.be/L2UykahVvFo" target="_blank" rel="noopener">Killing Dragons</a>
+                <a class="strip__all" href="https://www.youtube.com/@FatHappyBabyProductions" target="_blank" rel="noopener">All on YouTube &rsaquo;</a>
+            </nav>
+        </section>
+
+        <!-- THE CRY ROOM — the magazine -->
+        <section class="cry" aria-label="The Cry Room magazine">
+            <h2 class="section-name">Issues</h2>
+
+            <div class="cry__grid">
+                <div class="cry__main">
+                    <a class="cry__latest" href="vol1-no12/">
+                        <p class="cry__meta">Vol. 1 &middot; No. 12 &middot; November 21, 2026</p>
+                        <h3 class="cry__title">Official Retraction of Vol. 1 No. 10</h3>
+                        <p class="cry__line">The editorial board retracts Vol. 1 No. 10 at the director's request. Filed under protest. The director is demoted.</p>
+                    </a>
+                </div>
+                <aside class="cry__rail">
+                    <p class="label">Back Issues</p>
+                    <ul class="cry__back">
+                        <li><a href="vol1-no11/">Vol. 1 &middot; No. 11 &middot; A Sit Down With the Master of Horror</a></li>
+                        <li class="cry__back--retracted"><a href="vol1-no12/"><span class="cry__back__strike">Vol. 1 &middot; No. 10 &middot; The Road to Cannes</span><span class="cry__back__chip">Retraction Note</span></a></li>
+                        <li><a href="vol1-no4/">Vol. 1 &middot; No. 4 &middot; Booked In With Lost and Found</a></li>
+                        <li><a href="vol1-no3/">Vol. 1 &middot; No. 3 &middot; Rolling Dice With Killing Dragons</a></li>
+                        <li><a href="vol1-no2/">Vol. 1 &middot; No. 2 &middot; Locked Up With Rubber Head</a></li>
+                        <li><a href="vol1-no1/">Vol. 1 &middot; No. 1 &middot; Kicking Off With Unicorn Warrior</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <!-- MAILING LIST -->
+        <div class="subscribe" aria-label="Mailing list sign-up">
+            <script async
+                    src="https://subscribe-forms.beehiiv.com/v3/loader.js"
+                    data-beehiiv-form="a1da26f0-628c-4e11-8700-fe23c46dc58d"></script>
+        </div>
+    </main>
 
     <footer class="footer" aria-label="Site footer">
         <p class="footer__satire"><strong>Disclaimer:</strong> This publication is a work of satire and parody. All persons, characters, teams, production companies, films, titles, and quotations depicted herein are fictitious or are used in a fictionalized, parodic manner for the purposes of commentary and humor. Names have been invented or altered; any resemblance to actual persons, living or dead, or to actual companies, teams, films, or events is coincidental or is intended as protected parody and commentary. Any references to real festivals, competitions, or organizations are nominative, used for identification and commentary only, and imply no affiliation with, sponsorship by, or endorsement from those entities. Nothing herein is a statement of fact about any real person or entity.</p>
-        <p class="footer__copyright">&copy; Fat Happy Baby Productions</p>
-        <ul class="footer__links">
+        <span class="footer__copyright">&copy; Fat Happy Baby Productions</span>
+        <ul style="list-style:none;display:flex;gap:1.5rem;flex-wrap:wrap;margin:0;">
             <li><a href="https://www.youtube.com/@FatHappyBabyProductions" target="_blank" rel="noopener">YOUTUBE</a></li>
             <li><a href="https://www.instagram.com/Fat_Happy_Baby_Productions/" target="_blank" rel="noopener">INSTAGRAM</a></li>
             <li><a href="mailto:fathappybaby112@gmail.com">EMAIL</a></li>
@@ -126,8 +114,8 @@
         </ul>
     </footer>
 
-    <script src="js/script.js"></script>
     <script type="text/javascript" async
             src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
+
 </body>
 </html>
