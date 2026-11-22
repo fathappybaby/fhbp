@@ -142,6 +142,7 @@ a { color: var(--ink); }
     max-height: 95vh;
     width: auto;
     height: auto;
+    filter: grayscale(100%);
 }
 
 /* ---------- Button (shared) ------------------------------
