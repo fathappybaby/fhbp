@@ -142,6 +142,7 @@ a { color: var(--ink); }
     max-height: 95vh;
     width: auto;
     height: auto;
+    filter: grayscale(100%);
 }
 
 /* ---------- Button (shared) ------------------------------
@@ -284,6 +285,32 @@ a { color: var(--ink); }
 
 .about__body:last-child {
     margin-bottom: 0;
+}
+
+/* Opening-department lead: issue headline + dek (replaces the old wordmark
+   on interior issues). */
+.issue-headline {
+    font-family: var(--font-pixel);
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    line-height: 1.35;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.6rem;
+}
+.issue-dek {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--ink);
+    margin-bottom: 2rem;
+}
+/* Note From FHBP rotating gray mood tag — sits tight under its heading. */
+.about__mood {
+    font-family: var(--font-mono);
+    font-style: italic;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    color: var(--mute);
+    margin: -0.5rem 0 0.9rem;
 }
 
 /* Beehiiv subscribe form wrapper — now lives at the bottom of the
@@ -856,10 +883,10 @@ a { color: var(--ink); }
 
 .interview__titleband {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 0.35rem;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
     border-bottom: 2px solid var(--ink);
     padding-bottom: 1rem;
     margin-bottom: 2rem;
@@ -1119,108 +1146,16 @@ a { color: var(--ink); }
     .keeper__closer { font-size: 0.9rem; }
 }
 
-/* ============================================================
-   Masthead / volume line
-   A thin full-width strip between the topbar and the poster band,
-   carrying the issue number, date, and price gag. Pixel face,
-   tracked caps, centered, ink hairline beneath.
-   ============================================================ */
-
-.masthead {
-    font-family: var(--font-pixel);
-    font-size: 0.7rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--mute);
-    text-align: center;
-    padding: 0.85rem var(--pad-x);
-    border-bottom: 1px solid var(--ink);
-}
-
-@media (max-width: 600px) {
-    .masthead {
-        font-size: 0.58rem;
-        letter-spacing: 0.08em;
-        padding: 0.7rem var(--pad-x-sm);
-    }
-}
-
-
-/* ============================================================
-   VOL. 1 NO. 10 — Cannes feature issue.
-   Feature Q&A (no poster, no cover) + carried Current Moves and
-   mailing-list sign-up. Bands mirror the full-width .interview /
-   .letters pattern; the Q&A uses a narrow reading column. Most
-   inner elements reuse existing .interview__* / .latest__* /
-   .subscribe / .about__* classes, so only the bands and the
-   reading column are defined here.
-   ============================================================ */
-
-.feature { border-top: 1px solid var(--ink); padding: 4rem 0 5rem; }
-.feature__inner { max-width: 1200px; margin: 0 auto; padding: 0 var(--pad-x); }
-
-/* Kicker above the headline carries the tone: this is OUR Cannes. */
-.feature__kicker {
-    font-family: var(--font-mono); font-weight: 700; font-size: 0.72rem;
-    letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--mute); margin: 0 0 0.6rem;
-}
-
-/* Standfirst / setup intro spans the full spread width above the columns. */
-.feature__intro { max-width: 112ch; margin: 2.25rem 0 2.75rem; }
-.feature__intro p { font-size: 1.05rem; line-height: 1.7; margin: 0 0 1.1rem; }
-
-/* Two-page-spread body: the Q&A flows into two columns split by a center
-   gutter rule (the spine). Each SD/SC pair stays whole across the break. */
-.feature__body {
-    columns: 2;
-    column-gap: 3.5rem;
-    column-rule: 1px solid var(--rule);
-}
-.qa-pair { break-inside: avoid; margin: 0 0 1.25rem; }
-.feature__signoff {
-    text-align: right; margin: 2rem 0 0; padding-top: 1rem;
-    border-top: 1px solid var(--rule);
-}
-
-/* Current Moves band (carried Most Popular Films aside, reflowed). */
-.moves { border-top: 1px solid var(--ink); padding: 4rem 0 5rem; }
-.moves__inner { max-width: 960px; margin: 0 auto; padding: 0 var(--pad-x); }
-.moves .subscribe { margin-top: 3rem; }
-
-/* Visible marker for unconfirmed facts in this draft. */
-.moves__todo { color: var(--accent); font-weight: 700; }
-
-/* Collapse the spread to a single column on narrow screens. */
-@media (max-width: 700px) {
-    .feature__body { columns: 1; column-rule: none; }
-    .feature__signoff { text-align: left; }
-}
-
-@media (max-width: 600px) {
-    .feature { padding: 2.5rem 0 3.5rem; }
-    .moves { padding: 2.5rem 0 3.5rem; }
-}
-
-/* Satire / parody notice in the footer (cover for the spoof issue). */
+/* Parody / satire notice: full-width quiet fine print below the footer row. */
 .footer__satire {
-    order: 1;              /* sit below the copyright + links row */
-    flex: 0 0 100%;        /* full width, its own row, no narrow column */
+    order: 1;
+    flex: 0 0 100%;
     margin: 0;
-    font-size: 0.6rem;     /* a touch smaller than the footer text */
+    font-size: 0.6rem;
     line-height: 1.5;
-    letter-spacing: 0;     /* drop the footer's shouty tracking */
-    text-transform: none;  /* sentence case, not the inherited ALL CAPS */
+    letter-spacing: 0;
+    text-transform: none;
     color: var(--mute);
-}
-
-/* Minor inline photos within the feature spread columns. Kept whole inside a
-   column (break-inside), grayscale + hairline frame per house style. */
-.feature__fig { margin: 0 0 1.5rem; break-inside: avoid; }
-.feature__fig img { display: block; width: 100%; height: auto; filter: grayscale(100%); border: 1px solid var(--ink); }
-.feature__figcap {
-    font-family: var(--font-mono); font-size: 0.62rem; font-style: italic;
-    letter-spacing: 0; line-height: 1.4; color: var(--mute); margin-top: 0.4rem;
 }
 
 /* ---- Cross-issue navigation: top issue rail + bottom pager ---- */
@@ -1250,8 +1185,10 @@ a { color: var(--ink); }
 .pager__home { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mute); text-decoration: none; }
 .pager__home:hover, .pager__home:focus-visible { color: var(--accent); }
 
-/* Compact issue nav: centered prev/next, arrows toward the middle.
-   Endcaps: grayed .issuenav__off arrow for the missing side, or a Home link. */
+/* Compact issue nav (TEST on No.2): centered prev/next, arrows toward the
+   middle. Top variant = hairline ribbon rule; bottom variant = no rule,
+   just breathing space before the footer. Endcaps (for later rollout):
+   grayed .issuenav__off arrow for the missing side, or a Home link. */
 .issuenav {
     display: flex; justify-content: center; align-items: baseline; gap: 2.5rem;
     font-family: var(--font-mono); font-size: 0.72rem;
@@ -1263,127 +1200,17 @@ a { color: var(--ink); }
 .issuenav--top { padding: 2rem var(--pad-x); }
 .issuenav--bottom { padding: 2rem var(--pad-x); }
 
-/* ============================================================
-   VOL. 1 NO. 11 — Interview-only (single-feature) adjustments.
-   One article.interview laid out as a 3-column journalistic prose
-   feature. Adds a prose-body paragraph class, a figcaption
-   treatment, and moves the image frame from the figure onto the
-   img so figcaptions can sit beneath each figure.
-   ============================================================ */
-
-/* Prose body paragraphs within interview columns. Matches the
-   .interview__intro font tokens so prose reads continuous with
-   the standfirst, but without the border-bottom + padding that
-   distinguishes the standfirst block above it. */
-.interview__body {
-    font-family: var(--font-mono);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: var(--ink);
-    margin-bottom: 0.9rem;
-}
-
-/* Figures (hero + inline): let the figcaption sit outside the
-   framed image rather than inside a clipped box. Border moves
-   from the figure to the img. */
-.interview__hero,
-.interview__inline-fig {
-    overflow: visible;
-    border: none;
-}
-
-.interview__hero-img,
-.interview__inline-fig img {
-    border: 1px solid var(--ink);
-}
-
-/* Shared figcaption treatment for interview figures. Mirrors the
-   .feature__figcap tokens used in other issues' feature sections. */
-.interview__figcap {
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
-    font-style: italic;
-    letter-spacing: 0;
-    line-height: 1.4;
+/* Masthead / volume line (added for No.2 — Rubber Head). */
+.masthead {
+    font-family: var(--font-pixel);
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
     color: var(--mute);
-    margin-top: 0.4rem;
+    text-align: center;
+    padding: 0.85rem var(--pad-x);
+    border-bottom: 1px solid var(--ink);
 }
-
-/* vol1-no11 mailing-list band is form-only — no heading, no pitch copy.
-   Shrink the vertical space to a tight 10px top + 10px bottom, overriding
-   the base .moves (4rem/5rem) and mobile (2.5rem/3.5rem) padding that was
-   sized for content-dense bands. Also zero out the .subscribe inner
-   margin/padding that would otherwise add another 5rem on top. */
-.moves {
-    padding: 10px 0;
-}
-
-.moves .subscribe {
-    margin-top: 0;
-    padding-top: 0;
-}
-
 @media (max-width: 600px) {
-    .moves {
-        padding: 10px 0;
-    }
+    .masthead { font-size: 0.58rem; letter-spacing: 0.08em; padding: 0.7rem var(--pad-x); }
 }
-
-
-/* ============================================================
-   VOL. 1 NO. 13 overrides and additions (three-speaker Q&A)
-   ------------------------------------------------------------
-   Two differences from the no11 base:
-   1. .interview__qa:nth-of-type(2n) pair-grouping assumes
-      alternating SD/SC. no13 has THREE speakers (SD/A/SH)
-      so the 2n grouping misaligns. Replaced with consistent
-      margin-bottom on every .interview__qa, with slightly
-      tighter same-column spacing.
-   2. .interview__aside is the new class for SD's third-person
-      narrator asides between Q&A pairs (the Catch-22 clauses,
-      the blame-tally, the Shane-entry note, the retraction
-      winks, the contradiction note, the off-record fluffing
-      note, the closing aside). Muted italic with a 2px left
-      rule so narrator reads as commentary, not dialog.
-   ============================================================ */
-
-/* Neutralize the inherited two-speaker pair grouping. */
-.interview__qa:nth-of-type(2n) {
-    margin-bottom: 0.65rem;
-}
-
-/* Consistent beat between Q&A paragraphs. Keeps the three-speaker
-   rhythm even without pair grouping. */
-.interview__qa {
-    margin-bottom: 0.65rem;
-}
-
-/* SD narrator aside — italic third-person prose between Q&A pairs.
-   Left rule + muted color visually separates it from dialog. */
-.interview__aside {
-    font-family: var(--font-mono);
-    font-style: italic;
-    font-size: 0.85rem;
-    line-height: 1.55;
-    color: var(--mute);
-    padding: 0.35rem 0 0.35rem 0.75rem;
-    border-left: 2px solid var(--rule);
-    margin: 0.9rem 0 1.1rem;
-}
-
-/* Ensure the aside doesn't collapse awkwardly against adjacent
-   figures or signoff. */
-.interview__aside + .interview__qa,
-.interview__inline-fig + .interview__aside {
-    margin-top: 0.35rem;
-}
-
-/* Mobile: narrator asides sit comfortably in the single-column
-   reflow with slightly tighter padding. */
-@media (max-width: 600px) {
-    .interview__aside {
-        padding-left: 0.6rem;
-        margin: 0.75rem 0 1rem;
-    }
-}
-
