@@ -174,7 +174,7 @@ main { flex: 1; max-width: 960px; margin: 0 auto; width: 100%; padding: 2.5rem v
    breathing room — matches the Back Issues list visual rhythm. */
 
 .cry__latest + .cry__latest {
-    margin-top: 2.5rem;
-    padding-top: 2.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
     border-top: 1px solid var(--rule);
 }
