@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fat Happy Baby Productions. Vol. 1 No. 7. Junk Haulers — a rom-com in a trailer. FHBP's first hand-held picture. Shane Campbell interviewed about pivoting a horror shop into a fish-out-of-water buddy comedy.">
+    <title>FHBP</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+
+    <!--
+        VOL. 1 NO. 7 — Stripped standard-issue (new hybrid format).
+        Backfill (Aug 2026). Poster band + main.cover with opening
+        departments + 3-col Q&A interview + mailing-list in the
+        cover__aside. DROPS the standard-issue Keeper and Letters
+        sections. Candidate for format-prompt promotion as
+        `feature-issue.md` or `standard-issue-trimmed.md` once a
+        second instance ships.
+    -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="topbar" aria-label="Site top bar">
+        <div class="topbar__left">
+            <a class="topbar__brand" href="../index.html">FHBP</a>
+            <p class="topbar__tagline">WE MAKE INDIE FILMS</p>
+        </div>
+        <ul class="topbar__links">
+            <li><a href="https://www.youtube.com/@FatHappyBabyProductions" target="_blank" rel="noopener">YOUTUBE</a></li>
+            <li><a href="https://www.instagram.com/Fat_Happy_Baby_Productions/" target="_blank" rel="noopener">INSTAGRAM</a></li>
+            <li><a href="mailto:fathappybaby112@gmail.com">EMAIL</a></li>
+            <li><a href="https://linktr.ee/FatHappyBabyProductions" target="_blank" rel="noopener">LINKTREE</a></li>
+        </ul>
+    </header>
+
+    <!-- Masthead / volume line. Backfill granularity: Month Year only. -->
+    <p class="masthead" aria-label="Issue line">VOLUME 1 &middot; NO. 7 &middot; AUGUST 2026 &middot; FREE (AS-IS)</p>
+
+    <nav class="issuenav issuenav--top" aria-label="Issue navigation">
+        <a href="../vol1-no6/">No. 6 &lt;</a>
+        <a href="../vol1-no11/">&gt; No. 11</a>
+    </nav>
+
+    <!--
+        Movie-cover: Junk Haulers poster at the top. Placeholder
+        image reference — drop the actual poster file into
+        images/junk-haulers-poster.png when ready.
+    -->
+    <section class="movie-cover" aria-label="Junk Haulers poster">
+        <img src="images/junk-haulers-poster.png"
+             alt="Junk Haulers — a Fat Happy Baby Productions short film. Movie poster: Lish Bliss and Andrew Aberth. Written and directed by Shane Campbell. LA 48 Hour Film Project 2026, Regal North Hollywood."
+             class="movie-cover__poster">
+    </section>
+
+    <main class="cover">
+        <div class="cover__hero">
+            <!-- Opening departments: headline + dek, then the recurring
+                 departments. -->
+            <p class="issue-headline">Finding Gems With Junk Haulers</p>
+            <p class="issue-dek">A junk hauler gets a last-minute helper who cannot lift. By the end of the day they are friends.</p>
+
+            <section class="about">
+                <h2 class="about__heading">Note From FHBP</h2>
+                <p class="about__mood">running on fumes</p>
+                <p class="about__body">To our Canadian contingent: we want to get out in front of your complaining. It is possible that we slightly deviated from our horror superpowers and expertise. This one is about a fish that jumps out of the water and gets beached and is flopping around all over the place and we think it's downright scary.</p>
+                <p class="about__body">To our long-time fans: there will be no sheets, no blood, no limbs ripped off. Suck it up and brace yourself. It's just one camera, two actors, a truck, and a dump. We call it our first hand-held and we are sitting by it.</p>
+                <p class="about__body">To our new visitors: we make short films on deadline in the LA cinema hotbed known as Oxnard. Sometimes we make horror that is scary. Sometimes we make this. Subscribe in the panel so we can email you when we make the next one.</p>
+
+                <h2 class="about__heading">Standards Updates</h2>
+                <p class="about__intro">Every FHBP film must include:</p>
+                <ol class="about__list">
+                    <li><strong class="about__lead">A dog.</strong> (FAIL)</li>
+                    <li><strong class="about__lead">A child actor.</strong> (FAIL)</li>
+                    <li><strong class="about__lead">A limb gets ripped off.</strong> (FAIL, Canada, calm down)</li>
+                    <li><strong class="about__lead">Green screen.</strong> (FAIL)</li>
+                    <li><strong class="about__lead">Fold-out tables.</strong> (FAIL)</li>
+                    <li><strong class="about__lead">Backdrop sheets.</strong> (FAIL)</li>
+                </ol>
+                <p class="about__body">Every rule broken. Standards back next issue.</p>
+
+                <h2 class="about__heading">Secret Weapon</h2>
+                <p class="about__body">Behind every FHB short is <strong class="about__lead">Sean Dog</strong>, our writer, producer, and webdev. On a no-set, no-sheets, hand-held shoot, Sean Dog becomes Sean Dog who held the boom mic for twelve hours and did not complain once. Promotion pending.</p>
+
+                <h2 class="about__heading">Subscribe</h2>
+                <p class="about__body">If you give us your email we will store it in a safe virtual vault, and then from there email you all kinds of stuff about sheets. We think there is a button to unsubscribe but have never asked.</p>
+            </section>
+        </div>
+
+        <!--
+            Most Popular Films panel. Evergreen rail (per SOP §4.5
+            rail exception), identical to no2's. Shows films
+            released by Aug 2026 — Junk Haulers, Lord of the Undead,
+            Rubber Head, Unicorn Warrior visible; Dust and Reckoning
+            / Ghost in Orion 9 / Lost And Found / Killing Dragons
+            kept as commented-out hidden entries for parity with no2.
+        -->
+        <aside class="latest" aria-labelledby="latest-heading">
+            <h2 id="latest-heading" class="latest__heading">Our Most Popular Films</h2>
+
+            <!--
+                Horror-red "To Our Fans" apology block. Sits between
+                the films heading and the film list. In this issue,
+                teases the upcoming no8 picture without naming it.
+            -->
+            <div class="latest__note" role="note" aria-label="Note to fans">
+                <p class="latest__note-label">To Our Fans</p>
+                <p class="latest__note-body">We apologize for the odd fish-out-of-water draw on contest night and take full responsibility and blame Andrew, our disgruntled actor, who drew it for us that night, played Marcos the junk hauler in the movie, and then was quickly fired after wrap and never paid.</p>
+                <p class="latest__note-sd">&mdash; SD</p>
+            </div>
+
+            <ul class="latest__list">
+
+                <!-- 8. Junk Haulers -->
+                <li>
+                    <a class="latest__card" href="https://youtu.be/mEnn8HIKH_A" target="_blank" rel="noopener">
+                        <p class="latest__kicker">
+                            <span>Full Film</span>
+                            <span class="latest__kicker-arrow" aria-hidden="true">&gt;</span>
+                        </p>
+                        <h3 class="latest__title">Junk Haulers</h3>
+                        <p class="latest__summary">With her boyfriend laid up and rent due, a waitress fills in as helper on Marcos's junk-hauling business and finds the trade is ten percent lifting, ninety percent listening to other people's grief.</p>
+                        <p class="latest__meta">Aug. 15, 2026 &middot; Regal North Hollywood &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+
+                <!-- 6b. Lord of the Undead -->
+                <li>
+                    <a class="latest__card" href="https://youtu.be/wOD4a1AsMAw" target="_blank" rel="noopener">
+                        <p class="latest__kicker">
+                            <span>Full Film</span>
+                            <span class="latest__kicker-arrow" aria-hidden="true">&gt;</span>
+                        </p>
+                        <h3 class="latest__title">Lord of the Undead</h3>
+                        <p class="latest__summary">After six generations hunting the master vampire, a huntress finally finds the ritual that can finish him, but her solution requires ultimate sacrifice.</p>
+                        <p class="latest__meta">Oct. 23, 2025 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+
+                <!-- 2. Rubber Head -->
+                <li>
+                    <a class="latest__card" href="https://youtu.be/nJDrCf0tXFk" target="_blank" rel="noopener">
+                        <p class="latest__kicker">
+                            <span>Full Film</span>
+                            <span class="latest__kicker-arrow" aria-hidden="true">&gt;</span>
+                        </p>
+                        <h3 class="latest__title">Rubber Head</h3>
+                        <p class="latest__summary">Walter Vergara, a struggling late-night podcaster, is locked in a booth with a button he must keep pressing, or the world ends.</p>
+                        <p class="latest__meta">Oct. 28, 2023 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+
+                <!-- 1. Unicorn Warrior -->
+                <li>
+                    <a class="latest__card" href="https://youtu.be/NvP6vjMp8QA" target="_blank" rel="noopener">
+                        <p class="latest__kicker">
+                            <span>Full Film</span>
+                            <span class="latest__kicker-arrow" aria-hidden="true">&gt;</span>
+                        </p>
+                        <h3 class="latest__title">Unicorn Warrior</h3>
+                        <p class="latest__summary">A ten-year old girl must brave the underworld to trick the Gods and save her father from an unknown sickness.</p>
+                        <p class="latest__meta">Aug. 10, 2023 &middot; Downtown LA Regal &middot; LA 48 Hr</p>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="latest__footer">
+                <a class="btn btn--sm" href="https://www.youtube.com/@FatHappyBabyProductions" target="_blank" rel="noopener">ALL FILMS &nbsp;&gt;</a>
+            </div>
+
+            <!-- Beehiiv subscribe form inside the aside (no2 pattern). -->
+            <div class="subscribe">
+                <script async
+                        src="https://subscribe-forms.beehiiv.com/v3/loader.js"
+                        data-beehiiv-form="a1da26f0-628c-4e11-8700-fe23c46dc58d"></script>
+            </div>
+        </aside>
+    </main>
+
+    <!--
+        Interview with FHBP Director (August 2026). 3-column Q&A
+        spread, SD/SC two-speaker from the no2 lineage. Shane in
+        half-step-rough voice (preserved typos: Thats, didnt, isnt,
+        garauntee). Covers the rom-com pivot, fish-out-of-water
+        brief, 25-mph running gag, hand-held first, broken Standards,
+        7/11 class-system scene, final word. Image refs now live:
+        marco-waitress-wide.png (hero), side-by-side.jpg (col 2
+        inline), waitress-portrait-1.png (col 3 inline).
+    -->
+    <article class="interview" aria-labelledby="interview-heading">
+        <div class="interview__inner">
+
+        <header class="interview__titleband">
+            <h1 id="interview-heading" class="interview__title">The Director on the Rom-Com</h1>
+            <p class="interview__date">August 2026</p>
+        </header>
+
+        <div class="interview__grid">
+
+            <figure class="interview__hero">
+                <img src="images/marco-waitress-wide.png"
+                     alt="Wide two-shot of Lish Bliss and Andrew Aberth at the junkyard — the waitress in pink gesturing, Marcos reaching into the trailer."
+                     class="interview__hero-img">
+            </figure>
+
+            <!-- Col 3: starts at top of grid, spans both rows. Heaviest run + sign-off. -->
+            <div class="interview__col interview__col--3">
+
+                <p class="interview__qa"><strong>SD:</strong> But at least it was a shit show behind the scenes, right? That's a sacred staple.</p>
+                <p class="interview__qa"><strong>SC:</strong> We are creators, you dont build things without destroying other things.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Favorite scene.</p>
+                <p class="interview__qa"><strong>SC:</strong> The 7/11. Her giant pink water cup filled with sparkling water juxtaposed next to his Big Gulp soda. Thats literature man. Symbolism. Men-from-Mars Women-from-Venus in a frame. Then she goes to the bathroom and hes all upset. Thats the movie.</p>
+
+                <figure class="interview__inline-fig">
+                    <img src="images/waitress-portrait-1.png"
+                         alt="Portrait of the waitress — Lish Bliss, pink bucket hat, looking straight ahead.">
+                </figure>
+
+                <p class="interview__qa"><strong>SD:</strong> Rom-com for Canada.</p>
+                <p class="interview__qa"><strong>SC:</strong> We didnt forget Canada, we are just going for a different segment of it. This is for the fans at the hockey game who dont yell for blood. But its not a rom-com.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Do you have another film coming, will there be a dog.</p>
+                <p class="interview__qa"><strong>SC:</strong> Yes. A big one. The working logline is: 'An embattled father on Halloween night must get his dog to take a dump.' Titled <em>Sunny, take a dump!</em></p>
+
+                <p class="interview__qa"><strong>SD:</strong> So standards back next issue.</p>
+                <p class="interview__qa"><strong>SC:</strong> We arent in the business of making movies without sheets and without people losing limbs. We dont know the plot, but we do know a dog takes a dump and a head gets ripped off. How they come together is still to be understood.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Final word.</p>
+                <p class="interview__qa"><strong>SC:</strong> If you are a fish, stay in the water.</p>
+
+                <p class="interview__signoff">&mdash; SD</p>
+            </div>
+
+            <!-- Col 1: under hero, row 2. Standfirst + opener pairs. -->
+            <div class="interview__col interview__col--1">
+
+                <p class="interview__intro"><em>Shane Campbell on the record about what happens when you give FHBP a fish-out-of-water genre and two days to shoot, which is a rom-com without rom or com. Some say this movie is just a lesson in driving, as half the dialog is about speeding in a 25 mph zone. Sean Dog gets to the bottom of it in this issue.</em></p>
+
+                <p class="interview__qa"><strong>SD:</strong> This is a rom-com.</p>
+                <p class="interview__qa"><strong>SC:</strong> Its not a rom-com. Ive said this 100 times. Its a fish-out-of-water movie, a buddy pic at worst. Because there is no romance in it.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> It is 90% a waitress talking.</p>
+                <p class="interview__qa"><strong>SC:</strong> Thats because Marcos is bitching the entire time and has road rage issues. That is the comedy.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Why rom-com?</p>
+                <p class="interview__qa"><strong>SC:</strong> Its not. The assigned genre was fish out of water. I dont know what to tell our fans. If they assign us a genre that isnt horror we have to do that genre. We cant always be blood and guts, kicking ass and taking names in the horror genre.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Well, explain how it's a fish out of water?</p>
+                <p class="interview__qa"><strong>SC:</strong> The guy in the truck is the land. The waitress in the truck is the fish. And the truck is the land. And so then I guess the guy is a land animal, the girl a fish. Better, the truck is land, guy is mammal, girl is fish.</p>
+            </div>
+
+            <!-- Col 2: under hero, row 2. Middle pairs + inline fig. -->
+            <div class="interview__col interview__col--2">
+
+                <p class="interview__qa"><strong>SD:</strong> Where were the sheets.</p>
+                <p class="interview__qa"><strong>SC:</strong> On my bed. Which may have thrown me off. I have never made a movie and slept in a bed in the same 48-hr period. I think that is what gives FHBP that texture you dont see in other films. The reason is this time we had no set. Just a truck.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> Why the 25 mph zone.</p>
+                <p class="interview__qa"><strong>SC:</strong> The number 25 was the prompt, so we went with it.</p>
+
+                <figure class="interview__inline-fig">
+                    <img src="images/side-by-side.jpg"
+                         alt="Lish Bliss and Andrew Aberth from behind at a shipping container in the trailer storage park.">
+                </figure>
+
+                <p class="interview__qa"><strong>SD:</strong> Hand-held.</p>
+                <p class="interview__qa"><strong>SC:</strong> Baby is all gass no brakes, so we are always filming hand-held. We dont use tripods unless its lunch time and need a place to put down the camera. But to your point, this was the first time we ran around the city with no plan and no formal set. Hand-held is the only way a 48 works with no set.</p>
+
+                <p class="interview__qa"><strong>SD:</strong> This film was such a departure.</p>
+                <p class="interview__qa"><strong>SC:</strong> I know. The dog sheets. No blood. Thats half the standards. We are on a watch list. But Thats the deal, you cant say you are indie if every shoot is the same shoot.</p>
+
+            </div>
+
+        </div>
+        </div>
+    </article>
+
+    <nav class="issuenav issuenav--bottom" aria-label="Issue navigation">
+        <a href="../vol1-no6/">No. 6 &lt;</a>
+        <a href="../vol1-no11/">&gt; No. 11</a>
+    </nav>
+
+    <footer class="footer" aria-label="Site footer">
+        <p class="footer__satire"><strong>Disclaimer:</strong> This publication is a work of satire and parody. All persons, characters, teams, production companies, films, titles, and quotations depicted herein are fictitious or are used in a fictionalized, parodic manner for the purposes of commentary and humor. Names have been invented or altered; any resemblance to actual persons, living or dead, or to actual companies, teams, films, or events is coincidental or is intended as protected parody and commentary. Any references to real festivals, competitions, or organizations are nominative, used for identification and commentary only, and imply no affiliation with, sponsorship by, or endorsement from those entities. Nothing herein is a statement of fact about any real person or entity.</p>
+        <p class="footer__copyright">&copy; Fat Happy Baby Productions</p>
+        <ul class="footer__links">
+            <li><a href="https://www.youtube.com/@FatHappyBabyProductions" target="_blank" rel="noopener">YOUTUBE</a></li>
+            <li><a href="https://www.instagram.com/Fat_Happy_Baby_Productions/" target="_blank" rel="noopener">INSTAGRAM</a></li>
+            <li><a href="mailto:fathappybaby112@gmail.com">EMAIL</a></li>
+            <li><a href="https://linktr.ee/FatHappyBabyProductions" target="_blank" rel="noopener">LINKTREE</a></li>
+        </ul>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script type="text/javascript" async
+            src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
+</body>
+</html>
