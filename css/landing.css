@@ -1,1390 +1,180 @@
 /* ============================================================
-   FAT HAPPY BABY PRODUCTIONS — retro cover
-   Style reference: https://back290s.framer.website/
-   Tokens sampled from the reference's inline CSS.
+   FHBP — home / landing page styles (films-first + The Cry Room).
+   Promoted from working/home-page-draft/draft7 on 2026-11-15.
+   Landing page only; separate from each issue's vol1-noN/css/style.css.
+   Landing images live in ../images/ at the deploy root.
    ============================================================ */
 
 :root {
-    --bg:      #F2F2F2;
-    --ink:     #101010;
-    --rule:    #e1e1e1;
-    --mute:    #808080;
-    --accent:  #0099ff;
-
+    --bg: #F2F2F2; --ink: #101010; --rule: #e1e1e1; --mute: #808080;
+    --accent: #0099ff; --blood: #8b0a0a;
     --font-pixel: 'Rubik Mono One', 'Courier New', monospace;
-    --font-mono:  'IBM Plex Mono', 'Courier New', monospace;
-
+    --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
     --pad-x: 2rem;
-    --pad-x-sm: 1rem;
 }
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+* { box-sizing: border-box; margin: 0; padding: 0; }
 html, body {
-    background: var(--bg);
-    color: var(--ink);
-    font-family: var(--font-mono);
-    font-size: 14px;
-    line-height: 1.6;
+    background: var(--bg); color: var(--ink);
+    font-family: var(--font-mono); font-size: 14px; line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
+body { min-height: 100vh; display: flex; flex-direction: column; }
 
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-a { color: var(--ink); }
-
-/* ---------- Top bar --------------------------------------- */
-
+/* TOP BAR */
 .topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.1rem var(--pad-x);
-    border-bottom: 1px solid var(--ink);
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.1rem var(--pad-x); border-bottom: 1px solid var(--ink); flex-wrap: wrap; gap: 1rem;
 }
-
-/* FHBP brand mark on the left of the top bar — plain mono caps,
-   ink-colored, linked to home. No button chrome. */
+.topbar__left { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
 .topbar__brand {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ink);
-    text-decoration: none;
-    font-weight: 700;
-    transition: color 0.15s ease;
+    font-family: var(--font-mono); font-weight: 700; font-size: 0.75rem;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); text-decoration: none;
 }
-
-.topbar__brand:hover,
-.topbar__brand:focus-visible {
-    color: var(--accent);
-    outline: none;
-}
-
-/* Tagline on the right side of the top bar — plain mono caps,
-   muted, non-interactive. Pairs with the FHBP mark on the left. */
 .topbar__tagline {
-    margin: 0;
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--mute);
-    white-space: nowrap;
+    font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--mute); white-space: nowrap;
 }
-
-/* Left cluster: FHBP brand mark + tagline sitting side by side. */
-.topbar__left {
-    display: flex;
-    align-items: baseline;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-/* Right cluster: social links in the top bar (mirror of footer links). */
-.topbar__links {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.25rem;
-    margin: 0;
-    padding: 0;
-}
-
+.topbar__links { list-style: none; display: flex; flex-wrap: wrap; gap: 1.25rem; margin: 0; padding: 0; }
 .topbar__links a {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ink);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
+    font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink); text-decoration: none; border-bottom: 1px solid transparent;
     transition: color 0.15s ease, border-color 0.15s ease;
 }
+.topbar__links a:hover, .topbar__links a:focus-visible { color: var(--accent); border-bottom-color: var(--accent); outline: none; }
 
-.topbar__links a:hover,
-.topbar__links a:focus-visible {
-    color: var(--accent);
-    border-bottom-color: var(--accent);
-    outline: none;
-}
+/* POSTER BAND */
+.hero { display: flex; align-items: flex-start; justify-content: center; gap: 2.5rem; max-width: 1100px; margin: 0 auto; width: 100%; padding: 2rem var(--pad-x); }
+.hero__poster { flex: 0 1 auto; max-width: 48%; }
+.hero__poster img { display: block; max-width: 100%; max-height: 70vh; width: auto; height: auto; }
+.hero__words { flex: 0 1 auto; text-align: left; padding-top: 0.5rem; }
 
-/* ---------- Movie-cover (page-0 poster band) ------------
-   Full-width black band sitting between the topbar and the
-   Fat Happy Baby cover. Poster centered, scaled to fit one
-   viewport worth of scroll without exceeding natural size.
---------------------------------------------------------- */
+/* MAIN */
+main { flex: 1; max-width: 960px; margin: 0 auto; width: 100%; padding: 2.5rem var(--pad-x) 5rem; }
+.wordmark { font-family: var(--font-pixel); font-size: clamp(1.5rem, 6vw, 2.6rem); line-height: 1.3; letter-spacing: 0.02em; margin-bottom: 0.6rem; }
+.sub { font-family: var(--font-pixel); font-size: clamp(0.8rem, 1.6vw, 1rem); color: var(--mute); letter-spacing: 0.04em; margin-bottom: 0; }
 
-.movie-cover {
-    /* background: #000; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
-    padding: 5rem 0; /* vertical breathing room so poster doesn't touch the topbar/section rules; no side padding */
-    border-bottom: 1px solid var(--ink);
-}
+/* Shared section label */
+.label { font-family: var(--font-pixel); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.25rem; }
 
-.movie-cover__poster {
-    display: block;
-    max-width: 100%;
-    max-height: 95vh;
-    width: auto;
-    height: auto;
-    filter: grayscale(100%);
-}
-
-/* ---------- Button (shared) ------------------------------
-   Classic Win95-era chrome: outset bevel, inset on press.
-   Used for the top-bar links and the big cover CTA.
---------------------------------------------------------- */
-
+/* FEATURE FILM */
+.feature { text-align: center; max-width: 760px; margin: 0 auto 4rem; }
+.feature__media { display: block; margin-bottom: 2rem; border: 1px solid var(--ink); }
+.feature__media img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; filter: grayscale(100%); }
+.feature__title { font-family: var(--font-pixel); font-size: clamp(1.4rem, 4vw, 2rem); margin-bottom: 1rem; }
+.feature__title a { color: inherit; text-decoration: none; }
+.feature__title a:hover { color: var(--accent); }
+.feature__line { font-size: 1rem; margin: 0 auto 2rem; max-width: 60ch; }
 .btn {
-    display: inline-block;
-    font-family: var(--font-mono);
-    color: var(--ink);
-    background: var(--rule);
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    border: 3px outset var(--mute);
-    cursor: pointer;
-    user-select: none;
-}
-
-.btn:hover {
-    background: #ececec;
-}
-
-.btn:active {
-    border-style: inset;
-    background: var(--rule);
-}
-
-.btn:focus-visible {
-    outline: 2px dotted var(--ink);
-    outline-offset: -5px;
-}
-
-.btn--sm {
-    padding: 0.45rem 0.9rem;
-    font-size: 0.7rem;
-}
-
-.btn--lg {
-    padding: 0.9rem 1.5rem;
-    font-size: 0.875rem;
-}
-
-/* ---------- Cover / hero ---------------------------------- */
-
-.cover {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(260px, 380px);
-    gap: 4rem;
-    align-items: stretch;
-    padding: 5rem var(--pad-x); /* was 4rem top/bottom — matched to .movie-cover for consistent section spacing */
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.cover__hero {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.cover__title {
-    font-family: var(--font-pixel);
-    /* Rubik Mono One is a chunky single-weight display font; clamp()
-       scales it smoothly across viewport widths. */
-    font-size: clamp(1.5rem, 6vw, 3.25rem);
-    line-height: 1.3;
-    letter-spacing: 0.02em;
-    margin-bottom: 0.75rem; /* was 2.5rem — tightened; .cover__subtitle now sits just below */
-}
-
-/* Subtitle under the FAT HAPPY BABY PRODUCTIONS wordmark.
-   Same Rubik Mono One pixel face as the title so it reads as a
-   continuation, but much smaller and muted so the title stays dominant.
-   Separates the brand lockup from the About prose below. */
-.cover__subtitle {
-    font-family: var(--font-pixel);
-    font-size: clamp(0.85rem, 1.8vw, 1.1rem);
-    line-height: 1.4;
-    letter-spacing: 0.04em;
-    color: var(--mute);
-    margin-bottom: 2.5rem;
-}
-
-/* ---------- About block (Standards + Secret Weapon) -----
-   Lives directly under the wordmark in the hero column.
-   Pixel-font section headings, mono body with mid-weight
-   leads on each list item.
---------------------------------------------------------- */
-
-.about {
-    font-family: var(--font-mono);
-    font-size: 1rem; /* was 0.95rem */
-    line-height: 1.65;
-    max-width: 55ch;
-    color: var(--ink);
-}
-
-.about__heading {
-    font-family: var(--font-pixel);
-    font-size: 1rem; /* was 0.75rem — bumped to match .letters__marker */
-    line-height: 1.4;
-    letter-spacing: 0.04em;
-    margin-top: 1.75rem;
-    margin-bottom: 0.9rem;
-}
-
-.about__heading:first-child {
-    margin-top: 0;
-}
-
-.about__intro {
-    margin-bottom: 0.6rem;
-}
-
-.about__list {
-    padding-left: 1.6rem;
-    margin-bottom: 0.4rem;
-}
-
-.about__list li {
-    margin-bottom: 0.45rem;
-}
-
-.about__list li::marker {
-    font-family: var(--font-mono);
-    color: var(--mute);
-}
-
-.about__lead {
-    font-weight: 500;
-    color: var(--ink);
-}
-
-.about__body {
-    margin-bottom: 0.8rem;
-}
-
-.about__body:last-child {
-    margin-bottom: 0;
-}
-
-/* Beehiiv subscribe form wrapper — now lives at the bottom of the
-   Most Popular Films aside. margin-top:auto pushes it to the end of
-   the stretched flex column. */
-.subscribe {
-    margin-top: auto;
-    padding-top: 2rem;
-}
-
-/* ---------- Most Popular Films panel (cover aside) -------
-   Editorial list: each film is a stacked kicker / title /
-   summary / meta pair, separated by hairline ink rules.
-   Reads as a cousin to the Letters section below.
---------------------------------------------------------- */
-
-.latest {
-    /* Flex column so the heading/list/footer stack normally at the top,
-       and the subscribe form (last child) gets pushed to the bottom
-       of the stretched aside via margin-top:auto. */
-    display: flex;
-    flex-direction: column;
-    /* Dropped ~20px so the heading lines up visually with the
-       top of the FAT HAPPY BABY PRODUCTIONS wordmark. */
-    margin-top: 20px;
-}
-
-.latest__heading {
-    font-family: var(--font-pixel);
-    font-size: 1rem; /* was 0.75rem — bumped to match .letters__marker */
-    line-height: 1.4;
-    letter-spacing: 0.04em;
-    margin-bottom: 0.9rem;
-}
-
-/* ---------- "To Our Fans" apology note ------------------
-   Horror-red marquee-style block inserted between the
-   "Our Most Popular Films" heading and the film list.
-   Announces delayed releases. Cream-on-red so it pops
-   against the F2F2F2 page background.
---------------------------------------------------------- */
-
-.latest__note {
-    background: #8b0a0a;
-    color: #f2f2f2;
-    padding: 1rem 1.1rem;
-    margin-bottom: 1.25rem;
-    font-family: var(--font-mono);
-}
-
-.latest__note-label {
-    font-family: var(--font-pixel);
-    font-size: 1rem;
-    line-height: 1.4;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #f2f2f2;
-    margin-bottom: 0.7rem;
-}
-
-.latest__note-body {
-    font-size: 0.85rem;
-    line-height: 1.5;
-    color: #f2f2f2;
-    margin-bottom: 0.5rem;
-}
-
-.latest__note-body:last-of-type {
-    margin-bottom: 0;
-}
-
-.latest__note-body em {
-    font-style: italic;
-    font-weight: 700;
-}
-
-.latest__note-sd {
-    font-size: 0.75rem;
-    letter-spacing: 0.04em;
-    color: #d9a3a3;
-    margin-top: 0.6rem;
-}
-
-/* ============================================================
-   OLD: Win95-bevel card treatment. Kept commented for revert.
-   To restore: swap the comment markers around this block and
-   the EDITORIAL block below it.
-   ============================================================ */
-/*
-.latest__list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-}
-
-.latest__card {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto auto;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.35rem 0.75rem;
-    background: var(--rule);
-    border: 3px outset var(--mute);
-    color: var(--ink);
-    text-decoration: none;
-    cursor: pointer;
-    user-select: none;
-}
-
-.latest__card:hover { background: #ececec; }
-
-.latest__card:active {
-    border-style: inset;
-    background: var(--rule);
-}
-
-.latest__card:focus-visible {
-    outline: 2px dotted var(--ink);
-    outline-offset: -5px;
-}
-
-.latest__card.latest__card--expanded {
-    display: block;
-    padding: 0.55rem 0.75rem;
-}
-
-.latest__card.latest__card--expanded .latest__card__top {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto auto;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.55rem;
-}
-
-.latest__summary {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    line-height: 1.45;
-    color: var(--ink);
-    margin-bottom: 0.5rem;
-}
-
-.latest__meta {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--mute);
-}
-
-.latest__title {
-    font-family: var(--font-mono);
-    font-weight: 700;
-    font-size: 0.95rem;
-    color: var(--ink);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: left;
-}
-
-.latest__tag {
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--mute);
-    white-space: nowrap;
-}
-
-.latest__arrow {
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
-    color: var(--ink);
-    padding-right: 0.15rem;
-}
-
-.latest__footer {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: flex-start;
-}
-*/
-
-/* ============================================================
-   NEW: EDITORIAL list treatment.
-   No box, no bevel. Each film is kicker / title / summary /
-   meta, separated by a hairline ink rule.
-   ============================================================ */
-
-.latest__list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-}
-
-.latest__list li {
-    border-bottom: 1px solid var(--ink);
-}
-
-.latest__card {
-    display: block;
-    padding: 1.1rem 0;
-    color: var(--ink);
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.latest__card:hover .latest__title {
-    text-decoration: underline;
-    text-underline-offset: 0.2em;
-}
-
-.latest__card:focus-visible {
-    outline: 2px dotted var(--ink);
-    outline-offset: 4px;
-}
-
-/* "Full Film" kicker row above each title. Same tracked-caps
-   treatment as .letters__label so the two sections rhyme. */
-.latest__kicker {
-    font-family: var(--font-mono);
-    font-weight: 700;
-    font-size: 0.65rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--ink);
-    margin-bottom: 0.35rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-.latest__kicker-arrow {
-    font-size: 0.85rem;
-    letter-spacing: 0;
-    color: var(--ink);
-}
-
-.latest__title {
-    font-family: var(--font-mono);
-    font-weight: 700;
-    font-size: 1.05rem;
-    line-height: 1.3;
-    color: var(--ink);
-    margin-bottom: 0.4rem;
-}
-
-.latest__summary {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    line-height: 1.5;
-    color: var(--ink);
-    margin-bottom: 0.45rem;
-}
-
-.latest__meta {
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--mute);
-}
-
-/* ALL FILMS link at bottom of the list — flat editorial text
-   treatment. Overrides the .btn base class's Win95 chrome only
-   within this footer; .btn elsewhere on the site is unaffected. */
-.latest__footer {
-    margin-top: 1.5rem;        /* was 1.1rem — more space above the CTA */
-    display: flex;
-    justify-content: flex-start;   /* left-aligned */
-}
-
-.latest__footer .btn,
-.latest__footer .btn--sm {
-    background: none;
-    border: none;
-    padding: 0.4rem 0;         /* vertical click target, no horizontal inset so it hugs the left edge */
-    font-family: var(--font-mono);
-    font-weight: 700;
-    font-size: 0.85rem;        /* was 0.65rem — small bump, more readable without dominating */
-    letter-spacing: 0.2em;     /* was 0.22em — barely tighter for the slightly bigger type */
-    text-transform: uppercase;
-    color: var(--ink);
-    cursor: pointer;
-    transition: color 0.15s ease;
-}
-
-.latest__footer .btn:hover,
-.latest__footer .btn:focus-visible {
-    color: var(--accent);
-    outline: none;
-}
-
-.latest__footer .btn:active {
-    background: none;
-    border: none;
-}
-
-/* ---------- Letters to the Editor section --------------
-   Full-width band below the cover grid. Ink hairline on top
-   separates it from the hero. Items live in a 2-column grid
-   (collapses to 1 column on narrow screens). Each item stacks
-   vertically: label, letter body, signer, label, reply body,
-   SD sign. Labels are the Slash-style column headers.
---------------------------------------------------------- */
-
-.letters {
-    border-top: 1px solid var(--ink);
-    padding: 5rem 0;         /* was `5rem var(--pad-x)` — side padding moved to .letters__inner so border-top spans wider */
-    margin: 0 auto;
-    width: 100%;
-    font-family: var(--font-mono);
-    color: var(--ink);
-}
-
-/* Inner wrapper that caps the letters CONTENT at 1200px (where the
-   2-column grid stays readable), while the outer .letters border-top
-   runs the full width of the band above. */
-.letters__inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--pad-x);
-}
-
-.letters__heading {
-    font-family: var(--font-pixel);
-    font-size: clamp(1.25rem, 3vw, 1.75rem);
-    line-height: 1.3;
-    letter-spacing: 0.02em;
-    margin-bottom: 0.8rem;
-}
-
-/* FHBP motto below the heading — short declarative subtitle framing the
-   letters section as combat, not customer service. */
-.letters__motto {
-    font-family: var(--font-mono);
-    font-size: 0.95rem; /* was 0.9rem */
-    font-style: italic;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--mute);
-    margin-bottom: 2.5rem;
-    max-width: 65ch;
-}
-
-.letters__items {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 3rem 2.5rem;
-}
-
-.letters__item {
-    /* Each cell is a single letter + reply stacked vertically. */
-}
-
-/* Per-card chapter marker ("LETTER 1" / "LETTER 2"). Rubik Mono One for
-   typographic weight, with a hairline rule beneath to clearly separate
-   each letter in the grid. Sits above the small CONCERNED WRITER label. */
-.letters__marker {
-    font-family: var(--font-pixel);
-    font-size: 1rem;
-    line-height: 1.3;
-    letter-spacing: 0.02em;
-    color: var(--ink);
-    text-transform: uppercase;
-    margin-bottom: 0.9rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--ink);
-}
-
-/* Column-header style label above each block ("CONCERNED WRITER" / "FHBP"). */
-.letters__label {
-    font-family: var(--font-mono);
-    font-weight: 700;
-    font-size: 0.75rem; /* was 0.65rem */
-    letter-spacing: 0.22em;
-    color: var(--ink);
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-}
-
-/* Italicized parenthetical qualifier inside a label — e.g.
-   "CONCERNED WRITER (BIG WINNER WITH IDEAS)". Lighter weight so the
-   base label stays loudest. */
-.letters__label em {
-    font-style: italic;
-    font-weight: 400;
-}
-
-.letters__label--reply {
-    margin-top: 1.75rem;
-}
-
-.letters__letter,
-.letters__reply {
-    font-size: 1rem; /* was 0.9rem */
-    line-height: 1.6;
-    border-left: 2px solid var(--ink);
-    padding-left: 0.9rem;
-}
-
-.letters__reply {
-    border-left-color: var(--mute);
-}
-
-.letters__letter p,
-.letters__reply p {
-    margin-bottom: 0.7rem;
-}
-
-.letters__letter p:last-child,
-.letters__reply p:last-child {
-    margin-bottom: 0;
-}
-
-.letters__salutation {
-    font-weight: 700;
-}
-
-.letters__signer,
-.letters__sd {
-    color: var(--mute);
-    font-size: 0.8rem; /* was 0.75rem */
-    letter-spacing: 0.04em;
-    margin-top: 0.75rem;
-    padding-left: 0.9rem;
-}
-
-/* Delivery channel stamp inside a signer — "via email", "via YouTube comment".
-   Italic, same mute color, slightly smaller so it sits as a postmark. */
-.letters__medium {
-    font-style: italic;
-    font-size: 0.75rem; /* was 0.7rem */
-    letter-spacing: 0.02em;
-}
-
-/* ---------- Footer --------------------------------------- */
-
+    display: inline-block; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase;
+    text-decoration: none; color: var(--ink); border: 1px solid var(--ink); padding: 0.6rem 1.2rem;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+.btn:hover { background: var(--ink); color: var(--bg); }
+
+/* MORE FILMS */
+.strip { padding-bottom: 4rem; border-bottom: 1px solid var(--ink); margin-bottom: 4rem; }
+.strip__titles { display: flex; flex-wrap: wrap; gap: 1.25rem 2.5rem; align-items: baseline; }
+.strip__titles a { color: var(--ink); text-decoration: none; font-size: 1.15rem; }
+.strip__titles a:hover { color: var(--accent); }
+.strip__all { font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; margin-left: auto; }
+
+/* THE CRY ROOM */
+.section-name { font-family: var(--font-pixel); font-size: clamp(1.3rem, 3.5vw, 1.8rem); margin-bottom: 56px; }
+.cry__sub { font-size: 0.95rem; color: var(--mute); max-width: 60ch; margin-bottom: 3rem; }
+.cry__grid { display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: start; }
+.cry__latest { display: block; text-decoration: none; color: var(--ink); }
+.cry__meta { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mute); margin-bottom: 0.5rem; }
+.cry__title { font-family: var(--font-pixel); font-size: clamp(1rem, 2.5vw, 1.15rem); margin-bottom: 0.75rem; }
+.cry__latest:hover .cry__title { color: var(--accent); }
+.cry__line { font-size: 0.95rem; }
+.cry__rail { border-left: 1px solid var(--ink); padding-left: 2.5rem; }
+.cry__back { list-style: none; margin: 0; padding: 0; }
+.cry__back li { border-top: 1px solid var(--rule); }
+.cry__back li:first-child { border-top: none; }
+.cry__back a { display: block; padding: 0.8rem 0; color: var(--ink); text-decoration: none; font-size: 1rem; }
+.cry__back a:hover { color: var(--accent); }
+
+/* MAILING LIST */
+.subscribe { border-top: 1px solid var(--ink); margin-top: 4rem; padding-top: 2.5rem; }
+.subscribe__heading { font-family: var(--font-pixel); font-size: clamp(1rem, 2.5vw, 1.4rem); text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 0.8rem; }
+.subscribe__body { font-size: 0.9rem; max-width: 60ch; margin-bottom: 1.2rem; }
+
+/* FOOTER */
 .footer {
-    border-top: 1px solid var(--ink);
-    padding: 1.1rem var(--pad-x);
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+    border-top: 1px solid var(--ink); padding: 1.1rem var(--pad-x);
+    font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;
+}
+.footer__copyright { color: var(--mute); }
+.footer a { color: var(--ink); text-decoration: none; }
+.footer a:hover { color: var(--accent); }
+.footer__satire {
+    order: 1; flex: 0 0 100%; margin: 0;
+    font-size: 0.6rem; line-height: 1.5; letter-spacing: 0; text-transform: none; color: var(--mute);
 }
 
-.footer__copyright {
-    color: var(--mute);
-    white-space: nowrap;
+@media (max-width: 760px) {
+    .hero { flex-direction: column; align-items: center; gap: 1.5rem; }
+    .hero__poster { flex: 0 1 auto; }
+    .hero__words { flex: 0 1 auto; text-align: center; padding-top: 0; }
+    .cry__grid { grid-template-columns: 1fr; }
+    .cry__rail { border-left: none; padding-left: 0; border-top: 1px solid var(--ink); padding-top: 2rem; }
 }
-
-.footer__links {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin: 0;
-}
-
-.footer__links a {
-    color: var(--ink);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.footer__links a:hover,
-.footer__links a:focus-visible {
-    color: var(--accent);
-    border-bottom-color: var(--accent);
-    outline: none;
-}
-
-/* ---------- Medium screens: stack two-column cover ------ */
-
-@media (max-width: 900px) {
-    .cover {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-        padding-top: 4rem;    /* was 3rem */
-        padding-bottom: 4rem; /* was 3rem */
-    }
-
-    .cover__hero {
-        align-self: stretch;
-    }
-
-    .latest {
-        max-width: 560px;
-    }
-
-    .letters__items {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-    }
-}
-
-/* ---------- Small screens -------------------------------- */
-
 @media (max-width: 600px) {
-    .topbar { padding: 0.9rem var(--pad-x-sm); }
+    :root { --pad-x: 1rem; }
     .topbar__tagline { display: none; }
-    .topbar__links { gap: 0.9rem; }
-    .topbar__links a { font-size: 0.65rem; letter-spacing: 0.08em; }
-    .cover  { padding: 4rem var(--pad-x-sm); } /* was 3rem top/bottom */
-    .footer { padding: 0.9rem var(--pad-x-sm); }
-
-    .cover__title { font-size: clamp(1.2rem, 8vw, 2rem); line-height: 1.4; }
-    .btn--lg      { font-size: 0.8rem; padding: 0.8rem 1.1rem; }
-    .btn--sm      { font-size: 0.65rem; padding: 0.4rem 0.75rem; }
-
-    .latest           { /* no padding change — panel has no border */ }
-    .latest__heading  { font-size: 0.85rem; margin-bottom: 0.75rem; } /* was 0.7rem */
-    .latest__card     { padding: 0.95rem 0; } /* was grid 0.35rem 0.6rem — editorial block layout now */
-    .latest__title    { font-size: 0.95rem; } /* was 0.8rem */
-    .latest__kicker   { font-size: 0.6rem; letter-spacing: 0.2em; }
-    .latest__summary  { font-size: 0.8rem; }
-    .latest__meta     { font-size: 0.6rem; }
-
-    .footer__links     { gap: 1rem; font-size: 0.7rem; }
-    .footer__copyright { font-size: 0.7rem; }
-
-    .letters         { padding: 4rem 0; } /* was 2.5rem top/bottom — side padding on .letters__inner */
-    .letters__inner  { padding: 0 var(--pad-x-sm); }
-    .letters__heading { font-size: 0.75rem; margin-bottom: 1.5rem; }
-    .letters__letter,
-    .letters__reply   { font-size: 0.9rem; max-width: none; padding-left: 0.75rem; }
-    .letters__reply   { margin-left: 1rem; }
+    .hero { padding: 1rem var(--pad-x) 1.5rem; }
+    .hero__poster img { max-height: 55vh; }
 }
 
-/* ---------- Reduced motion ------------------------------- */
+/* ---------- Retracted back-issue row --------------------
+   An issue that has been retracted gets a strikethrough on the
+   original title + a small ink chip marking the state. The whole
+   anchor links to the retraction page (currently vol1-no12), not
+   to the retracted issue's own URL. The original issue remains
+   on disk and reachable via paginators; this row is the public
+   signal that it has been pulled.
+--------------------------------------------------------- */
 
-@media (prefers-reduced-motion: reduce) {
-    * { transition: none !important; animation: none !important; }
-}
-
-/* ============================================================
-   Exclusive Interview with FHBP Director
-   ------------------------------------------------------------
-   Three-column magazine spread, sits between the cover grid
-   and the Letters to FHBP section. Shares typography tokens
-   with the rest of the page; no new tokens introduced.
-   ============================================================ */
-
-.interview {
-    border-top: 1px solid var(--ink);
-    padding: 5rem 0;         /* side padding moved to .interview__inner so border-top spans wider */
-    margin: 0 auto;
-    width: 100%;
-}
-
-/* Inner wrapper caps the interview CONTENT at 1200px (where the
-   3-column grid stays readable), while the outer .interview
-   border-top runs the full width of the band above. */
-.interview__inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--pad-x);
-}
-
-/* ---- Title band (full-width, above the grid) ---- */
-
-.interview__titleband {
+.cry__back--retracted a {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 0.35rem;
-    border-bottom: 2px solid var(--ink);
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
+    align-items: baseline;
+    gap: 0.75rem;
+    flex-wrap: wrap;
 }
-
-.interview__title {
-    font-family: var(--font-pixel);
-    font-size: clamp(1.25rem, 3vw, 1.75rem);
-    line-height: 1.3;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
+.cry__back__strike {
+    text-decoration: line-through;
+    color: var(--mute);
 }
-
-.interview__date {
+.cry__back__chip {
     font-family: var(--font-mono);
     font-weight: 700;
-    font-size: 0.85rem;
-    letter-spacing: 0.14em;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--mute);
+    color: var(--ink);
+    border: 1px solid var(--ink);
+    padding: 0.15rem 0.5rem;
     white-space: nowrap;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.cry__back--retracted a:hover .cry__back__strike,
+.cry__back--retracted a:focus-visible .cry__back__strike {
+    color: var(--mute);  /* keep muted on hover so the strike reads as archival */
+}
+.cry__back--retracted a:hover .cry__back__chip,
+.cry__back--retracted a:focus-visible .cry__back__chip {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
 }
 
-/* ---- Three-column grid ----
-   Row 1: hero image (cols 1+2) | col 3 content (starts at top)
-   Row 2: col 1 text            | col 2 text            | col 3 continues
-   Col 3 is a single element spanning rows 1+2 so it starts at the top.
------------------------------- */
+/* Stacked Latest cards. When the Latest column shows more than one
+   issue, each subsequent card gets a hairline rule above it +
+   breathing room — matches the Back Issues list visual rhythm. */
 
-.interview__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    column-gap: 2rem;
-    row-gap: 1.25rem;
-    align-items: start;
-}
-
-/* Hero image — row 1, cols 1+2 */
-.interview__hero {
-    grid-column: 1 / span 2;
-    grid-row: 1;
-    margin: 0;
-    overflow: hidden;
-    border: 1px solid var(--ink);
-}
-
-.interview__hero-img {
-    display: block;
-    width: 100%;
-    height: clamp(220px, 32vh, 360px);
-    object-fit: cover;
-    object-position: center 25%;
-    filter: grayscale(100%);
-}
-
-/* Col placements */
-.interview__col--1 { grid-column: 1; grid-row: 2; }
-.interview__col--2 { grid-column: 2; grid-row: 2; }
-.interview__col--3 { grid-column: 3; grid-row: 1 / span 2; }
-
-/* ---- Intro paragraph (italic lede at top of col 1) ---- */
-
-.interview__intro {
-    font-family: var(--font-mono);
-    font-size: 0.95rem;
-    line-height: 1.55;
-    color: var(--ink);
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid var(--rule);
-}
-
-.interview__intro em {
-    font-style: italic;
-}
-
-/* ---- Q&A body ---- */
-
-.interview__qa {
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
-    line-height: 1.55;
-    color: var(--ink);
-    margin-bottom: 0.65rem;
-}
-
-.interview__qa strong {
-    font-weight: 700;
-    letter-spacing: 0.04em;
-}
-
-.interview__qa + .interview__qa {
-    margin-top: -0.2rem;
-}
-
-/* Answer (every 2nd .interview__qa) gets a hair more space below
-   so SD/SC pairs visually group. */
-.interview__qa:nth-of-type(2n) {
-    margin-bottom: 1rem;
-}
-
-/* ---- Inline figure (images 2 and 3) ---- */
-
-.interview__inline-fig {
-    margin: 0.4rem 0 1rem;
-    border: 1px solid var(--ink);
-    overflow: hidden;
-}
-
-.interview__inline-fig img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: 260px;
-    object-fit: cover;
-    object-position: center;
-    filter: grayscale(100%);
-}
-
-/* ---- Sign-off ---- */
-
-.interview__signoff {
-    font-family: var(--font-mono);
-    font-weight: 700;
-    font-size: 0.85rem;
-    letter-spacing: 0.1em;
-    color: var(--mute);
-    margin-top: 1.25rem;
-}
-
-/* ---- Medium screens: 2 columns; col 3 reflows into 2 sub-cols ---- */
-
-@media (max-width: 900px) {
-    .interview__grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    .interview__hero  { grid-column: 1 / span 2; }
-    .interview__col--1 { grid-column: 1; grid-row: 2; }
-    .interview__col--2 { grid-column: 2; grid-row: 2; }
-    .interview__col--3 {
-        grid-column: 1 / span 2;
-        grid-row: 3;
-        column-count: 2;
-        column-gap: 2rem;
-    }
-    .interview__col--3 .interview__inline-fig,
-    .interview__col--3 .interview__qa {
-        break-inside: avoid;
-    }
-}
-
-/* ---- Narrow screens: single column ---- */
-
-@media (max-width: 600px) {
-    .interview       { padding: 2rem 0 3rem; }
-    .interview__inner { padding: 0 var(--pad-x-sm); }
-    .interview__grid { grid-template-columns: 1fr; }
-    .interview__hero   { grid-column: 1; grid-row: 1; }
-    .interview__col--1 { grid-column: 1; grid-row: 2; }
-    .interview__col--2 { grid-column: 1; grid-row: 3; }
-    .interview__col--3 { grid-column: 1; grid-row: 4; column-count: 1; }
-    .interview__hero-img {
-        height: clamp(180px, 42vh, 280px);
-    }
-}
-
-/* ============================================================
-   The Keeper Reviews
-   ------------------------------------------------------------
-   Film-review department hosted by The Keeper, inserted between
-   the interview and the letters. Band mirrors .interview /
-   .letters: full-width border-top, 1200px inner wrapper, 2px
-   title-band rule. Poem cut, left-justified. Uses existing
-   tokens; the only literal color is the horror-red sign-off,
-   matching the "To Our Fans" note (#8b0a0a) already on the page.
-   ============================================================ */
-
-.keeper {
-    border-top: 1px solid var(--ink);
-    padding: 5rem 0;
-    margin: 0 auto;
-    width: 100%;
-    font-family: var(--font-mono);
-    color: var(--ink);
-}
-
-/* Inner wrapper caps content at 1200px while the border-top runs
-   the full width of the band, exactly like .interview__inner. */
-.keeper__inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--pad-x);
-}
-
-/* Header spacing only — no rule beneath (unlike the interview
-   titleband); it just holds the title above the poem. */
-.keeper__titleband {
-    margin-bottom: 2rem;
-}
-
-/* One line: "The Keeper Reviews: Rubber Head". Scale matches
-   .interview__title / .letters__heading. Keeper part ink; the
-   film title in the lighter mute gray used for the interview
-   "November 2026" date. */
-.keeper__title {
-    font-family: var(--font-pixel);
-    font-size: clamp(1.25rem, 3vw, 1.75rem);
-    line-height: 1.3;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-}
-
-.keeper__dept { color: var(--ink); }
-.keeper__film { color: var(--mute); }
-
-/* One-line critic tag under the title — italic mute standfirst,
-   mirroring .letters__motto. */
-.keeper__intro {
-    font-style: italic;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--mute);
-    margin-bottom: 2rem;
-    max-width: 65ch;
-}
-
-/* Poem body — left-justified stanzas, generous line rhythm. */
-.keeper__stanza {
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-}
-
-.keeper__closer {
-    font-size: 1rem;
-    line-height: 1.7;
-    font-weight: 500;
-    margin: 2rem 0 1.25rem;
-}
-
-/* Sign-off — black (ink), same as the body line above it. */
-.keeper__sd {
-    font-family: var(--font-pixel);
-    font-size: 1rem;
-    letter-spacing: 0.04em;
-    color: var(--ink);
-}
-
-/* ---- Narrow screens ---- */
-
-@media (max-width: 600px) {
-    .keeper        { padding: 4rem 0; }
-    .keeper__inner { padding: 0 var(--pad-x-sm); }
-    .keeper__stanza,
-    .keeper__closer { font-size: 0.9rem; }
-}
-
-/* ============================================================
-   Masthead / volume line
-   A thin full-width strip between the topbar and the poster band,
-   carrying the issue number, date, and price gag. Pixel face,
-   tracked caps, centered, ink hairline beneath.
-   ============================================================ */
-
-.masthead {
-    font-family: var(--font-pixel);
-    font-size: 0.7rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--mute);
-    text-align: center;
-    padding: 0.85rem var(--pad-x);
-    border-bottom: 1px solid var(--ink);
-}
-
-@media (max-width: 600px) {
-    .masthead {
-        font-size: 0.58rem;
-        letter-spacing: 0.08em;
-        padding: 0.7rem var(--pad-x-sm);
-    }
-}
-
-
-/* ============================================================
-   VOL. 1 NO. 10 — Cannes feature issue.
-   Feature Q&A (no poster, no cover) + carried Current Moves and
-   mailing-list sign-up. Bands mirror the full-width .interview /
-   .letters pattern; the Q&A uses a narrow reading column. Most
-   inner elements reuse existing .interview__* / .latest__* /
-   .subscribe / .about__* classes, so only the bands and the
-   reading column are defined here.
-   ============================================================ */
-
-.feature { border-top: 1px solid var(--ink); padding: 4rem 0 5rem; }
-.feature__inner { max-width: 1200px; margin: 0 auto; padding: 0 var(--pad-x); }
-
-/* Kicker above the headline carries the tone: this is OUR Cannes. */
-.feature__kicker {
-    font-family: var(--font-mono); font-weight: 700; font-size: 0.72rem;
-    letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--mute); margin: 0 0 0.6rem;
-}
-
-/* Standfirst / setup intro spans the full spread width above the columns. */
-.feature__intro { max-width: 112ch; margin: 2.25rem 0 2.75rem; }
-.feature__intro p { font-size: 1.05rem; line-height: 1.7; margin: 0 0 1.1rem; }
-
-/* Two-page-spread body: the Q&A flows into two columns split by a center
-   gutter rule (the spine). Each SD/SC pair stays whole across the break. */
-.feature__body {
-    columns: 2;
-    column-gap: 3.5rem;
-    column-rule: 1px solid var(--rule);
-}
-.qa-pair { break-inside: avoid; margin: 0 0 1.25rem; }
-.feature__signoff {
-    text-align: right; margin: 2rem 0 0; padding-top: 1rem;
+.cry__latest + .cry__latest {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
     border-top: 1px solid var(--rule);
 }
-
-/* Current Moves band (carried Most Popular Films aside, reflowed). */
-.moves { border-top: 1px solid var(--ink); padding: 4rem 0 5rem; }
-.moves__inner { max-width: 960px; margin: 0 auto; padding: 0 var(--pad-x); }
-.moves .subscribe { margin-top: 3rem; }
-
-/* Visible marker for unconfirmed facts in this draft. */
-.moves__todo { color: var(--accent); font-weight: 700; }
-
-/* Collapse the spread to a single column on narrow screens. */
-@media (max-width: 700px) {
-    .feature__body { columns: 1; column-rule: none; }
-    .feature__signoff { text-align: left; }
-}
-
-@media (max-width: 600px) {
-    .feature { padding: 2.5rem 0 3.5rem; }
-    .moves { padding: 2.5rem 0 3.5rem; }
-}
-
-/* Satire / parody notice in the footer (cover for the spoof issue). */
-.footer__satire {
-    order: 1;              /* sit below the copyright + links row */
-    flex: 0 0 100%;        /* full width, its own row, no narrow column */
-    margin: 0;
-    font-size: 0.6rem;     /* a touch smaller than the footer text */
-    line-height: 1.5;
-    letter-spacing: 0;     /* drop the footer's shouty tracking */
-    text-transform: none;  /* sentence case, not the inherited ALL CAPS */
-    color: var(--mute);
-}
-
-/* Minor inline photos within the feature spread columns. Kept whole inside a
-   column (break-inside), grayscale + hairline frame per house style. */
-.feature__fig { margin: 0 0 1.5rem; break-inside: avoid; }
-.feature__fig img { display: block; width: 100%; height: auto; filter: grayscale(100%); border: 1px solid var(--ink); }
-.feature__figcap {
-    font-family: var(--font-mono); font-size: 0.62rem; font-style: italic;
-    letter-spacing: 0; line-height: 1.4; color: var(--mute); margin-top: 0.4rem;
-}
-
-/* ---- Cross-issue navigation: top issue rail + bottom pager ---- */
-.issue-rail {
-    display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;
-    padding: 0.55rem var(--pad-x);
-    border-bottom: 1px solid var(--rule);
-    font-family: var(--font-mono); font-size: 0.68rem;
-    letter-spacing: 0.14em; text-transform: uppercase;
-}
-.issue-rail a { color: var(--mute); text-decoration: none; }
-.issue-rail a:hover, .issue-rail a:focus-visible { color: var(--accent); }
-.issue-rail__current { color: var(--ink); font-weight: 700; }
-
-.pager {
-    border-top: 1px solid var(--ink);
-    display: flex; justify-content: space-between; align-items: center;
-    gap: 1.5rem; flex-wrap: wrap;
-    padding: 2rem var(--pad-x);
-}
-.pager__link { display: flex; flex-direction: column; gap: 0.2rem; text-decoration: none; color: var(--ink); }
-.pager__prev { align-items: flex-start; }
-.pager__next { align-items: flex-end; text-align: right; }
-.pager__dir { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mute); }
-.pager__title { font-family: var(--font-pixel); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.2; }
-.pager__link:hover .pager__title, .pager__link:focus-visible .pager__title { color: var(--accent); }
-.pager__home { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mute); text-decoration: none; }
-.pager__home:hover, .pager__home:focus-visible { color: var(--accent); }
-
-/* Compact issue nav: centered prev/next, arrows toward the middle.
-   Endcaps: grayed .issuenav__off arrow for the missing side, or a Home link. */
-.issuenav {
-    display: flex; justify-content: center; align-items: baseline; gap: 2.5rem;
-    font-family: var(--font-mono); font-size: 0.72rem;
-    letter-spacing: 0.16em; text-transform: uppercase;
-}
-.issuenav a { color: var(--ink); text-decoration: none; }
-.issuenav a:hover, .issuenav a:focus-visible { color: var(--accent); }
-.issuenav__off { color: var(--mute); }
-.issuenav--top { padding: 2rem var(--pad-x); }
-.issuenav--bottom { padding: 2rem var(--pad-x); }
-
-/* ============================================================
-   VOL. 1 NO. 11 — Interview-only (single-feature) adjustments.
-   One article.interview laid out as a 3-column journalistic prose
-   feature. Adds a prose-body paragraph class, a figcaption
-   treatment, and moves the image frame from the figure onto the
-   img so figcaptions can sit beneath each figure.
-   ============================================================ */
-
-/* Prose body paragraphs within interview columns. Matches the
-   .interview__intro font tokens so prose reads continuous with
-   the standfirst, but without the border-bottom + padding that
-   distinguishes the standfirst block above it. */
-.interview__body {
-    font-family: var(--font-mono);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: var(--ink);
-    margin-bottom: 0.9rem;
-}
-
-/* Figures (hero + inline): let the figcaption sit outside the
-   framed image rather than inside a clipped box. Border moves
-   from the figure to the img. */
-.interview__hero,
-.interview__inline-fig {
-    overflow: visible;
-    border: none;
-}
-
-.interview__hero-img,
-.interview__inline-fig img {
-    border: 1px solid var(--ink);
-}
-
-/* Shared figcaption treatment for interview figures. Mirrors the
-   .feature__figcap tokens used in other issues' feature sections. */
-.interview__figcap {
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
-    font-style: italic;
-    letter-spacing: 0;
-    line-height: 1.4;
-    color: var(--mute);
-    margin-top: 0.4rem;
-}
-
-/* vol1-no11 mailing-list band is form-only — no heading, no pitch copy.
-   Shrink the vertical space to a tight 10px top + 10px bottom, overriding
-   the base .moves (4rem/5rem) and mobile (2.5rem/3.5rem) padding that was
-   sized for content-dense bands. Also zero out the .subscribe inner
-   margin/padding that would otherwise add another 5rem on top. */
-.moves {
-    padding: 10px 0;
-}
-
-.moves .subscribe {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-@media (max-width: 600px) {
-    .moves {
-        padding: 10px 0;
-    }
-}
-
-
-/* ============================================================
-   VOL. 1 NO. 13 overrides and additions (three-speaker Q&A)
-   ------------------------------------------------------------
-   Two differences from the no11 base:
-   1. .interview__qa:nth-of-type(2n) pair-grouping assumes
-      alternating SD/SC. no13 has THREE speakers (SD/A/SH)
-      so the 2n grouping misaligns. Replaced with consistent
-      margin-bottom on every .interview__qa, with slightly
-      tighter same-column spacing.
-   2. .interview__aside is the new class for SD's third-person
-      narrator asides between Q&A pairs (the Catch-22 clauses,
-      the blame-tally, the Shane-entry note, the retraction
-      winks, the contradiction note, the off-record fluffing
-      note, the closing aside). Muted italic with a 2px left
-      rule so narrator reads as commentary, not dialog.
-   ============================================================ */
-
-/* Neutralize the inherited two-speaker pair grouping. */
-.interview__qa:nth-of-type(2n) {
-    margin-bottom: 0.65rem;
-}
-
-/* Consistent beat between Q&A paragraphs. Keeps the three-speaker
-   rhythm even without pair grouping. */
-.interview__qa {
-    margin-bottom: 0.65rem;
-}
-
-/* SD narrator aside — italic third-person prose between Q&A pairs.
-   Left rule + muted color visually separates it from dialog. */
-.interview__aside {
-    font-family: var(--font-mono);
-    font-style: italic;
-    font-size: 0.85rem;
-    line-height: 1.55;
-    color: var(--mute);
-    padding: 0.35rem 0 0.35rem 0.75rem;
-    border-left: 2px solid var(--rule);
-    margin: 0.9rem 0 1.1rem;
-}
-
-/* Ensure the aside doesn't collapse awkwardly against adjacent
-   figures or signoff. */
-.interview__aside + .interview__qa,
-.interview__inline-fig + .interview__aside {
-    margin-top: 0.35rem;
-}
-
-/* Mobile: narrator asides sit comfortably in the single-column
-   reflow with slightly tighter padding. */
-@media (max-width: 600px) {
-    .interview__aside {
-        padding-left: 0.6rem;
-        margin: 0.75rem 0 1rem;
-    }
-}
-
